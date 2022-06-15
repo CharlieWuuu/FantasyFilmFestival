@@ -77,6 +77,10 @@ $('.type__title').click(function () {
 });
 
 // (3) 載入時，已選片單變紅色
+const localData = JSON.parse(localStorage.getItem('片單'))
+  ? JSON.parse(localStorage.getItem('片單'))
+  : [];
+
 function showClicked() {
   const localData = JSON.parse(localStorage.getItem('片單'));
   // 變數：載入時，預選的id；預設為空值
@@ -93,7 +97,6 @@ showClicked();
 
 // (4) 當點擊愛心時，影片加入我的片單
 function chooseFavorite(clickedId) {
-  const localData = JSON.parse(localStorage.getItem('片單'));
   // 變數：設定(1)檢查片單存在與否的i、(2)片單存在狀態、(3)欲渲染片單的HTML
   let current_i = -1;
   let check = '還沒有這部片';
