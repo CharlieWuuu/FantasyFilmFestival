@@ -99,6 +99,7 @@ wrapper();
 // (4) 刪除按到的片單
 function remove(selectedFilm) {
   selectedFilm.remove(selectedFilm);
+  const localData = JSON.parse(localStorage.getItem('片單'));
   // 刪除localStorage
   for (i = 0; i < localData.length; i++) {
     if (selectedFilm.id == localData[i].full_id) {
