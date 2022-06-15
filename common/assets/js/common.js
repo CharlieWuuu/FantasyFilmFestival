@@ -41,8 +41,6 @@ function showFilmAmount() {
   }
 }
 
-//
-
 $(document).ready(function () {
   //顯示header
   $.ajax({
