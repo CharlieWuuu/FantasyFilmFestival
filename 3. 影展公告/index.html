@@ -30,84 +30,7 @@
     <div class="background__tail">
       <img src="./assets/image/tail2.svg" alt="" />
     </div>
-    <nav id="navbar">
-      <article class="navbar__container">
-        <a href="#" class="navbar__logo" title="回到首頁">
-          <img
-            src="./assets/image/logo-04-04 3.png"
-            alt="logo"
-            id="navbar__logoPic"
-          />
-          <img
-            src="./assets/image/金馬奇幻影展混色 1.png"
-            alt="logo"
-            id="navbar__logoText"
-          />
-        </a>
-        <ul class="navbar__link">
-          <li onclick="dropDown(this)">
-            <a href="#"
-              ><p>訊息公告 <i class="fas fa-angle-down"></i></p>
-            </a>
-            <div class="menu__container" style="display: none">
-              <a class="menu">
-              最新消息
-              </a>
-              <a class="menu">
-              影展公告
-              </a>
-            </div>
-          </li>
-          <li>
-            <a href="#"
-              ><p>關於影展</p>
-            </a>
-          </li>
-          <li onclick="dropDown(this)">
-            <a href="#"
-              ><p>節目介紹 <i class="fas fa-angle-down"></i></p>
-            </a>
-            <div class="menu__container" style="display: none">
-              <a class="menu">
-              影片清單
-              </a>
-              <a class="menu" href="#">
-              場次表
-              </a>
-            </div>
-          </li>
-          <li>
-            <a href="#" title="售票資訊"
-              ><p>售票資訊</p>
-            </a>
-          </li>
-          <li>
-            <a href="https://tghff.tixcraft.com/activity" target="_blank" title="金馬購票專區 (另開視窗)" id="buyTicket"
-              ><p>立即購票<i class="fa-solid fa-angles-down"></i></p>
-            </a>
-          </li>
-          <li>
-            <div class="nav__button">
-              <a href="/myFavoriteFilm/" title="我的片單">
-                <img
-                src="./assets/image/ticket 黑 2.svg"
-                alt="ticket"
-                width="20"
-              />
-                <div class="nav__button__number__container" >
-                  <span class="nav__button__number" id="film_amount"></span>
-                </div>
-              </a>
-              <div class="nav__button__line"></div>
-              <div class="nav__button__search">
-                <input class="nav__button__searchBar" type="text" style="display: none" placeholder="功能開發中">
-                <i class="fas fa-search"></i>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </article>
-    </nav>
+    <nav id="navbar"></nav>
     <header class="header">
       <div class="title__container" >
         <h1>WHAT'S <br>ON</h1>
@@ -247,64 +170,8 @@
             </div>
     </main>
 
-    <footer class="footer">
-      <div class="footer__container">
-        <article class="footer__upside">
-          <section class="footer__news">
-            <span class="footer__title">訊息公告</span>
-            <span class="footer__contant"><a href="#" title="最新消息">最新消息</a></span>
-            <span class="footer__contant"><a href="#" title="影展公告">影展公告</a></span>
-          </section>
-          <section class="footer__about">
-            <span class="footer__title">關於影展</span>
-          </section>
-          <section class="footer__intro">
-            <span class="footer__title">節目介紹</span>
-            <span class="footer__contant"><a href="#" title="影片清單">影片清單</a></span>
-            <span class="footer__contant"><a href="#" title="場次表">場次表</a></span>
-          </section>
-          <section class="footer__ticket">
-            <span class="footer__title">售票資訊</span>
-            <!-- <span class="footer__contant">售票資訊</span>
-            <span class="footer__contant">場地資訊</span> -->
-          </section>
-          <section class="footer__schedule">
-            <span class="footer__title">我的片單</span>
-          </section>
-        </article>
-        <div class="footer__line"></div>
-        <article class="footer__downside">
-          <section class="footer__logo">
-            <a href="#" title="回到首頁">
-            <span class="footer__logo">
-              <img
-                src="./assets/image/logo-04-04 3.png"
-                alt="logo"
-                id="footer__logoPic"
-              />
-              <img
-                src="./assets/image/金馬奇幻影展混色 1.png"
-                alt="logo"
-                id="footer__logoText"
-              />
-            </a>
-            </span>
-          </section>
-          <section class="footer__contact">
-            <span>台北金馬影展執行委員會</span>
-            <span>100413台北市中正區中華路一段39號17樓</span>
-            <span>電話：886 (0) 2-2370-0456 傳真：886 (0) 2-2370-0360</span>
-            <span>© Taipei Golden Horse Film Festival Executive Committee</span>
-          </section>
-          <section class="footer__share">
-            <a href="https://www.instagram.com/goldenhorsefilmfestival/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.facebook.com/tghff/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://www.youtube.com/user/TGHFF" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-          </section>
-        </article>
-      </div>
-    </footer>
-    <script src="./assets/js/navbar.js"></script>
+    <footer class="footer" id="footer"></footer>
+    <script src="../common/assets/js/common.js" defer></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

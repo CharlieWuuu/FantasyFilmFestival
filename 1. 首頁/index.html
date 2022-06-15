@@ -22,6 +22,16 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).onload(function () {
+        $('.header').delay('fast').fadeIn();
+        $('.navbar').delay('slow').fadeIn();
+        $('.background').delay(1000).fadeIn();
+        $('.curve').delay(1500).fadeIn();
+        $('.main').delay(2000).fadeIn();
+        $('.footer').delay(4000).fadeIn();
+      });
+    </script>
   </head>
   <body>
     <div class="background">
