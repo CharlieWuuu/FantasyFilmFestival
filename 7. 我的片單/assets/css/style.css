@@ -369,6 +369,15 @@ main {
           justify-content: space-between;
 }
 
+.favorite__select__symbols {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
 .favorite__select__symbols > p {
   color: #535353;
   margin: 6px;
@@ -386,6 +395,23 @@ main {
 .favorite__select__symbols #favSymbolsR {
   -webkit-box-shadow: 0 0 3px 1px #ea5136;
           box-shadow: 0 0 3px 1px #ea5136;
+}
+
+.favorite__select__delete {
+  background-color: #6AB5B9;
+  margin: 20px;
+  padding: 2px 5px;
+  color: #FFFFFF;
+  cursor: pointer;
+  border: 0.3px solid #FFFFFF;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.favorite__select__delete:hover {
+  background-color: #4d9fa3;
 }
 
 .favorite__select__button div {

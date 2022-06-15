@@ -1,3 +1,7 @@
+const localData = JSON.parse(localStorage.getItem('片單'))
+  ? JSON.parse(localStorage.getItem('片單'))
+  : [];
+
 // (1) 在表格中渲染最愛片單的資料
 
 // 1-1 載入時取得最愛片單資料
@@ -5,9 +9,6 @@
 const favArrayData = [];
 
 function getFavFilmData() {
-  const localData = JSON.parse(localStorage.getItem('片單'))
-    ? JSON.parse(localStorage.getItem('片單'))
-    : [];
   // 迴圈：逐一取出full_id準備檢查
   for (i = 0; i < localData.length; i++) {
     // 迴圈：進入片單原始資料逐一檢查
@@ -99,9 +100,6 @@ wrapper();
 // (4) 刪除按到的片單
 function remove(selectedFilm) {
   selectedFilm.remove(selectedFilm);
-  const localData = JSON.parse(localStorage.getItem('片單'))
-    ? JSON.parse(localStorage.getItem('片單'))
-    : [];
   // 刪除localStorage
   for (i = 0; i < localData.length; i++) {
     if (selectedFilm.id == localData[i].full_id) {
@@ -220,3 +218,11 @@ $('.film').hover(
     sessionStorage.setItem('filmHeight', JSON.stringify(sessionData));
   },
 );
+
+// (7) 刪除所有片單
+function removeAll() {
+  const x = localData.length;
+  localData.splice(0, x);
+  localStorage.setItem('片單', JSON.stringify(localData));
+  favArrayData.splice(0, x);
+}

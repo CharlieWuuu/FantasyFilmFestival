@@ -13,6 +13,8 @@ main{
 
 	&__symbols{
 		@extend %flex-center;
+		flex: 1;
+		justify-content: flex-start;
 		&>p{
 			color: $color_secondary_black;
 			margin: 6px;
@@ -28,6 +30,21 @@ main{
 			box-shadow: 0 0 3px 1px rgb(234, 81, 54);
 		}
 	}
+	&__delete{
+		background-color: $color_main;
+		margin: 20px;
+		padding: 2px 5px ;
+		color: $color_secondary_white;
+		cursor: pointer;
+		border: 0.3px solid $color_secondary_white;
+		border-radius: 5px;
+		font-size: 0.8rem;
+		transition-duration: 0.5s;
+		&:hover{
+			background-color: darken($color_main , 10%);
+		}
+	}
+
 	&__button{
 		@extend %flex-center;
 		div{
