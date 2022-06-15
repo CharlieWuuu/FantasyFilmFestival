@@ -70,7 +70,7 @@ var filmContainer_html = `
 <div class="film__container" id="{{filmData.list.full_id}}">
   <div class="film" id={{filmData.list.full_id}} title="{{filmData.list.name}} {{filmData.list.startTime}}-{{filmData.list.endTime}}"
   style="transform: translate({{filmData.list.left}}vw, -150px);
-  width: {{filmData.list.long}}vw">
+  width: {{filmData.list.long}}vw;">
     <p id="film__name">{{filmData.list.name}}</p>
     <p id="film__time">
       {{filmData.list.startTime}}-{{filmData.list.endTime}}
@@ -352,3 +352,33 @@ function chooseFavorite(clickedId) {
     document.getElementById('film_amount').innerText = localData.length;
   }
 }
+
+// (6) hover後顯示完整片單內容
+const sessionData = JSON.parse(sessionStorage.getItem('片單'))
+  ? JSON.parse(sessionStorage.getItem('片單'))
+  : [];
+
+$('.film').hover(
+  function () {
+    const thisHeight = $(this).css('width');
+    $(this).css('width', 'auto'); // 高度偷偷變auto
+    const currentHeight = $(this).css('width');
+    $(this).css('width', thisHeight); // 高度偷偷變回來
+    $(this).css('box-shadow', '0 0 5px 0 rgb(0, 0, 0)');
+
+    if (parseFloat(thisHeight) > parseFloat(currentHeight)) {
+      sessionData.push({ this_height: thisHeight });
+      sessionStorage.setItem('filmWidth', JSON.stringify(sessionData));
+    } else {
+      sessionData.push({ this_height: thisHeight });
+      sessionStorage.setItem('filmWidth', JSON.stringify(sessionData));
+      $(this).css('width', 'auto');
+    }
+  },
+  function () {
+    $(this).css('box-shadow', 'none');
+    $(this).css('width', sessionData[0].this_height);
+    sessionData.splice(0, 1);
+    sessionStorage.setItem('filmWidth', JSON.stringify(sessionData));
+  },
+);
