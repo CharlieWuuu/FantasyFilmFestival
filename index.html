@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>奇幻影展 首頁</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/image/logo-04-04 3.png"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c50ac87e11.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="background">
+      <img id="tail__latest" src="./assets/image/bg/尾巴3-09 3.svg" alt="" />
+      <img id="tail__whatsOn" src="./assets/image/bg/尾巴3-09 2.svg" alt="" />
+      <img
+        id="tail__aboutFilmFes"
+        src="./assets/image/bg/尾巴3-09 4.svg"
+        alt=""
+      />
+      <img id="tail__manual" src="./assets/image/bg/尾巴-角.svg" alt="" />
+      <img id="tail__getIt" src="./assets/image/bg/尾巴-最下方.svg" alt="" />
+    </div>
+    <script>
+      $.ajax({
+        dataType: 'html',
+        url: './assets/html/nav.html',
+        jsonp: '$callback',
+        success: showHeaderData,
+      });
+
+      function showHeaderData(data) {
+        // Use the template
+        $('#navbar').append(data);
+      }
+    </script>
+    <nav id="navbar"></nav>
+    <header class="header" onmousemove="myFunction(event)">
+      <div class="header__bg__container">
+        <div>
+          <img
+            class="header__float"
+            id="tailBig"
+            src="./assets/image/header/首頁圖層用_尾巴(大-模糊).png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="header__float"
+            id="tailSmall1"
+            src="./assets/image/header/首頁圖層用_尾巴(低彩度-模糊-水平).png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="header__float"
+            id="tailSmall2"
+            src="./assets/image/header/首頁圖層用_尾巴(低彩度-模糊-垂直).png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="header__main__container">
+        <div class="header__main__title__container">
+          <div>
+            <img
+              class="header__float"
+              id="ZHtitle"
+              src="./assets/image/header/首頁圖層用_標題.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="header__float"
+              id="titleDate"
+              src="./assets/image/header/影展日期.svg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="header__float"
+              id="ENtitle"
+              src="./assets/image/header/gOLDEN HORSE fANTASTIC FILM FESTIVAL.svg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              class="header__float"
+              id="arrow"
+              src="./assets/image/header/箭頭.svg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div>
+          <img
+            class="header__float"
+            id="horse"
+            src="./assets/image/header/首頁圖層用_馬.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="header__float"
+            id="rainbow"
+            src="./assets/image/header/首頁圖層用_彩虹.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="header__float"
+            id="cornO"
+            src="./assets/image/header/首頁圖層用_三角錐(橘).png"
+            alt=""
+          />
+          <img
+            class="header__float"
+            id="cornG"
+            src="./assets/image/header/首頁圖層用_三角錐(綠).png"
+            alt=""
+          />
+          <img
+            class="header__float"
+            id="cornP"
+            src="./assets/image/header/首頁圖層用_三角錐(粉).png"
+            alt=""
+          />
+        </div>
+      </div>
+    </header>
+    <div class="curve">
+      <img src="./assets/image/wave.svg" alt="" />
+    </div>
+    <main class="main">
+      <article class="latest">
+        <div class="title__container">
+          <div class="title__all">
+            <h1>Latest <br />NEWs</h1>
+            <div class="ZHtitle__line"></div>
+            <h2 class="ZHtitle__text">最新消息</h2>
+          </div>
+        </div>
+        <section class="latest__news__container">
+          <div class="news-list__item">
+            <div class="news-list__background">
+              <a href="#">
+                <img src="./assets/image/latest/news01.png" alt="" />
+                <div class="news-thumbnail__detail">
+                  <span class="news-thumbnail__title"
+                    >閉幕奇幻劇集《良辰吉時》大銀幕搶先揭曉結局</span
+                  >
+                  <span class="news-thumbnail__time">2022.04.17 </span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="news-list__item">
+            <div class="news-list__background">
+              <a href="#">
+                <img src="./assets/image/latest/news02.png" alt="" />
+                <div class="news-thumbnail__detail">
+                  <span class="news-thumbnail__title"
+                    >《少年吔，安啦！》修復版、張震＋羅大佑《永生號》金馬奇幻影展世界首映</span
+                  >
+                  <span class="news-thumbnail__time">2022.03.15</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="news-list__item">
+            <div class="news-list__background">
+              <a href="#">
+                <img src="./assets/image/latest/conan.png" alt="" />
+                <div class="news-thumbnail__detail">
+                  <span class="news-thumbnail__title"
+                    >「柯南推理夜」經典劇場版連發
+                    K歌重現《萬花嬉春》《真善美》經典歌舞</span
+                  >
+                  <span class="news-thumbnail__time">2022.03.10 </span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+        <div class="latest__more">
+          <a href="https://charliewuuu.github.io/Cinema_2_news/">SEE MORE</a>
+        </div>
+      </article>
+      <article class="whatsOn">
+        <div class="title__container">
+          <div class="title__all">
+            <h1>WHAT'S<br />ON</h1>
+            <div class="ZHtitle__line"></div>
+            <h2 class="ZHtitle__text">影展公告</h2>
+          </div>
+        </div>
+        <section class="whatsOn__container">
+          <div class="whatsOn__date"><p>2022/04</p></div>
+          <div class="whatsOn__text">
+            <p>2022金馬奇幻影展 │ 觀眾票選排行榜（更新至4/15）</p>
+            <a href=""><i class="fa-solid fa-chevron-right"></i></a>
+          </div>
+          <div class="whatsOn__text">
+            <p>2022金馬奇幻影展︱觀眾票選中獎名單（更新至4/16）</p>
+            <a href=""><i class="fa-solid fa-chevron-right"></i></a>
+          </div>
+          <div class="whatsOn__text">
+            <p>2022 金馬奇幻影展 未來院線發行影片一覽表</p>
+            <a href=""><i class="fa-solid fa-chevron-right"></i></a>
+          </div>
+          <div class="whatsOn__text">
+            <p>2022 金馬奇幻影展 異動總覽</p>
+            <a href=""><i class="fa-solid fa-chevron-right"></i></a>
+          </div>
+          <div class="whatsOn__text">
+            <p>2022金馬奇幻影展最寵觀眾 送出超過萬件好禮饗影迷</p>
+            <a href=""><i class="fa-solid fa-chevron-right"></i></a>
+          </div>
+          <div class="whatsOn__more">
+            <a href="https://charliewuuu.github.io/Cinema_3_whatsOn/"
+              >SEE MORE</a
+            >
+          </div>
+        </section>
+        <div class="whatsOn__img">
+          <img src="./assets/image/whatsOn/周邊商品.jpg" alt="" />
+        </div>
+        <div class="whatsOn__cone">
+          <img src="./assets/image/whatsOn/三角錐-04-04 2.svg" alt="" />
+        </div>
+      </article>
+      <article class="aboutFilmFes">
+        <div class="title__container">
+          <div class="title__all">
+            <h1>ABOUT<br />FILM FESTIVAL</h1>
+            <div class="ZHtitle__line"></div>
+            <h2 class="ZHtitle__text">關於影展</h2>
+          </div>
+        </div>
+        <section class="aboutFilmFes__container">
+          <div class="aboutFilmFes__bg"></div>
+          <div class="aboutFilmFes__logo">
+            <img src="./assets/image/logo-04-04 3.png" alt="" />
+          </div>
+          <div class="aboutFilmFes__text">
+            <p>
+              金馬奇幻影展為台灣首次以「奇幻」為名的主題影展，自2010年創辦至今，內容涵蓋科幻、恐怖、驚悚、歌舞、喜劇、武俠、動畫、愛情以及各類cult
+              film，打破觀眾對電影的想像界限，展開獨特的觀影體驗。<span
+                class="aboutFilmFes__more"
+                ><a href="">SEE MORE</a></span
+              >
+            </p>
+          </div>
+        </section>
+        <div class="aboutFilmFes__img">
+          <img
+            id="img__horse"
+            src="./assets/image/aboutFilmFes/Ellipse 10.png"
+            alt=""
+          />
+          <img
+            id="img__text"
+            src="./assets/image/aboutFilmFes/Ellipse 8.png"
+            alt=""
+          />
+        </div>
+      </article>
+      <article class="manual">
+        <div class="title__container">
+          <div class="title__all">
+            <h1>FILM FESTIVAL<br />MANUAL</h1>
+            <div class="ZHtitle__line"></div>
+            <h2 class="ZHtitle__text">影展專刊</h2>
+          </div>
+        </div>
+        <div class="manual__img">
+          <img src="./assets/image/manual/三角錐-04-04 2.svg" alt="" />
+        </div>
+        <section class="manual__container">
+          <img src="./assets/image/manual/金馬奇幻影展(透明背景).png" alt="" />
+        </section>
+      </article>
+      <article class="getIt">
+        <div class="title__container">
+          <div class="title__all">
+            <h1>HOW TO GET IT</h1>
+          </div>
+        </div>
+        <section class="getIt__container">
+          <div class="getIt__container__vertical">
+            <div class="getIt__container__card">
+              <div class="getIt__container__title">現場索取 台北誠品</div>
+              <div class="getIt__container__content">
+                <div class="getIt__container__line"></div>
+                <div class="getIt__container__text__container">
+                  <div class="getIt__container__text">誠品信義店</div>
+                  <div class="getIt__container__text">誠品生活松菸店</div>
+                  <div class="getIt__container__text">誠品台大店</div>
+                  <div class="getIt__container__text">誠品西門店</div>
+                  <div class="getIt__container__text">誠品站前店</div>
+                </div>
+              </div>
+              <div class="getIt__container__icon">
+                <img src="./assets/image/getIt/icon_house.svg" alt="" />
+              </div>
+            </div>
+            <div class="getIt__container__card">
+              <div class="getIt__container__title">現場索取 台北誠品</div>
+              <div class="getIt__container__content">
+                <div class="getIt__container__line"></div>
+                <div class="getIt__container__text__container">
+                  <div class="getIt__container__text">光點台北</div>
+                  <div class="getIt__container__text">西門紅樓</div>
+                  <div class="getIt__container__text">
+                    TSUTAYA BOOKSTORE 信義店
+                  </div>
+                  <div class="getIt__container__text">光點華山電影館</div>
+                  <div class="getIt__container__text">白鹿洞書坊師大店</div>
+                  <div class="getIt__container__text">台北當代藝術館</div>
+                </div>
+              </div>
+              <div class="getIt__container__icon">
+                <img src="./assets/image/getIt/icon_list.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="getIt__container__vertical">
+            <div class="getIt__container__card">
+              <div class="getIt__container__title">現場索取 桃園</div>
+              <div class="getIt__container__content">
+                <div class="getIt__container__line"></div>
+                <div class="getIt__container__text__container">
+                  <div class="getIt__container__text">中壢光影電影館</div>
+                </div>
+              </div>
+              <div class="getIt__container__icon">
+                <img
+                  id="iconPlace"
+                  src="./assets/image/getIt/icon_place.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="getIt__container__card">
+              <div class="getIt__container__title">現場索取 台中</div>
+              <div class="getIt__container__content">
+                <div class="getIt__container__line"></div>
+                <div class="getIt__container__text__container">
+                  <div class="getIt__container__text">
+                    TSUTAYA BOOKSTORE台中市政店
+                  </div>
+                  <div class="getIt__container__text">誠品生活園道店</div>
+                </div>
+              </div>
+              <div class="getIt__container__icon">
+                <img src="./assets/image/getIt/icon_check.svg" alt="" />
+              </div>
+            </div>
+            <div class="getIt__container__card">
+              <div class="getIt__container__title">現場索取 高雄</div>
+              <div class="getIt__container__content">
+                <div class="getIt__container__line"></div>
+                <div class="getIt__container__text__container">
+                  <div class="getIt__container__text">高雄棧貳庫KW2</div>
+                </div>
+              </div>
+              <div class="getIt__container__icon">
+                <img src="./assets/image/getIt/icon_shop.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="getIt__container__vertical">
+            <div class="getIt__container__card">
+              <div class="getIt__container__title">網路下載</div>
+              <div class="getIt__container__content">
+                <div class="getIt__container__line"></div>
+                <div class="getIt__container__text__container">
+                  <div class="getIt__container__text">載點一</div>
+                </div>
+              </div>
+              <div class="getIt__container__icon">
+                <img src="./assets/image/getIt/icon_download.svg" alt="" />
+              </div>
+            </div>
+            <div class="getIt__container__card">
+              <div class="getIt__container__title">網路下載</div>
+              <div class="getIt__container__content">
+                <div class="getIt__container__line"></div>
+                <div class="getIt__container__text__container">
+                  <div class="getIt__container__text">載點二</div>
+                </div>
+              </div>
+              <div class="getIt__container__icon">
+                <img src="./assets/image/getIt/icon_download.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+    <script>
+      $(document).ready(function () {
+        $.ajax({
+          dataType: 'html',
+          url: './assets/html/footer.html',
+          jsonp: '$callback',
+          success: showFooterData,
+        });
+      });
+
+      function showFooterData(data) {
+        // Use the template
+        $('#footer').append(data);
+      }
+    </script>
+    <footer class="footer" id="footer"></footer>
+    <script src="./assets/js/navbar.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
+    <script src="./assets/js/header.js"></script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>金馬奇幻影展 場次表</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/image/logo-04-04 3.png"
+    />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c50ac87e11.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="background__line">
+      <img src="./assets/image/售票資訊背景.svg" alt="" />
+    </div>
+    <script></script>
+    <nav id="navbar"></nav>
+    <header class="header">
+      <div class="title__container">
+        <h1>Schedule</h1>
+        <div class="ZHtitle__contaitner">
+          <div class="ZHtitle__line"></div>
+          <h2>場次表</h2>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="information__container">
+        <div class="select__container">
+          <select id="startDate_selector">
+            <option value="" disabled selected hidden>開始日期</option>
+            <option value="D08">4月08日 (五)</option>
+            <option value="D09">4月09日 (六)</option>
+            <option value="D10">4月10日 (日)</option>
+            <option value="D11">4月11日 (一)</option>
+            <option value="D12">4月12日 (二)</option>
+            <option value="D13">4月13日 (三)</option>
+            <option value="D14">4月14日 (四)</option>
+            <option value="D15">4月15日 (五)</option>
+            <option value="D16">4月16日 (六)</option>
+            <option value="D17">4月17日 (日)</option>
+          </select>
+          <select id="endDate_selector">
+            <option value="" disabled selected hidden>結束日期</option>
+            <option value="D08">4月08日 (五)</option>
+            <option value="D09">4月09日 (六)</option>
+            <option value="D10">4月10日 (日)</option>
+            <option value="D11">4月11日 (一)</option>
+            <option value="D12">4月12日 (二)</option>
+            <option value="D13">4月13日 (三)</option>
+            <option value="D14">4月14日 (四)</option>
+            <option value="D15">4月15日 (五)</option>
+            <option value="D16">4月16日 (六)</option>
+            <option value="D17">4月17日 (日)</option>
+          </select>
+          <select id="cinema_selector">
+            <option value="C0" disabled selected hidden>選擇影廳</option>
+            <option value="C01">MUVIE TITAN</option>
+            <option value="C02">信義9廳</option>
+            <option value="C03">信義10廳</option>
+            <option value="C04">信義11廳</option>
+            <option value="C0">全部</option>
+          </select>
+        </div>
+        <div class="timeline__container"></div>
+      </div>
+    </main>
+    <footer class="footer" id="footer"></footer>
+    <script src="./assets/js/filmTimeline_v4.js" defer></script>
+    <script src="../11. common/assets/js/common.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>奇幻影展 售票資訊</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/image/logo-04-04 3.png"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c50ac87e11.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="background__line">
+      <img src="./assets/image/售票資訊背景.svg" alt="" />
+    </div>
+    <div class="background__tail">
+      <img src="./assets/image/tail.svg" alt="" />
+    </div>
+    <script>
+      $.ajax({
+        dataType: 'html',
+        url: './assets/html/nav.html',
+        jsonp: '$callback',
+        success: showHeaderData,
+      });
+
+      function showHeaderData(data) {
+        // Use the template
+        $('#navbar').append(data);
+      }
+    </script>
+    <nav id="navbar"></nav>
+    <header class="header">
+      <div class="title__container">
+        <h1>ABOUT</h1>
+        <div class="ZHtitle__contaitner">
+          <h2>售票資訊</h2>
+          <div class="ZHtitle__line"></div>
+        </div>
+        <h1 id="ENtitle_2">TICKETs</h1>
+      </div>
+    </header>
+    <main class="main">
+      <ul class="ticketInfo__container">
+        <li>
+          <h3>票價</h3>
+          <div class="ticketInfo__content">
+            <div class="ticketInfo__line"></div>
+            <p>
+              <span class="span_blue">全　票 240元</span>
+              銷售時間：07.22〈五〉- 08.11〈四〉。 <br /><br />
+              <span class="span_blue">預售票 180元</span>
+              銷售時間：06.19〈日〉13:00起 - 07.21〈四〉23:59止。 <br /><br />
+              <span class="span_blue">卡友票 200元</span>
+              銷售時間：07.22〈五〉- 08.11〈四〉。<br />
+              ※僅供持有「2018柏格曼百年紀念卡」或「2019金馬經典影展膠捲典藏卡」者購買，入場時須出示卡片（一票一卡），否則須補全票差價。
+              <br /><br />
+              <span class="span_blue">敬老愛心票 120元</span>
+              銷售時間：06.19〈日〉13:00起 - 08.11〈四〉。<br />
+              ※僅供「65歲以上長者」或「身心障礙人士與乙名必要陪同者」購買，入場時請出示相關證件，否則須補全票差價。
+            </p>
+          </div>
+        </li>
+      </ul>
+      <ul class="ticketInfo__container">
+        <li>
+          <h3>網路購票</h3>
+          <div class="ticketInfo__content">
+            <div class="ticketInfo__line"></div>
+            <p>
+              1.拓元售票系統 tghff.tixcraft.com（02-8772-9835）。<br />
+              2.購票須登入金馬影展會員帳號（尚無會員帳號之觀眾，請先至金馬影展官網免費註冊）。為確保購票順利，請自行確認會員帳號有效，且能正常登入。<br />
+              3.單一帳號請勿多裝置或多視窗同時操作。<br />
+              4.進入購票流程後，10分鐘內須完成訂單確認，逾時未確認之訂單，系統將視為無效並取消，需再重新訂購。每筆訂單以8張為限。<br />
+              5.各場次開演前2小時「線上售票系統」將停止販售，僅可於戲院現場之影展售票處購買。<br />
+              <br />
+              付款方式<br />
+              線上刷卡<br />
+              僅限VISA、MasterCard、JCB、銀聯卡（無法使用：AE、大來）。<br />
+              ※如刷卡失敗，請自行重新訂購；經銀行端對帳後，系統將自動刪除失敗的訂單。<br />
+              ATM虛擬帳號轉帳<br />
+              請於「訂單查詢」之「繳費期限」前完成付款，逾時未付款，系統將自動刪除該筆訂單。非使用國泰世華金融卡及ATM者，需另外支付轉帳手續費（僅接受台灣金融卡，不支援海外匯款）。<br />
+              <br />
+              取票方式<br />
+              僅提供自助取票機取票，使用「訂單查詢」之：<br />
+              ① QR code<br />
+              ② 同時輸入「取票序號」及「取票號碼」。<br />
+            </p>
+          </div>
+        </li>
+      </ul>
+      <ul class="ticketInfo__container">
+        <li>
+          <h3>退票方式</h3>
+          <div class="ticketInfo__content">
+            <div class="ticketInfo__line"></div>
+            <p>
+              1.退票最遲須於該場次<span class="span_red">開演3天前</span
+              >辦理，逾時恕不受理。<br />
+              例：07.22開演的場次，最遲須於07.19完成退票手續。<br />
+              2.每張需酌收10%手續費。<br />
+              3.請取出票券後於營業時間至退票地點辦理退票，恕無法網路退票。<br />
+              「換票」視同「退票」，請依上述方式辦理退票並自行重新購買。<br />
+              4.已兌換贈品之票券，恕不接受退換票。<br />
+              5.超級影癡套組退換票方式請見金馬影展官網影展公告。<br />
+            </p>
+          </div>
+        </li>
+      </ul>
+      <ul class="ticketInfo__container">
+        <li>
+          <h3>取票地點</h3>
+          <div class="ticketInfo__content">
+            <div class="ticketInfo__line"></div>
+            <p>
+              07.09 - 07.10：12:30 - 18:30<br />
+              07.11 - 07.21：週一至週五12:30 - 14:30及18:00 - 20:00<br />
+              台北金馬影展辦公室 02-2370-0456<br />
+              台北市中華路一段39號17樓（台糖騰雲大樓）<br />
+              <br />
+              07.22 -
+              08.11：該場地當日首場電影開演前30分鐘，至末場電影開演後20分鐘。<br />
+              台北獅子林新光影城影展售票處 0905-476-119<br />
+              台北市西寧南路36號4樓<br />
+            </p>
+          </div>
+        </li>
+      </ul>
+      <ul class="ticketInfo__container">
+        <li>
+          <h3>注意事項</h3>
+          <div class="ticketInfo__content">
+            <div class="ticketInfo__line"></div>
+            <p>
+              1.每場次座位有限，售完為止。現場無保留票券，請提早購買。<br />
+              2.票券為唯一入場憑證，請妥善保存。如發生遺失、損毀或無法辨識等情形請自行負責，恕無法重新開票。<br />
+              3.身高超過100（含）公分以上兒童須購買敬老愛心票入場。<br />
+              4.影廳內無障礙設施席位有限，如有需求請事先來電預約（02-2370-0456）。<br />
+              5.為維護觀影品質，<span class="span_red"
+                >影片開演20分鐘後，不再開放入場且無法退換票</span
+              >，敬請準時入場。<br />
+              6.攜帶外食者，請遵守各戲院之外食規定。<br />
+              7.每場次放映完畢後皆會清場，離場時請注意個人隨身物品。<br />
+              8.為了影廳內的安全與維持逃生動線，請勿逗留、站立或坐在廳內走道與其他非座位處。<br />
+              9.影片之權利屬於版權所有者，任何攝影、錄影、錄音行為皆屬違法，可能招致法律訴訟，本會保留要求違法觀眾刪除檔案之權利。<br />
+              10.影展手冊場次表所列之影片片長為刊物付印前之最完整資料，若有片長異動，將於官方網站與戲院現場另行公告。片長不包含映前與映後座談時間。<br />
+              11.影展手冊場次表所列之影片級數為刊物付印前之最完整資料，但可能因文化部審核結果而有所變更，級數異動將於官方網站與戲院現場另行公告。於公告前購票之觀眾若因級數異動而無法觀影，票款將可全額退回。<br />
+              12.影展工作人員之各種舉措乃為維持影展之順暢運作，及盡可能維護大眾之最佳觀影品質，本會不接受任何針對工作人員之惡意行為，並將視情況採取相應之措施。<br />
+              13.上述事項若有未盡事宜，主辦單位保留節目及活動更動之權利。<br />
+            </p>
+          </div>
+        </li>
+      </ul>
+    </main>
+    <script>
+      $(document).ready(function () {
+        $.ajax({
+          dataType: 'html',
+          url: './assets/html/footer.html',
+          jsonp: '$callback',
+          success: showFooterData,
+        });
+      });
+
+      function showFooterData(data) {
+        // Use the template
+        $('#footer').append(data);
+      }
+    </script>
+    <footer class="footer" id="footer"></footer>
+    <script src="./assets/js/navbar.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+body{
+	background-color: $bgc_main;
+	font-family: 'Noto Sans TC', sans-serif;
+	font-family: 'Alata', sans-serif;
+}
+
+.background__line{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+
+	mix-blend-mode: soft-light;
+	opacity: 0.58;
+	z-index: -10;
+	img{
+		width: 100vw;
+		height: 100vh;
+		background-size: s;
+	}
+}
+
+.background__tail{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+
+	justify-content: flex-end;
+	align-items: flex-end;
+	overflow: hidden;
+	z-index: -5;
+	img{
+		position: relative;
+		width: 20vw;
+		bottom: -20vh;
+		animation: float infinite 5s;
+		animation-timing-function: ease;
+		filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.2));
+	}
+}
+
+@keyframes float{
+	0% {transform: translateY(-1vh);}
+	50% {transform: translateY(1vh);}
+	100% {transform: translateY(-1vh);}
+}

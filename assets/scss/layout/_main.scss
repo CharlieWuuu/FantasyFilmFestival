@@ -1,0 +1,380 @@
+// first view下面的波浪設計
+.curve{
+	position: relative;
+	margin-top: -5vh;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+.main {
+	// 不知為何與上面的svg會有空隙，增加一個負的margin
+	margin-top: -2px;
+	padding-bottom: 20vh;
+	font-weight: 700;
+	background-color: #1E646A;
+}
+
+.main > article{
+	@extend %flex-center;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+	height: 90vh;
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto 10vh auto;
+}
+
+// 設定各節標題
+article{
+	.title__container{
+		@extend %flex-center;
+		align-items: flex-end;
+		color:$color_secondary_golden;
+		height: 30vh;
+		z-index: 1;
+
+		.title__all{
+			@extend %flex-center;
+			align-items: stretch;
+
+			h1{
+				font-weight: 400;
+				font-size: 56px;
+				line-height: 77px;
+			}
+
+			.ZHtitle__line{
+				margin: 10px 15px;
+				width: 3px;
+				background-color: $color_main;
+			}
+
+			.ZHtitle__text{
+				width: 30px;
+				font-size: 30px;
+				line-height: 40px;
+				color: $color_secondary_white;
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+// 最新消息
+.latest__news__container{
+	@extend %flex-center;
+	justify-content: space-between;
+	width: 100%;
+	height: 60vh;
+	z-index: 2;
+
+	.news-list__item{
+		display: flex;
+		width: 30%;
+
+		.news-list__background{
+			background-color: #fff;
+			width: 100%;
+			margin-left: 10px;
+
+			a{
+				text-decoration: none;
+
+				img{
+					position: relative;
+					object-fit: cover;
+					right: 10px;
+					width: 100%;
+					height: 180px;
+				}
+
+				.news-thumbnail__detail{
+					display: flex;
+					flex-direction: column;
+					background-color: white;
+
+					.news-thumbnail__title{
+						padding: 12px 8px;
+						font-size: 18px;
+						font-weight: 900;
+						line-height: 28px;
+						color: $color_secondary_black;
+					}
+
+					.news-thumbnail__time{
+						padding: 12px 8px;
+						font-size: 16px;
+						font-weight: 300;
+						color: gray;
+					}
+				}
+			}
+		}
+	}
+}
+
+.latest__more{
+	@extend %flex-center;
+	align-items: flex-start;
+	height: 10vh;
+	width: 100%;
+
+	a{
+		font-size: 12px;
+		font-weight: 500;
+		text-decoration: none;
+		color: $color_secondary_white;
+
+		border: 1px solid white;
+		border-radius: 50px;
+		padding: 10px 15px;
+	}
+}
+
+
+// 影展公告
+.whatsOn__container{
+	position: relative;
+	top: -10vh;
+	height: 65vh;
+	width: 60%;
+	margin-left: auto;
+
+	.whatsOn__date{
+		margin-bottom: 10px;
+		p{
+			color: $color_secondary_white;
+			font-size: 40px;
+			font-weight: 400;
+			color: rgba(0,0,0,0);
+			-webkit-text-stroke: 1px white;
+		}
+	}
+
+	.whatsOn__text{
+		@extend %flex-center;
+		justify-content: space-between;
+		border-bottom: 2px solid $color_main;
+		padding: 15px 0;
+		p{
+			font-weight: 900;
+			font-size: 18px;
+			color: white;
+		}
+		a{
+			font-size: 18px;
+			color: white;
+		}
+	}
+
+	.whatsOn__more{
+		@extend %flex-center;
+		justify-content: flex-end;
+		height: 10vh;
+		width: 100%;
+		a{
+			font-size: 12px;
+			font-weight: 500;
+			text-decoration: none;
+			color: $color_secondary_white;
+
+			border: 1px solid white;
+			border-radius: 50px;
+			padding: 10px 15px;
+		}
+	}
+}
+
+.whatsOn__img{
+	position: relative;
+	height: 0vh;
+	width: 100%;
+	img{
+		position: absolute;
+		object-fit: cover;
+		bottom: 0px;
+		width: 35%;
+		height: 35vh;
+		border-radius: 0 50px 15px 0;
+	}
+}
+
+.whatsOn__cone{
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-end;
+	height: 25vh;
+	width: 25%;
+	margin-left: auto;
+	img{
+		position: absolute;
+		bottom: -75px;
+		width: 150px;
+	}
+}
+
+// 關於影展
+.aboutFilmFes__container{
+	position: relative;
+	top: -10vh;
+	height: 70vh;
+	width: 55%;
+	margin-left: auto;
+
+	.aboutFilmFes__bg{
+		position: absolute;
+		height: 500px;
+		width: 500px;
+		border-radius: 50%;
+		border: 1px solid white;
+	}
+
+	.aboutFilmFes__logo{
+		margin-bottom: 10px;
+		img{
+			position: absolute;
+			left: 55%;
+			width: 150px;
+		}
+	}
+
+	.aboutFilmFes__text{
+		@extend %flex-center;
+		justify-content: space-between;
+		position: absolute;
+		top: 20%;
+		margin-left: 10%;
+		line-height: 48px;
+		p{
+			font-weight: 300;
+			font-size: 22px;
+			color: white;
+		}
+		a{
+			font-size: 18px;
+			color: white;
+		}
+	}
+
+	.aboutFilmFes__more{
+		a{
+			font-size: 12px;
+			font-weight: 500;
+			text-decoration: none;
+			color: $color_secondary_white;
+
+			border: 1px solid white;
+			border-radius: 50px;
+			padding: 10px 15px;
+		}
+	}
+}
+
+.aboutFilmFes__img{
+	position: relative;
+	height: 0vh;
+	width: 100%;
+	img{
+		position: absolute;
+		object-fit: cover;
+	}
+	#img__horse{
+		width: 200px;
+		left: 12%;
+		bottom: 30vh;
+		z-index: 1;
+	}
+	#img__text{
+		width: 250px;
+		left: 25%;
+		bottom: 10vh;
+	}
+}
+
+// 影展專刊
+.manual__img{
+	position: relative;
+	height: 0vh;
+	width: 100%;
+	img{
+		position: absolute;
+		right: 0;
+		top: -50px;
+	}
+}
+
+.manual__container{
+	position: relative;
+	height: 70vh;
+	width: 80%;
+	margin: auto;
+	@extend %flex-center;
+	& > img{
+		width: 100%;
+	}
+}
+// 取得專刊
+.getIt{
+	.title__container{
+		height: 10vh;
+		position: relative;
+	}
+}
+
+.getIt__container{
+	position: relative;
+	height: 150vh;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	color: $color_secondary_white;
+	.getIt__container__vertical{
+		width: 30%;
+		.getIt__container__card{
+			background-color: $color_main;
+			padding: 20px;
+			border-radius: 10px;
+			margin: 40px 0;
+			.getIt__container__title{
+				font-size: 18px;
+				margin-bottom: 16px;
+			}
+			.getIt__container__content{
+				display: flex;
+				align-items: stretch;
+				.getIt__container__line{
+					width: 1.5px;
+					background-color: #fff;
+					margin: 5px 10px;
+				}
+				.getIt__container__text__container{
+					display: flex;
+					flex-direction: column;
+					.getIt__container__text{
+						padding: 12px 0;
+						font-size: 14px;
+					}
+				}
+			}
+			.getIt__container__icon{
+				position: relative;
+				width: 100%;
+				height: 0;
+				img{
+					position: absolute;
+					right: 0;
+					bottom: 0rem;
+					width: 40px;
+					margin: 10px;
+				}
+				#iconPlace{
+					height: 40px;
+				}
+			}
+		}
+	}
+}

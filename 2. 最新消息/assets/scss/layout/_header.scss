@@ -1,0 +1,49 @@
+header{
+	// margin-top: 140px;
+
+	.title__container{
+		margin: 140px 10vw 160px 10vw;
+		font-weight: 700;
+		font-size: 10rem;
+		color:$color_secondary_golden;
+		width: 300px;
+
+		h1{
+			font-weight: 400;
+			font-size: 56px;
+			line-height: 77px;
+		}
+
+		.ZHtitle__contaitner{
+			@extend %flex-center;
+			align-content: flex-start;
+			height: 0px;
+
+			h2{
+				position: relative;
+				top: -56px;
+				left: 48px;
+				width: 30px;
+				font-size: 30px;
+				line-height: 40px;
+				margin:0 16px;
+				color: $color_secondary_white;
+				font-weight: 500;
+			}
+
+			.ZHtitle__line{
+				position: relative;
+				top: -56px;
+				left: -16px;
+				width: 3px;
+				height: 119px;
+				background-color: $color_main;
+			}
+		}
+
+		#ENtitle_2{
+			position: relative;
+			left: 150px;
+		}
+	}
+}

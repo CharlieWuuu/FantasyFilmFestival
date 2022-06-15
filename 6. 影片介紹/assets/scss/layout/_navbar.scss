@@ -1,0 +1,116 @@
+.navbar__container {
+	position: fixed;
+	top: 0px;
+	z-index: 1;
+	width: 100%;
+	height: 65px;
+	@extend %flex-center;
+	background-color: $color_main;
+	filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.25));
+	transition: all 1s;
+
+	.navbar__logo {
+		@extend %flex-center;
+		justify-content: flex-start;
+		margin-left: 50px;
+		#navbar__logoPic{
+			width: 60px;
+		}
+		#navbar__logoText{
+			width: 75px;
+			transform: translateX(-10px);
+		}
+	}
+
+	.navbar__link {
+		@extend %flex-center;
+		justify-content: flex-end;
+		flex: 1;
+		overflow: hidden;
+		li{
+			a{
+				@extend %flex-center;
+				color: $color_secondary_white;
+				font-weight: 500;
+				font-size: 16px;
+				text-decoration: none;
+				letter-spacing: 0.2px;
+				transition-duration: 500ms;
+				p{
+				font-family: 'Noto Sans TC', sans-serif;
+				line-height: 22px;
+				text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+				@extend %flex-center;
+				margin: 15px;
+				}
+				i{
+					margin: 0 2px;
+				}
+				&:hover{
+					color: $color_secondary_red;
+				}
+			}
+			#buyTicket{
+				color: $color_secondary_blue;
+			}
+			.menu__container{
+				position: absolute;
+				margin: 20px 7px;
+				width: 90px;
+				padding: 10px 0;
+				background-color: $color_main;
+				border-radius: 8px;
+				.menu{
+					padding: 5px 0;
+					text-align: center;
+					margin-left: auto;
+					background-color: $color_main;
+					color: white;
+					transition-duration: 500ms;
+					&:hover{
+						background-color: $color_secondary_red;
+					}
+				}
+			}
+		}
+
+		.nav__button{
+			@extend %flex-center;
+			background-color: $color_secondary_white;
+			padding: 6px 15px;
+			margin: 0 30px 0 15px;
+			border-radius: 20px;
+			.nav__button__number__container{
+				position: absolute;
+				width: 0;
+				height: 0;
+				.nav__button__number{
+					@extend %flex-center;
+					color: $color_secondary_white;
+					background-color: $color_secondary_red;
+					border-radius: 50%;
+					width: 20px;
+					height: 20px;
+					font-size: 12px;
+					position: relative;
+					top: -20px;
+				}
+			}
+			.nav__button__line{
+				height: 18px;
+				margin: 0px 12px;
+				width: 1px;
+				background-color: #E1E1E1;
+			}
+			.nav__button__search{
+				@extend %flex-center;
+				.nav__button__searchBar{
+					width: 80px;
+					margin: 0 5px;
+					border-radius: 3px;
+					border: 1px black solid;
+				}
+			}
+		}
+	}
+}

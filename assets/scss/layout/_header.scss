@@ -1,0 +1,134 @@
+header{
+	position: static;
+	top: 0px;
+	width: 100%;
+	height: 100vh;
+	@extend %flex-center;
+	align-items: flex-start;
+
+	.header__bg__container{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: linear-gradient(45deg, #0E6968, #6AB5B9);
+		z-index: -10;
+		.header__float{
+			transition-duration: 1s;
+		}
+		#tailBig{
+			position: absolute;
+			width: 40%;
+			top: -10vh;
+			left: 15%;
+			filter: blur(2px);
+			transition-duration: 0.5s all;
+			animation: move 4s infinite;
+			animation-timing-function: ease-in-out;
+
+		}
+		#tailSmall1{
+			position: absolute;
+			bottom: 0vh;
+			width: 70%;
+			left: -10%;
+			opacity: 50%;
+			filter: blur(5px);
+			animation: move 5s infinite;
+			animation-timing-function: ease-in-out;
+
+		}
+		#tailSmall2{
+			position: absolute;
+			width: 40%;
+			top: -20vh;
+			right: -15%;
+			opacity: 50%;
+			filter: blur(6px);
+			animation: move 10s infinite;
+			animation-timing-function: ease-in-out;
+		}
+	}
+	.header__main__container{
+		position: absolute;
+		width: 90%;
+		margin: auto;
+		height: 100vh;
+
+		.header__main__title__container{
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			width: 24%;
+			height: 75vh;
+			top: 22vh;
+			left: 8%;
+
+				#ZHtitle{
+					width: 100%;
+					filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+				}
+				#titleDate{
+					width: 100%;
+				}
+				#ENtitle{
+					margin-top: 2vh;
+					width: 60%;
+				}
+				#arrow{
+					width: 60%;
+				}
+			}
+
+		#horse{
+			position: absolute;
+			width: 60%;
+			top: 5vh;
+			right: 10%;
+			z-index: 4;
+			animation: move 8s infinite;
+			animation-timing-function: ease-in-out;
+		}
+		#rainbow{
+			position: absolute;
+			height: 130%;
+			top: 5vh;
+			right: 0%;
+			z-index: 2;
+			animation: move 6s infinite;
+			animation-timing-function: ease-in-out;
+		}
+		#cornO{
+			position: absolute;
+			width: 5%;
+			top: 68vh;
+			right: 5%;
+			z-index: 3;
+			animation: move 6s infinite;
+			animation-timing-function: ease-in-out;
+		}
+		#cornG{
+			position: absolute;
+			width: 5%;
+			top: 40vh;
+			right: 15%;
+			z-index: 5;
+			animation: move 5s infinite;
+			animation-timing-function: ease-in-out;
+		}
+		#cornP{
+			position: absolute;
+			width: 6%;
+			top: 70vh;
+			right: 23%;
+			z-index: 5;
+			animation: move 4s infinite;
+			animation-timing-function: ease-in-out;
+		}
+	}
+}
+
+@keyframes move{
+	0%  {transform: translateY(0vh)}
+	50%  {transform: translateY(-1vh)}
+	100%  {transform: translateY(0vh)}
+}

@@ -1,0 +1,10 @@
+.main {
+	font-weight: 700;
+	font-size: 10rem;
+	color:$color_secondary_golden;
+
+	article{
+		@extend %flex-center;
+		height: 100vh;
+	}
+}

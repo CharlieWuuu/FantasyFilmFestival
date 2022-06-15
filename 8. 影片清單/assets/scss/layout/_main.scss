@@ -1,0 +1,102 @@
+.main{
+	@extend %flex-center;
+	flex-direction: column;
+	margin: 50px auto 200px auto;
+	width: 90%;
+	max-width: 1200px;
+}
+
+.type__container{
+	@extend %flex-center;
+	width: 100%;
+	margin: 50px 0 20px 0;
+
+	.type__title{
+		@extend %flex-center;
+		width: 350px;
+		height: 260px;
+		border-radius: 30px;
+		overflow: hidden;
+		position: relative;
+		background-color:rgba(71, 71, 71, 0.5);
+		transition:1s background-color;
+
+		& > img{
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+			z-index: -2;
+			transition:1s transform;
+		}
+
+		// active是js控制用
+		&:hover, &.active{
+			background-color:rgba(71, 71, 71, 0.2);
+			& > img{
+				transform: scale(1.1,1.1);
+			}
+		}
+
+		& > .title__container{
+			position: absolute;
+			@extend %flex-center;
+			flex-direction: column;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			color: white;
+			z-index: 10;
+			font-size: 2rem;
+		}
+	}
+	.type__line{
+		border: 0.5px solid rgba(255, 255, 255, 0.4);
+		width: 0px;
+		height: 200px;
+		margin: 0 4%;
+	}
+}
+
+.film {
+	width: 88vw;
+	max-width: 1200px;
+	@extend %flex-center;
+	border-bottom: 1px solid $color_secondary_white;
+
+	p {
+		flex: 1;
+		margin: 10px;
+		color: $color_secondary_white;
+		a{
+			text-decoration: none;
+			color: $color_secondary_white;
+		}
+	}
+
+	#timelineList{
+		text-align:right;
+		padding: 10px;
+
+		.timelineList__container{
+			background-color: $color_main;
+			margin: 5px;
+			padding: 4px 5px;
+			@extend %flex-center;
+			justify-content: space-between;
+
+			span {
+				padding: 0 5px;
+				color: $color_secondary_white;
+			}
+
+			.timelineCinema{
+				flex:1;
+			}
+
+			.timelineFav{
+				color:rgba(0, 0, 0, 0.2);
+			}
+		}
+	}
+}

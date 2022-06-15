@@ -1,0 +1,44 @@
+header{
+
+	.title__container{
+		margin: 140px 10vw 160px 10vw;
+		color:$color_secondary_golden;
+
+		h1{
+			font-weight: 400;
+			font-size: 56px;
+			line-height: 77px;
+		}
+
+		.ZHtitle__contaitner{
+			@extend %flex-center;
+			justify-content: flex-start;
+			height: 0px;
+
+			h2{
+
+				position: relative;
+				top: 100px;
+				width: 30px;
+				margin:0 16px;
+				font-size: 30px;
+				font-weight: 500;
+				line-height: 40px;
+				color: $color_secondary_white;
+			}
+
+			.ZHtitle__line{
+				position: relative;
+				top: 100px;
+				width: 3px;
+				height: 190px;
+				background-color: $color_main;
+			}
+		}
+
+		#ENtitle_2{
+			position: relative;
+			left: 150px;
+		}
+	}
+}

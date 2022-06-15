@@ -1,0 +1,22 @@
+body{
+	background-color: $bgc_main;
+	font-family: 'Noto Sans TC', sans-serif;
+	font-family: 'Alata', sans-serif;
+}
+
+.background__line{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+
+	mix-blend-mode: soft-light;
+	opacity: 0.58;
+	z-index: -10;
+	img{
+		width: 100vw;
+		height: 100vh;
+		background-size: s;
+	}
+}

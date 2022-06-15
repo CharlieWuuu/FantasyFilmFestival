@@ -1,0 +1,88 @@
+<article class="navbar__container">
+  <a
+    href="https://charliewuuu.github.io/Cinema_1_home/"
+    class="navbar__logo"
+    title="回到首頁"
+  >
+    <img
+      src="./assets/image/logo-04-04 3.png"
+      alt="logo"
+      id="navbar__logoPic"
+    />
+    <img
+      src="./assets/image/金馬奇幻影展混色 1.png"
+      alt="logo"
+      id="navbar__logoText"
+    />
+  </a>
+  <ul class="navbar__link">
+    <li onclick="dropDown(this)">
+      <a
+        ><p>訊息公告 <i class="fas fa-angle-down"></i></p>
+      </a>
+      <div class="menu__container" style="display: none">
+        <a class="menu" href="https://charliewuuu.github.io/Cinema_2_news/">
+          最新消息
+        </a>
+        <a class="menu" href="https://charliewuuu.github.io/Cinema_3_whatsOn/">
+          影展公告
+        </a>
+      </div>
+    </li>
+    <li>
+      <a href="https://charliewuuu.github.io/Cinema_4_aboutFestival/"
+        ><p>關於影展</p>
+      </a>
+    </li>
+    <li onclick="dropDown(this)">
+      <a
+        ><p>節目介紹 <i class="fas fa-angle-down"></i></p>
+      </a>
+      <div class="menu__container" style="display: none">
+        <a class="menu" href="https://charliewuuu.github.io/Cinema_8_FilmList/">
+          影片清單
+        </a>
+        <a class="menu" href="https://charliewuuu.github.io/Cinema_9_timeline/">
+          場次表
+        </a>
+      </div>
+    </li>
+    <li>
+      <a href="https://charliewuuu.github.io/Cinema_5_aboutTickets/"
+        ><p>售票資訊</p>
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://tghff.tixcraft.com/activity"
+        target="_blank"
+        title="金馬購票專區 (另開視窗)"
+        id="buyTicket"
+        ><p>立即購票<i class="fa-solid fa-angles-down"></i></p>
+      </a>
+    </li>
+    <li>
+      <div class="nav__button">
+        <a
+          href="https://charliewuuu.github.io/Cinema_7_myFavoriteFilm/"
+          title="我的片單"
+        >
+          <img src="./assets/image/ticket 黑 2.svg" alt="ticket" width="20" />
+          <div class="nav__button__number__container">
+            <span class="nav__button__number" id="film_amount"></span>
+          </div>
+        </a>
+        <div class="nav__button__line"></div>
+        <div class="nav__button__search">
+          <input
+            class="nav__button__searchBar"
+            type="text"
+            style="display: none"
+            placeholder="功能開發中"
+          />
+          <i class="fas fa-search"></i>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>

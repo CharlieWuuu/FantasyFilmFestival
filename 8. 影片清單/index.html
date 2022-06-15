@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>奇幻影展 影片清單</title>
+    <link
+    rel="icon"
+    type="image/x-icon"
+    href="./assets/image/logo-04-04 3.png"
+  />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alata&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet"
+  />
+  <script
+    src="https://kit.fontawesome.com/c50ac87e11.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="background__line">
+      <img src="./assets/image/售票資訊背景.svg" alt="" />
+    </div>
+    <script>
+      $.ajax({
+        dataType: 'html',
+        url: './assets/html/nav.html',
+        jsonp: '$callback',
+        success: showHeaderData,
+      });
+
+      function showHeaderData(data) {
+        // Use the template
+        $('#navbar').append(data);
+      }
+    </script>
+    <nav id="navbar"></nav>
+    <header class="header">
+      <div class="title__container">
+        <h1>Movie Lists</h1>
+        <div class="ZHtitle__contaitner">
+          <div class="ZHtitle__line"></div>
+          <h2>影片清單</h2>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <article class="type__container" id="type__container1">
+        <section class="type__title" href="T01">
+          <img src="./assets/image/T01.jpeg" alt="" class="filmImg">
+          <div class="title__container">
+            <p>開閉幕片</p>
+            <p><i class="fas fa-angle-down"></i></p>
+          </div>
+        </section>
+        <div class="type__line"></div>
+        <section class="type__title" href="T03">
+          <img src="./assets/image/T03.jpeg" alt="" class="filmImg">
+          <div class="title__container">
+            <p>特別放映</p>
+            <p><i class="fas fa-angle-down"></i></p>
+          </div>
+        </section>
+        <div class="type__line"></div>
+        <section class="type__title" href="T04">
+          <img src="./assets/image/T04.jpeg" alt="" class="filmImg">
+          <div class="title__container">
+            <p>SURPRISE FILM</p>
+            <p><i class="fas fa-angle-down"></i></p>
+          </div>
+        </section>
+      </article>
+			<article class="film__type" id="T01">
+			</article>
+			<article class="film__type" id="T03">
+			</article>
+			<article class="film__type" id="T04">
+			</article>
+			<article class="type__container" id="type__container2">
+        <section class="type__title" href="T05">
+          <img src="./assets/image/T05.jpeg" alt="" class="filmImg">
+          <div class="title__container">
+            <p>當代奇幻</p>
+            <p><i class="fas fa-angle-down"></i></p>
+          </div>
+        </section>
+        <div class="type__line"></div>
+        <section class="type__title" href="T06">
+          <img src="./assets/image/T06.jpeg" alt="" class="filmImg">
+          <div class="title__container">
+            <p>非一般愛情</p>
+            <p><i class="fas fa-angle-down"></i></p>
+          </div>
+        </section>
+        <div class="type__line"></div>
+        <section class="type__title" href="T07">
+          <img src="./assets/image/T07.jpeg" alt="" class="filmImg">
+          <div class="title__container">
+            <p>喜劇萬花筒</p>
+            <p><i class="fas fa-angle-down"></i></p>
+          </div>
+        </section>
+      </article>
+			<article class="film__type" id="T05">
+			</article>
+			<article class="film__type" id="T06">
+			</article>
+			<article class="film__type" id="T07">
+			</article>
+			<article class="type__container" id="type__container3">
+        <section class="type__title" href="T08">
+          <img src="./assets/image/T08.jpeg" alt="" class="filmImg">
+          <div class="title__container">
+            <p>罪悚快</p>
+            <p><i class="fas fa-angle-down"></i></p>
+          </div>
+        </section>
+        <div class="type__line"></div>
+        <section class="type__title" href="T09">
+          <img src="./assets/image/T09.jpeg" alt="" class="filmImg">
+          <div class="title__container">
+            <p>東瀛狂想</p>
+            <p><i class="fas fa-angle-down"></i></p>
+          </div>
+        </section>
+        <div class="type__line"></div>
+        <section class="type__title" href="T11">
+          <img src="./assets/image/T11.jpeg" alt="" class="filmImg">
+          <div class="title__container">
+            <p>影迷許願池</p>
+            <p><i class="fas fa-angle-down"></i></p>
+          </div>
+        </section>
+      </article>
+			<article class="film__type" id="T08">
+			</article>
+			<article class="film__type" id="T09">
+			</article>
+			<article class="film__type" id="T11">
+			</article>
+			<article class="type__container" id="type__container4">
+        <section class="type__title" href="T12">
+          <img src="./assets/image/T12.jpeg" alt="" class="filmImg">
+          <div class="title__container">
+            <p>焦點導演：賈克大地</p>
+            <p><i class="fas fa-angle-down"></i></p>
+          </div>
+        </section>
+        <div class="type__line"></div>
+        <section class="type__title" href="T13">
+          <img src="./assets/image/T13.jpeg" alt="" class="filmImg">
+          <div class="title__container">
+            <p>金馬大舞廳</p>
+            <p><i class="fas fa-angle-down"></i></p>
+          </div>
+        </section>
+        <div class="type__line"></div>
+        <section class="type__title" href="T14">
+          <img src="./assets/image/T14.jpeg" alt="" class="filmImg">
+          <div class="title__container">
+            <p>神祕影片</p>
+            <p><i class="fas fa-angle-down"></i></p>
+          </div>
+        </section>
+      </article>
+			<article class="film__type" id="T12">
+			</article>
+			<article class="film__type" id="T13">
+			</article>
+			<article class="film__type" id="T14">
+			</article>
+    </main>
+    <script>
+      $(document).ready(function () {
+        $.ajax({
+          dataType: 'html',
+          url: './assets/html/footer.html',
+          jsonp: '$callback',
+          success: showFooterData,
+        });
+      });
+
+      function showFooterData(data) {
+        // Use the template
+        $('#footer').append(data);
+      }
+    </script>
+    <footer class="footer" id="footer"></footer>
+  <script src="./assets/js/filmTimeline_v4.js" defer></script>
+	<script src="./assets/js/filmList_v4.js" defer></script>
+  <script src="./assets/js/navbar.js" defer></script>
+  <script src="./assets/js/script.js" defer></script>
+</html>

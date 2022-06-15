@@ -1,0 +1,10 @@
+header{
+	height: 100vh;
+	@extend %flex-center;
+
+	.title__container{
+		font-weight: 700;
+		font-size: 10rem;
+		color:$color_secondary_golden;
+	}
+}

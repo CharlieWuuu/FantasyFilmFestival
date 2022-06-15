@@ -1,0 +1,13 @@
+// 消除所有預設
+@import 'base/reset';
+
+@import 'variable/color';
+@import 'variable/font';
+
+@import 'mixin/mixin';
+
+@import 'layout/body';
+@import 'layout/navbar';
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/footer';

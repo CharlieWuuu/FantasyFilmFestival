@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>奇幻影展 我的片單</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/image/logo-04-04 3.png"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c50ac87e11.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="background__line">
+      <img src="./assets/image/售票資訊背景.svg" alt="" />
+    </div>
+    <script>
+      $.ajax({
+        dataType: 'html',
+        url: './assets/html/nav.html',
+        jsonp: '$callback',
+        success: showHeaderData,
+      });
+
+      function showHeaderData(data) {
+        // Use the template
+        $('#navbar').append(data);
+      }
+    </script>
+    <nav id="navbar"></nav>
+    <header class="header">
+      <div class="title__container">
+        <h1>My Favorite</h1>
+        <div class="ZHtitle__contaitner">
+          <div class="ZHtitle__line"></div>
+          <h2>我的片單</h2>
+        </div>
+      </div>
+    </header>
+    <main class="favorite">
+      <article class="favorite__select">
+        <div class="favorite__select__symbols">
+          <p id="favSymbolsB">不衝堂</p>
+          <p id="favSymbolsR">衝　堂</p>
+        </div>
+        <div class="favorite__select__button">
+          <div id="8-12">＜</div>
+          <div id="favoriteSelectText">4/08～12</div>
+          <div id="13-17">＞</div>
+        </div>
+      </article>
+      <article class="favTable__wrapper">
+        <div class="favTableSlide__container">
+          <section class="favTable__container" id="favTable__container1">
+            <table class="favTable" id="favTable1">
+              <tr>
+                <td class="favTable__header favTable__time"></td>
+                <td class="favTable__header">
+                  <p>星期五</p>
+                  <p>4/08</p>
+                </td>
+                <td class="favTable__header" id="weekendTable">
+                  <p>星期六</p>
+                  <p>4/09</p>
+                </td>
+                <td class="favTable__header" id="weekendTable">
+                  <p>星期日</p>
+                  <p>4/10</p>
+                </td>
+                <td class="favTable__header">
+                  <p>星期一</p>
+                  <p>4/11</p>
+                </td>
+                <td class="favTable__header">
+                  <p>星期二</p>
+                  <p>4/12</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="favTable__time"><p>10:00</p></td>
+                <td></td>
+                <td id="weekendTable"></td>
+                <td id="weekendTable"></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="favTable__time"><p>11:00</p></td>
+                <td></td>
+                <td id="weekendTable"></td>
+                <td id="weekendTable"></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="favTable__time"><p>12:00</p></td>
+                <td></td>
+                <td id="weekendTable"></td>
+                <td id="weekendTable"></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="favTable__time"><p>13:00</p></td>
+                <td></td>
+                <td id="weekendTable"></td>
+                <td id="weekendTable"></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="favTable__time"><p>14:00</p></td>
+                <td></td>
+                <td id="weekendTable"></td>
+                <td id="weekendTable"></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="favTable__time"><p>15:00</p></td>
+                <td></td>
+                <td id="weekendTable"></td>
+                <td id="weekendTable"></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="favTable__time"><p>16:00</p></td>
+                <td></td>
+                <td id="weekendTable"></td>
+                <td id="weekendTable"></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="favTable__time"><p>17:00</p></td>
+                <td></td>
+                <td id="weekendTable"></td>
+                <td id="weekendTable"></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="favTable__time"><p>18:00</p></td>
+                <td></td>
+                <td id="weekendTable"></td>
+                <td id="weekendTable"></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="favTable__time"><p>19:00</p></td>
+                <td></td>
+                <td id="weekendTable"></td>
+                <td id="weekendTable"></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="favTable__time"><p>20:00</p></td>
+                <td></td>
+                <td id="weekendTable"></td>
+                <td id="weekendTable"></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="favTable__time"><p>21:00</p></td>
+                <td></td>
+                <td id="weekendTable"></td>
+                <td id="weekendTable"></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="favTable__time"><p>22:00</p></td>
+                <td></td>
+                <td id="weekendTable"></td>
+                <td id="weekendTable"></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="favTable__time"><p>23:00</p></td>
+                <td></td>
+                <td id="weekendTable"></td>
+                <td id="weekendTable"></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+            <div class="film__container" id="film__container1"></div>
+          </section>
+          <section class="favTable__container" id="favTable__container2">
+            <table class="favTable" id="favTable2">
+              <tr>
+                <td class="favTable__header favTable__time"></td>
+                <td class="favTable__header">
+                  <p>星期三</p>
+                  <p>4/13</p>
+                </td>
+                <td class="favTable__header">
+                  <p>星期四</p>
+                  <p>4/14</p>
+                </td>
+                <td class="favTable__header">
+                  <p>星期五</p>
+                  <p>4/15</p>
+                </td>
+                <td class="favTable__header" id="weekendTable">
+                  <p>星期六</p>
+                  <p>4/16</p>
+                </td>
+                <td class="favTable__header" id="weekendTable">
+                  <p>星期日</p>
+                  <p>4/17</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="favTable__time"><p>10:00</p></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td id="weekendTable"></td>
+                <td id="weekendTable"></td>
+              </tr>
+              <tr>
+                <td class="favTable__time"><p>11:00</p></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td id="weekendTable"></td>
+                <td id="weekendTable"></td>
+              </tr>
+              <tr>
+                <td class="favTable__time"><p>12:00</p></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td id="weekendTable"></td>
+                <td id="weekendTable"></td>
+              </tr>
+              <tr>
+                <td class="favTable__time"><p>13:00</p></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td id="weekendTable"></td>
+                <td id="weekendTable"></td>
+              </tr>
+              <tr>
+                <td class="favTable__time"><p>14:00</p></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td id="weekendTable"></td>
+                <td id="weekendTable"></td>
+              </tr>
+              <tr>
+                <td class="favTable__time"><p>15:00</p></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td id="weekendTable"></td>
+                <td id="weekendTable"></td>
+              </tr>
+              <tr>
+                <td class="favTable__time"><p>16:00</p></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td id="weekendTable"></td>
+                <td id="weekendTable"></td>
+              </tr>
+              <tr>
+                <td class="favTable__time"><p>17:00</p></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td id="weekendTable"></td>
+                <td id="weekendTable"></td>
+              </tr>
+              <tr>
+                <td class="favTable__time"><p>18:00</p></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td id="weekendTable"></td>
+                <td id="weekendTable"></td>
+              </tr>
+              <tr>
+                <td class="favTable__time"><p>19:00</p></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td id="weekendTable"></td>
+                <td id="weekendTable"></td>
+              </tr>
+              <tr>
+                <td class="favTable__time"><p>20:00</p></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td id="weekendTable"></td>
+                <td id="weekendTable"></td>
+              </tr>
+              <tr>
+                <td class="favTable__time"><p>21:00</p></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td id="weekendTable"></td>
+                <td id="weekendTable"></td>
+              </tr>
+              <tr>
+                <td class="favTable__time"><p>22:00</p></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td id="weekendTable"></td>
+                <td id="weekendTable"></td>
+              </tr>
+              <tr>
+                <td class="favTable__time"><p>23:00</p></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td id="weekendTable"></td>
+                <td id="weekendTable"></td>
+              </tr>
+            </table>
+            <div class="film__container" id="film__container2"></div>
+          </section>
+        </div>
+      </article>
+    </main>
+    <script>
+      $(document).ready(function () {
+        $.ajax({
+          dataType: 'html',
+          url: './assets/html/footer.html',
+          jsonp: '$callback',
+          success: showFooterData,
+        });
+      });
+
+      function showFooterData(data) {
+        // Use the template
+        $('#footer').append(data);
+      }
+    </script>
+    <footer class="footer" id="footer"></footer>
+    <script src="./assets/js/filmTimeline_v4.js"></script>
+    <script src="./assets/js/navbar.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
+  </body>
+</html>

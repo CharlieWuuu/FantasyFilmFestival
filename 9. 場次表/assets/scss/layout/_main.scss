@@ -1,0 +1,204 @@
+//資訊卡
+main{
+	margin: 70px 0 200px 0;
+}
+
+.information__container{
+	width: 95vw;
+	margin: auto;
+	overflow: hidden;
+	@extend %flex-center;
+	flex-direction: column;
+}
+
+//下拉選單
+.select__container{
+	position: relative;
+  font-family: Arial;
+	text-align: center;
+
+	select{
+		margin: 0 24px;
+		background-color: rgba(255, 255, 255, 0);
+		padding: 10px;
+		color: $color_secondary_white;
+		border: 1px solid $color_secondary_white;
+		padding: 8px 20px;
+		width: 150px;
+		option{
+			color: $color_secondary_black;
+		}
+	}
+}
+
+//時間表
+.tableDaily__container{
+	margin-top: 30px;
+	display: block;
+}
+
+table{
+	position: relative;
+}
+
+td{
+	vertical-align: middle;
+	text-align: center;
+	background-color: $color_main;
+	p{
+		overflow: hidden;
+		text-overflow: ellipsis;
+		font-size: 10px;
+	}
+}
+
+.tableHeading{
+	position: relative;
+	height: 32px;
+}
+
+#date01{
+	width: 5vw;
+	p{
+		width: 5vw;
+		font-size: 16px;
+		font-weight: 700;
+		left: -10px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
+
+#date02{
+	width: 6vw;
+		p{
+			position: relative;
+			top: -5px;
+			left: 0px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+}
+
+#date03{
+	width: 3vw;
+		p{
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+}
+
+
+.tableCinema{
+	height: 100px;
+}
+
+#cinema{
+	position: relative;
+	width: 8vw;
+	p{
+		width: 8vw;
+		font-size: 16px;
+		font-weight: 700;
+	}
+}
+
+#cinema::before{
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 1px;
+	top: 0;
+	background-color: #fff;
+	left: 0;
+}
+
+#cinema::after{
+	position: absolute;
+	content: '';
+	width: 1px;
+	height: 110%;
+	right: 0;
+	bottom: 0;
+	background-color: #fff;
+	z-index: 2;
+}
+
+#block{
+	position: relative;
+	width: 3vw;
+}
+
+#block::before{
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 1px;
+	left: 0;
+	top: 0;
+	background-color: #fff;
+}
+
+#block:nth-child(odd)::after{
+	position: absolute;
+	content: '';
+	width: 1px;
+	height: 110%;
+	right: 0;
+	bottom: 0;
+	background-color: #fff;
+	z-index: 2;
+}
+
+#block:nth-last-child(1)::after{
+	display: none;
+}
+
+#block:nth-child(even)::after{
+	position: absolute;
+	content: '';
+	width: 1px;
+	height: 105%;
+	right: -1px;
+	bottom: 0;
+	background-color: rgba(255, 255, 255, 0.3);
+	z-index: 2;
+}
+
+
+.film__container{
+	position: relative;
+	width: 0;
+	z-index: 10;
+	.film {
+		position: absolute;
+		background-color: $color_secondary_golden;
+		border-radius: 8px;
+		margin: 0;
+		padding: 0;
+		top: 65px;
+		height: 70px;
+		font-size: 0.5rem;
+	}
+
+	p{
+		margin: 3px 0 0 6px ;
+		padding: 0;
+		font-size: 0.9rem;
+		font-weight: 700;
+		line-height: 1;
+		// 省略部分文字
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	#film__name{
+		margin: 10px 0 0 6px;
+	}
+
+	.film__fav{
+		color: rgba(0, 0, 0, 0.2);
+		cursor: pointer;
+	}
+}
