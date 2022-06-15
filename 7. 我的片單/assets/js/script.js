@@ -222,8 +222,10 @@ $('.film').hover(
 // (7) 刪除所有片單
 function removeAll() {
   $('.film').remove();
+  console.log(localData);
   for (i = 0; i < localData.length; i++) {
     localData.splice(i, 1);
+    console.log(localData);
     localStorage.setItem('片單', JSON.stringify(localData));
     favArrayData.splice(i, 1);
   }
