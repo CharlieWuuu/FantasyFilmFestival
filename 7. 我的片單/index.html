@@ -26,19 +26,6 @@
     <div class="background__line">
       <img src="./assets/image/售票資訊背景.svg" alt="" />
     </div>
-    <script>
-      $.ajax({
-        dataType: 'html',
-        url: './assets/html/nav.html',
-        jsonp: '$callback',
-        success: showHeaderData,
-      });
-
-      function showHeaderData(data) {
-        // Use the template
-        $('#navbar').append(data);
-      }
-    </script>
     <nav id="navbar"></nav>
     <header class="header">
       <div class="title__container">
@@ -346,24 +333,9 @@
         </div>
       </article>
     </main>
-    <script>
-      $(document).ready(function () {
-        $.ajax({
-          dataType: 'html',
-          url: './assets/html/footer.html',
-          jsonp: '$callback',
-          success: showFooterData,
-        });
-      });
-
-      function showFooterData(data) {
-        // Use the template
-        $('#footer').append(data);
-      }
-    </script>
     <footer class="footer" id="footer"></footer>
     <script src="./assets/js/filmTimeline_v4.js"></script>
-    <script src="./assets/js/navbar.js" defer></script>
+    <script src="../common/assets/js/common.js" defer></script>
     <script src="./assets/js/script.js" defer></script>
   </body>
 </html>
