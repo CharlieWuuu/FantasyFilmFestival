@@ -45,7 +45,7 @@ $(document).ready(function () {
   // 載入header
   $.ajax({
     dataType: 'html',
-    url: '../common/assets/html/nav.html',
+    url: '/common/assets/html/nav.html',
     jsonp: '$callback',
     success: showHeaderData,
   });
@@ -53,7 +53,7 @@ $(document).ready(function () {
   // 載入顯示footer
   $.ajax({
     dataType: 'html',
-    url: '../common/assets/html/footer.html',
+    url: '/common/assets/html/footer.html',
     jsonp: '$callback',
     success: showFooterData,
   });
@@ -71,7 +71,5 @@ function showHeaderData(data) {
 
 function showFooterData(data) {
   // Use the template
-  console.log('show footer');
   $('#footer').append(data);
-  console.log('after show footer');
 }

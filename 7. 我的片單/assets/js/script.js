@@ -222,13 +222,9 @@ $('.film').hover(
 // (7) 刪除所有片單
 function removeAll() {
   $('.film').remove();
-  console.log(localData);
-  for (i = 0; i < localData.length; i++) {
-    localData.splice(i, 1);
-    console.log(localData);
-    localStorage.setItem('片單', JSON.stringify(localData));
-    favArrayData.splice(i, 1);
-  }
+  localData.splice(0);
+  localStorage.setItem('片單', JSON.stringify(localData));
+  favArrayData.splice(0);
   if (localData.length == 0) {
     document.getElementById('film_amount').style.opacity = '0';
   } else {
