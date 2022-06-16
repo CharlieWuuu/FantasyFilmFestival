@@ -387,7 +387,7 @@ header .title__container .ZHtitle__contaitner {
 header .title__container .ZHtitle__contaitner h2 {
   position: absolute;
   left: 0;
-  top: 0;
+  top: 38px;
   width: 20%;
   font-size: 30px;
   line-height: 40px;
