@@ -270,6 +270,7 @@ body {
   letter-spacing: 0.2px;
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
+  cursor: pointer;
 }
 
 .navbar__container .navbar__link li a p {
