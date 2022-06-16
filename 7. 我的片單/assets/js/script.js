@@ -28,7 +28,7 @@ const testFilmHTML = `
 <div class="film" id="{{full_id}}"
 style="transform: translate({{xaxis}}vw, {{yaxis}}vh); height: {{height}}vh">
   <div class="film__content__container">
-    <p class="film__name"><a href="https://charliewuuu.github.io/Cinema_6_aboutFilm/">{{name}}</a></p>
+    <p class="film__name"><a href="/FantasyFilmFestival/6. 影片介紹/index.html">{{name}}</a></p>
     <span class="film__time">{{startTime}}-{{endTime}}</span>
     <span class="film__cinema__name">{{cinema}}</span>
     <span class="film__delete" onclick="remove(this.parentNode.parentNode)" title="刪除影片">x</span>

@@ -2,7 +2,7 @@
 // 變數：要渲染的片單HTML
 const filmHTML = `
 <section class="film">
-	<p><a href="https://charliewuuu.github.io/Cinema_6_aboutFilm/">{{name}}</a> | {{country}} | {{long}} | {{rating}}</p>
+	<p><a href="/FantasyFilmFestival/6. 影片介紹/index.html">{{name}}</a> | {{country}} | {{long}} | {{rating}}</p>
   <div id="timelineList">{{timelineList}}</div>
 </section>`;
 

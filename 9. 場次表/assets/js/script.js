@@ -71,7 +71,7 @@ var filmContainer_html = `
   <div class="film" id={{filmData.list.full_id}} title="{{filmData.list.name}} {{filmData.list.startTime}}-{{filmData.list.endTime}}"
   style="transform: translate({{filmData.list.left}}vw, -150px);
   width: {{filmData.list.long}}vw;">
-    <p id="film__name"><a href="https://charliewuuu.github.io/Cinema_6_aboutFilm/">{{filmData.list.name}}</a></p>
+    <p id="film__name"><a href="/FantasyFilmFestival/6. 影片介紹/index.html">{{filmData.list.name}}</a></p>
     <p id="film__time">
       {{filmData.list.startTime}}-{{filmData.list.endTime}}
     </p>
