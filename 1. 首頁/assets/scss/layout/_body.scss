@@ -14,6 +14,7 @@ body{
 		position: absolute;
 		top: 120vh;
 		width: 100%;
+		transform: rotate(-2deg);
 	}
 	#tail__whatsOn{
 		position: absolute;
@@ -26,7 +27,7 @@ body{
 	}
 	#tail__manual{
 		position: absolute;
-		top: 300vh;
+		top: 400vh;
 		right: 0px;
 	}
 	#tail__getIt{
