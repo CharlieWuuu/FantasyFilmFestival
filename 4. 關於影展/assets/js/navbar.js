@@ -1,13 +1,18 @@
-// 當滑鼠往下滑，menu自動闔上（監聽scroll事件）
+// 隱藏navbar
 let lastPos = 300;
 const nav = document.querySelector('.navbar__container');
 
+// 監聽scroll事件
 document.addEventListener('scroll', function () {
   let currentPos = window.scrollY;
   // 當滑鼠往下滑
   if (currentPos > lastPos) {
-    $('.menu__container').removeClass('active').slideUp();
+    nav.style.top = '-100px'; //讓nav bar消失
+    $('.menu__container').slideUp();
+  } else {
+    nav.style.top = '0px'; //讓nav bar出現
   }
+  lastPos = currentPos; //再記住現在位置，跟未來的位置做比較
 });
 
 // 顯示下拉選單

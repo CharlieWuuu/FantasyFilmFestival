@@ -1,30 +1,40 @@
 .footer {
+	position: relative;
 	padding: 40px;
 	background-color: $color_main;
 	color:$color_secondary_golden;
+	z-index: 10;
+
 	.footer__container{
 		@extend %flex-center;
 		flex-direction: column;
 	}
+
 	.footer__upside{
 		width: 100%;
 		@extend %flex-center;
 		margin-bottom: 3rem;
+
 		section{
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-start;
-
 			height: 10vh;
 			margin: 0 2.5rem;
+
 			.footer__title{
 				font-weight: 700;
+				a{
+					text-decoration: none;
+					color:$color_secondary_golden;
+				}
 			}
 
 			span{
 				margin-bottom: 1rem ;
 			}
-			.footer__contant{
+
+			.footer__content{
 				color: $color_secondary_white;
 				a{
 					text-decoration: none;
@@ -33,6 +43,7 @@
 			}
 		}
 	}
+
 	.footer__line{
 		width: 100%;
 		border: solid 0.5px $color_secondary_golden;
@@ -50,9 +61,11 @@
 			justify-content: flex-start;
 			font-family: arial;
 			font-size: 3rem;
+
 			#footer__logoPic{
 				width: 100px;
 			}
+
 			#footer__logoText{
 				transform: translateX(-15px);
 				width: 120px;
@@ -63,8 +76,8 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-
 			width: 50%;
+
 			span{
 				margin-bottom: 1rem ;
 
@@ -76,6 +89,7 @@
 			width: 25%;
 			@extend %flex-center;
 			justify-content: flex-end;
+
 			a{
 				text-decoration: none;
 				margin: 0 0.5rem;

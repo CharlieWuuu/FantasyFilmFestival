@@ -73,4 +73,14 @@ color: $color_secondary_white;
 	position: absolute;
 	right: 0;
 }
+.animate__fadeInUp{
+	animation: fadeInUp;
+	animation-duration: 2s;
+}
+.animate__delay-2s{
+	animation-delay: 2s;
+}
+.animate__delay-4s{
+	animation-delay: 4s;
+}
 }

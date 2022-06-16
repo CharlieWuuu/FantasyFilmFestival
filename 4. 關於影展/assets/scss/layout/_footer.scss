@@ -1,7 +1,9 @@
 .footer {
+	position: relative;
 	padding: 40px;
 	background-color: $color_main;
 	color:$color_secondary_golden;
+	z-index: 10;
 
 	.footer__container{
 		@extend %flex-center;

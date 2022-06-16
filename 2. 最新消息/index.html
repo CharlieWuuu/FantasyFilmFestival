@@ -17,6 +17,10 @@
       href="https://fonts.googleapis.com/css2?family=Alata&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"
+  />
     <script
       src="https://kit.fontawesome.com/c50ac87e11.js"
       crossorigin="anonymous"
@@ -43,7 +47,7 @@
       <div class="news-list">
         <div class="news-list__container">
           <div class="news-list__content-left">
-            <div class="news-list__item">
+            <div class="news-list__item bounceInUp">
               <a href="#">
                 <img src="./assets/image/news01.png" alt="">
                 <span class="news-thumbnail__detail">
@@ -52,7 +56,7 @@
                 </span>
               </a>
             </div>
-            <div class="news-list__item">
+            <div class="news-list__item bounceInLeft ">
               <a href="#">
                 <img src="./assets/image/news03.png" alt="">
                 <span class="news-thumbnail__detail">
@@ -61,7 +65,7 @@
                 </span>
               </a>
             </div>
-            <div class="news-list__item">
+            <div class="news-list__item bounceInLeft animation__delay-2500ms">
               <a href="#">
                 <img src="./assets/image/news05.png" alt="">
                 <span class="news-thumbnail__detail">
@@ -72,7 +76,7 @@
             </div>
           </div>
           <div class="news-list__content-right">
-            <div class="news-list__item">
+            <div class="news-list__item bounceInUp">
               <a href="#">
                 <img src="./assets/image/news02.png" alt="">
                 <span class="news-thumbnail__detail">
@@ -81,7 +85,7 @@
                 </span>
               </a>
             </div>
-            <div class="news-list__item">
+            <div class="news-list__item bounceInRight ">
               <a href="#">
                 <img src="./assets/image/news04.png" alt="">
                 <span class="news-thumbnail__detail">
@@ -90,7 +94,7 @@
                 </span>
               </a>
             </div>
-            <div class="news-list__item">
+            <div class="news-list__item bounceInRight animation__delay-2500ms">
               <a href="#">
                 <img src="./assets/image/news06.png" alt="">
                 <span class="news-thumbnail__detail">
@@ -107,6 +111,13 @@
 
     <footer class="footer" id="footer"></footer>
     <script src="../common/assets/js/common.js" defer></script>
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js" defer></script>
+    <script src="./assets/js/wow.min.js" defer></script>
+    <script>
+      	if(screen.width > 768){
+		new WOW().init();
+	}
+    </script>
+
   </body>
 </html>
