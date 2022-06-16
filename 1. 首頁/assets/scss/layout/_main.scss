@@ -245,6 +245,7 @@ article{
 	.aboutFilmFes__text{
 		@extend %flex-center;
 		justify-content: space-between;
+		flex-direction: column;
 		position: absolute;
 		top: 150px;
 		margin-left: 10%;
@@ -254,13 +255,6 @@ article{
 			font-size: 22px;
 			color: white;
 		}
-		a{
-			font-size: 18px;
-			color: white;
-		}
-	}
-
-	.aboutFilmFes__more{
 		a{
 			font-size: 12px;
 			font-weight: 500;

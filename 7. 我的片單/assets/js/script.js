@@ -56,7 +56,7 @@ function renderFilm() {
       .replace('{{cinema}}', favArrayI.cinema);
     if (favArrayI.d_num < 5) {
       const varDay8 = favArrayI.d_num;
-      const xaxis = 6.5 + varDay8 * 16 + varCinema * 3;
+      const xaxis = 6.5 + varDay8 * 16 + varCinema * 2;
       const current_testFilmHTML1 = current_testFilmHTML.replace(
         '{{xaxis}}',
         xaxis,
@@ -180,9 +180,9 @@ function conflict() {
         }
         const conflictFilm = document.querySelector('#' + favArrayX.full_id);
         if (check == 1) {
-          conflictFilm.style.boxShadow = '0 0 3px 1px rgb(234, 81, 54)';
+          $(conflictFilm).addClass('active');
         } else if (check == 0) {
-          conflictFilm.style.boxShadow = '0 0 5px 0 rgb(0, 0, 0)';
+          $(conflictFilm).removeClass('active');
         }
       }
     }

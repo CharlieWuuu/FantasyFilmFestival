@@ -18,7 +18,6 @@ main{
 		& #favSymbolsB, & #favSymbolsR{
 			color: $color_secondary_black;
 			margin: 6px;
-			background-color: $color_secondary_golden;
 			border-radius: 8px;
 			width: 110px;
 			height: 30px;
@@ -26,33 +25,34 @@ main{
 			& p{
 				font-weight: 700;
 				font-size: 14px;
-				color: black;
 			}
 		}
 		#favSymbolsB{
-			border: 2px solid rgb(0, 0, 0);
+			background-color: $color_secondary_golden;
+			color: black;
 		}
 		#favSymbolsR{
-			border: 2px solid rgb(234, 81, 54);
+			background-color: #FFE4E6;
+			color: #BE123C;
 		}
 	}
 	&__delete{
-		background-color: #FFE4E6;
+		background-color: $color_main;
 		width: 110px;
 		height: 30px;
 		border-radius: 8px;
 		margin: 20px;
 		cursor: pointer;
 		border-radius: 8px;
-		transition-duration: 0.5s;
+		transition-duration: 0.3s;
 		@extend %flex-center;
 		p{
 			font-weight: 700;
 			font-size: 14px;
-			color: #BE123C;
+			color: white;
 		}
 		&:hover{
-			background-color: darken(#FFE4E6 , 10%);
+			background-color: darken($color_main , 10%);
 		}
 	}
 
@@ -61,15 +61,19 @@ main{
 		div{
 			background-color: $color_main;
 			margin: 20px 0;
-			padding: 8px;
-			font-size: 1.1rem;
+			height: 30px;
 			color: $color_secondary_white;
 			cursor: pointer;
+			@extend %flex-center;
 		}
 		#before{
 			text-align: center;
 			border-radius: 10px 0 0 10px;
-			width: 20px;
+			width: 28px;
+			transition-duration: 0.3s;
+			&:hover{
+				background-color: darken($color_main , 10%);
+			}
 		}
 		#favoriteSelectText{
 			width: 90px;
@@ -80,7 +84,11 @@ main{
 		#after{
 			text-align: center;
 			border-radius: 0 10px 10px 0;
-			width: 20px;
+			width: 28px;
+			transition-duration: 0.3s;
+			&:hover{
+				background-color: darken($color_main , 10%);
+			}
 		}
 	}
 }
@@ -181,13 +189,23 @@ td{
 
 	background-color: $color_secondary_golden;
 	border-radius: 5px;
+	box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.7);
 
-	width: 6vw;
+	width: 9vw;
 	height: 8vh;
 	overflow: hidden;
 	&:hover{
 		z-index: 10;
 		overflow:visible;
+	}
+	&.active{
+		background-color: #FFE4E6;
+		& a, & span{
+			color: #BE123C;
+		}
+		& a::before{
+			background-color: darken(#FFE4E6, 20%);
+		}
 	}
 }
 
@@ -200,7 +218,6 @@ td{
 	@extend %flex-center;
 	justify-content: flex-start;
 
-
 	&>p{
 		position: relative;
 		margin: 2px 0 10px 0;
@@ -209,16 +226,13 @@ td{
 		a{
 			text-align:center;
 			text-decoration: none;
-			font-size: 1.2rem;
 			font-weight: 900;
 			color: black;
-			transition-duration: .7s;
-			transition-timing-function: ease-in-out;
 		&::before{
 			position: absolute;
 			content: '';
 			left: 0px;
-			bottom: -7px;
+			bottom: -4px;
 			width: 0%;
 			height: 2px;
 			background-color: darken(#D3D6B1, 20%);
@@ -232,7 +246,7 @@ td{
 	}
 	}
 	&>span{
-		font-size: 0.8rem;
+		font-size: 0.5rem;
 		margin: 2px 0;
 	}
 	.film__delete{

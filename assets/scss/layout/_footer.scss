@@ -27,6 +27,10 @@
 				a{
 					text-decoration: none;
 					color:$color_secondary_golden;
+					transition-duration: 0.3s;
+				}
+				a:hover{
+					color: $color_secondary_red;
 				}
 			}
 
@@ -39,6 +43,11 @@
 				a{
 					text-decoration: none;
 					color: $color_secondary_white;
+					transition-duration: 0.3s;
+					&:hover{
+						color: $color_secondary_red;
+						font-weight: 700;
+				}
 				}
 			}
 		}
@@ -80,7 +89,6 @@
 
 			span{
 				margin-bottom: 1rem ;
-
 				font-family: arial;
 			}
 		}
