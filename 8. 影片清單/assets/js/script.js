@@ -88,9 +88,9 @@ function showClicked() {
   // 檢查：瀏覽器暫存片單(obj)所有資料
   for (i = 0; i < localData.length; i++) {
     chosenId = localData[i].full_id;
-    // 判斷：是否有預選id，有的話欲渲染片單的HTML變灰色
+    // 判斷：是否有預選id，有的話欲渲染片單的HTML變色
     const clickedHTML = document.querySelector('#' + chosenId);
-    if (clickedHTML != null) clickedHTML.style.color = '#EA5136';
+    if (clickedHTML != null) $(clickedHTML).addClass('active');
   }
 }
 showClicked();
@@ -118,7 +118,7 @@ function chooseFavorite(clickedId) {
     localStorage.setItem('片單', JSON.stringify(localData));
     // 渲染：已選片單變回灰色
     const clickedHTML = document.querySelector('#' + clickedId);
-    clickedHTML.style.color = 'rgba(0, 0, 0, 0.2)';
+    $(clickedHTML).removeClass('active');
   } else if (check == '還沒有這部片') {
     localData.push({ full_id: clickedId });
     localStorage.setItem('片單', JSON.stringify(localData));

@@ -71,11 +71,13 @@ var filmContainer_html = `
   <div class="film" id={{filmData.list.full_id}} title="{{filmData.list.name}} {{filmData.list.startTime}}-{{filmData.list.endTime}}"
   style="transform: translate({{filmData.list.left}}vw, -150px);
   width: {{filmData.list.long}}vw;">
-    <p id="film__name"><a href="/FantasyFilmFestival/6. 影片介紹/index.html">{{filmData.list.name}}</a></p>
+    <p id="film__name">
+      <a href="/FantasyFilmFestival/6. 影片介紹/index.html">{{filmData.list.name}}</a>
+      <span class="film__fav" id="{{filmData.list.full_id}}" onclick="chooseFavorite(this.id)">❤</span>
+    </p>
     <p id="film__time">
       {{filmData.list.startTime}}-{{filmData.list.endTime}}
     </p>
-    <p class="film__fav" id="{{filmData.list.full_id}}" onclick="chooseFavorite(this.id)">❤</p>
   </div>
 </div>`;
 
@@ -308,8 +310,10 @@ function showClicked() {
   for (i = 0; i < localData.length; i++) {
     // 判斷：是否有預選id，有的話欲渲染片單的HTML變色
     if ((chosenId = localData[i].full_id)) {
-      const clickedHTML = document.querySelector('.film > #' + chosenId);
-      clickedHTML.style.color = '#EA5136';
+      const clickedHTML = document.querySelector(
+        '.film > #film__name > #' + chosenId,
+      );
+      $(clickedHTML).addClass('active');
     }
   }
 }
@@ -320,7 +324,9 @@ function chooseFavorite(clickedId) {
   // 變數：設定(1)檢查片單存在與否的i、(2)片單存在狀態、(3)欲渲染片單的HTML
   let current_i = -1;
   let check = '還沒有這部片';
-  const clickedHTML = document.querySelector('.film > #' + clickedId);
+  const clickedHTML = document.querySelector(
+    '.film > #film__name > #' + clickedId,
+  );
 
   // 檢查：瀏覽器暫存片單(obj)所有資料
   for (i = 0; i < localData.length; i++) {
@@ -337,7 +343,7 @@ function chooseFavorite(clickedId) {
     localData.splice(current_i, 1);
     localStorage.setItem('片單', JSON.stringify(localData));
     // 渲染：已選片單變回灰色
-    clickedHTML.style.color = 'rgba(0, 0, 0, 0.2)';
+    $(clickedHTML).removeClass('active');
   } else if (check == '還沒有這部片') {
     localData.push({ full_id: clickedId });
     localStorage.setItem('片單', JSON.stringify(localData));
@@ -365,6 +371,7 @@ $('.film').hover(
     const currentHeight = $(this).css('width');
     $(this).css('width', thisHeight); // 高度偷偷變回來
     $(this).css('box-shadow', '0 0 5px 0 rgb(0, 0, 0)');
+    $(this).parent().css('z-index', '100');
 
     if (parseFloat(thisHeight) > parseFloat(currentHeight)) {
       sessionData.push({ this_height: thisHeight });
@@ -377,6 +384,7 @@ $('.film').hover(
   },
   function () {
     $(this).css('box-shadow', 'none');
+    $(this).parent().css('z-index', '3');
     $(this).css('width', sessionData[0].this_height);
     sessionData.splice(0, 1);
     sessionStorage.setItem('filmWidth', JSON.stringify(sessionData));

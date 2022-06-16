@@ -371,10 +371,17 @@ header .title__container .ZHtitle__contaitner .ZHtitle__line {
   width: 100%;
   height: 100%;
   z-index: -2;
-  -webkit-transition: 1s -webkit-transform;
-  transition: 1s -webkit-transform;
-  transition: 1s transform;
-  transition: 1s transform, 1s -webkit-transform;
+  -webkit-transition: 0.5s -webkit-transform;
+  transition: 0.5s -webkit-transform;
+  transition: 0.5s transform;
+  transition: 0.5s transform, 0.5s -webkit-transform;
+}
+
+.type__container .type__title i {
+  -webkit-transition: 0.5s -webkit-transform;
+  transition: 0.5s -webkit-transform;
+  transition: 0.5s transform;
+  transition: 0.5s transform, 0.5s -webkit-transform;
 }
 
 .type__container .type__title:hover, .type__container .type__title.active {
@@ -384,6 +391,11 @@ header .title__container .ZHtitle__contaitner .ZHtitle__line {
 .type__container .type__title:hover > img, .type__container .type__title.active > img {
   -webkit-transform: scale(1.1, 1.1);
           transform: scale(1.1, 1.1);
+}
+
+.type__container .type__title:hover i, .type__container .type__title.active i {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
 }
 
 .type__container .type__title > .title__container {
@@ -419,17 +431,31 @@ header .title__container .ZHtitle__contaitner .ZHtitle__line {
       -ms-flex: 1;
           flex: 1;
   margin: 10px;
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 300;
 }
 
 .film p a {
   text-decoration: none;
   color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0 10px;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.film p a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
 }
 
 .film #timelineList {
   text-align: right;
   padding: 10px;
+  width: 25%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .film #timelineList .timelineList__container {
@@ -444,6 +470,8 @@ header .title__container .ZHtitle__contaitner .ZHtitle__line {
 .film #timelineList .timelineList__container span {
   padding: 0 5px;
   color: #FFFFFF;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .film #timelineList .timelineList__container .timelineCinema {
@@ -453,7 +481,15 @@ header .title__container .ZHtitle__contaitner .ZHtitle__line {
 }
 
 .film #timelineList .timelineList__container .timelineFav {
+  cursor: pointer;
   color: rgba(0, 0, 0, 0.2);
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  font-size: 1.2rem;
+}
+
+.film #timelineList .timelineList__container .timelineFav.active {
+  color: #EA5136;
 }
 
 .footer {

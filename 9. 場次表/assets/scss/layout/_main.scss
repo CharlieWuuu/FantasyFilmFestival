@@ -167,9 +167,10 @@ td{
 
 
 .film__container{
-	position: relative;
+	position: absolute;
 	width: 0;
-	z-index: 10;
+	z-index: 3;
+
 	.film {
 		position: absolute;
 		background-color: $color_secondary_golden;
@@ -182,7 +183,7 @@ td{
 	}
 
 	p{
-		margin: 3px 6px 0 6px ;
+		margin: 6px 6px 0 6px ;
 		padding: 0;
 		font-size: 0.9rem;
 		font-weight: 700;
@@ -194,11 +195,26 @@ td{
 	}
 
 	#film__name{
-		margin: 10px 6px 0 6px;
+		@extend %flex-center;
+		justify-content: space-between;
 	}
 
-	.film__fav{
-		color: rgba(0, 0, 0, 0.2);
+	#film__name > a{
+		font-size: 1.2rem;
+		font-weight: 700;
+		text-decoration: none;
+		color: black
+	}
+
+	#film__name > .film__fav{
 		cursor: pointer;
+		color:rgba(0, 0, 0, 0.2);
+		transition-duration: 0.2s;
+		font-size: 1.2rem;
+		margin-left: 10px;
+
+		&.active{
+			color: #EA5136;
+		}
 	}
 }

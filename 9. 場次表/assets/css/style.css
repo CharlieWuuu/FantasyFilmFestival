@@ -136,7 +136,7 @@ table {
   border-spacing: 0;
 }
 
-.navbar__container, .navbar__container .navbar__logo, .navbar__container .navbar__link, .navbar__container .navbar__link li a, .navbar__container .navbar__link li a p, .navbar__container .navbar__link .nav__button, .navbar__container .navbar__link .nav__button .nav__button__number__container .nav__button__number, .navbar__container .navbar__link .nav__button .nav__button__search, header .title__container .ZHtitle__contaitner, .information__container, .footer .footer__container, .footer .footer__upside, .footer .footer__downside, .footer .footer__downside .footer__logo, .footer .footer__downside .footer__share, .footer .footer__downside .footer__share a {
+.navbar__container, .navbar__container .navbar__logo, .navbar__container .navbar__link, .navbar__container .navbar__link li a, .navbar__container .navbar__link li a p, .navbar__container .navbar__link .nav__button, .navbar__container .navbar__link .nav__button .nav__button__number__container .nav__button__number, .navbar__container .navbar__link .nav__button .nav__button__search, header .title__container .ZHtitle__contaitner, .information__container, .film__container #film__name, .footer .footer__container, .footer .footer__upside, .footer .footer__downside, .footer .footer__downside .footer__logo, .footer .footer__downside .footer__share, .footer .footer__downside .footer__share a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -512,9 +512,9 @@ td p {
 }
 
 .film__container {
-  position: relative;
+  position: absolute;
   width: 0;
-  z-index: 10;
+  z-index: 3;
 }
 
 .film__container .film {
@@ -529,7 +529,7 @@ td p {
 }
 
 .film__container p {
-  margin: 3px 6px 0 6px;
+  margin: 6px 6px 0 6px;
   padding: 0;
   font-size: 0.9rem;
   font-weight: 700;
@@ -540,12 +540,29 @@ td p {
 }
 
 .film__container #film__name {
-  margin: 10px 6px 0 6px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.film__container .film__fav {
-  color: rgba(0, 0, 0, 0.2);
+.film__container #film__name > a {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+}
+
+.film__container #film__name > .film__fav {
   cursor: pointer;
+  color: rgba(0, 0, 0, 0.2);
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+
+.film__container #film__name > .film__fav.active {
+  color: #EA5136;
 }
 
 .footer {
