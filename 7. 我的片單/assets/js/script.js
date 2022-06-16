@@ -84,12 +84,12 @@ const favTableSlideContainerHTML = document.querySelector(
 
 // 函式：隱藏除 id=introduction 以外的區塊
 function wrapper() {
-  $('.favorite__select__button>#13-17').click(function () {
+  $('.favorite__select__button>#after').click(function () {
     favTableSlideContainerHTML.style.transform = 'translateX(-45vw)';
     document.querySelector('#favoriteSelectText').innerText = '4/13～17';
   });
 
-  $('.favorite__select__button>#8-12').click(function () {
+  $('.favorite__select__button>#before').click(function () {
     favTableSlideContainerHTML.style.transform = 'translateX(45vw)';
     document.querySelector('#favoriteSelectText').innerText = '4/08～12';
   });
