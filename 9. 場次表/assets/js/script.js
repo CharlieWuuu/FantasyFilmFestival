@@ -371,7 +371,7 @@ $('.film').hover(
     const currentHeight = $(this).css('width');
     $(this).css('width', thisHeight); // 高度偷偷變回來
     $(this).css('box-shadow', '0 0 5px 0 rgb(0, 0, 0)');
-    $(this).parent().css('z-index', '100');
+    $(this).parent().css('z-index', '10');
 
     if (parseFloat(thisHeight) > parseFloat(currentHeight)) {
       sessionData.push({ this_height: thisHeight });
