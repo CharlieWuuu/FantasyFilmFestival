@@ -64,15 +64,31 @@ color: $color_secondary_white;
 	align-items: center;
 	font-family: 'Noto Sans';
 	font-weight: 100;
-font-size: 16px;
-line-height: 22px;
-letter-spacing: 0.2px;
-color: $color_secondary_white;
+	font-size: 16px;
+	line-height: 22px;
+	letter-spacing: 0.2px;
+	color: $color_secondary_white;
 }
 .list-item__card__icon{
 	position: absolute;
+	top: 0;
 	right: 0;
+	font-size: 26px;
+	color: $color_secondary_white;
 }
+
+.list-item__card{
+	.list-item__card__text, .list-item__card__time, .list-item__card__icon{
+		transition-duration: 0.3s;
+	}
+	&:hover{
+		.list-item__card__text, .list-item__card__time, .list-item__card__icon{
+			color: $color_secondary_golden;
+		}
+	}
+}
+
+
 .animate__fadeInUp{
 	animation: fadeInUp;
 	animation-duration: 2s;

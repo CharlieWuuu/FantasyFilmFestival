@@ -300,7 +300,16 @@ header .title__container #ENtitle_2 {
 }
 .main .list-item__card__icon {
   position: absolute;
+  top: 0;
   right: 0;
+  font-size: 26px;
+  color: #FFFFFF;
+}
+.main .list-item__card .list-item__card__text, .main .list-item__card .list-item__card__time, .main .list-item__card .list-item__card__icon {
+  transition-duration: 0.3s;
+}
+.main .list-item__card:hover .list-item__card__text, .main .list-item__card:hover .list-item__card__time, .main .list-item__card:hover .list-item__card__icon {
+  color: #D3D6B1;
 }
 .main .animate__fadeInUp {
   animation: fadeInUp;
