@@ -1,6 +1,7 @@
 //資訊卡
 main{
 	margin: 70px 0 200px 0;
+
 }
 
 .information__container{
@@ -35,6 +36,7 @@ main{
 .tableDaily__container{
 	margin-top: 30px;
 	display: block;
+	transform: scale(0.9);
 }
 
 table{
@@ -72,6 +74,7 @@ td{
 #date02{
 	width: 6vw;
 		p{
+			width: 6vw;
 			position: relative;
 			top: -5px;
 			left: 0px;
@@ -83,6 +86,7 @@ td{
 #date03{
 	width: 3vw;
 		p{
+			width: 3vw;
 			overflow: hidden;
 			text-overflow: ellipsis;
 		}
@@ -97,9 +101,10 @@ td{
 	position: relative;
 	width: 8vw;
 	p{
-		width: 8vw;
+		width: 6vw;
 		font-size: 16px;
 		font-weight: 700;
+		margin: auto;
 	}
 }
 
@@ -197,24 +202,46 @@ td{
 	#film__name{
 		@extend %flex-center;
 		justify-content: space-between;
-	}
 
-	#film__name > a{
-		font-size: 1.2rem;
-		font-weight: 700;
-		text-decoration: none;
-		color: black
-	}
 
-	#film__name > .film__fav{
-		cursor: pointer;
-		color:rgba(0, 0, 0, 0.2);
-		transition-duration: 0.2s;
-		font-size: 1.2rem;
-		margin-left: 10px;
-
-		&.active{
-			color: #EA5136;
+		a{
+			position: relative;
+			font-weight: 700;
+			text-decoration: none;
+			color: black;
+			&:hover{
+				&::before{
+					width: 100%;
+				}
+			}
 		}
+		a::before{
+			position: absolute;
+			content: '';
+			left: 0px;
+			bottom: -4px;
+			width: 0%;
+			height: 4px;
+			background-color: darken(#D3D6B1, 20%);
+			transition-duration: 0.3s;
+		}
+
+
+		.film__fav{
+			cursor: pointer;
+			color:rgba(0, 0, 0, 0.2);
+			transition-duration: 0.2s;
+			font-size: 1.2rem;
+			margin-left: 10px;
+
+			&.active{
+				color: #EA5136;
+			}
+		}
+	}
+
+	#film__time{
+			font-size: 0.5rem;
+			font-weight: 300;
 	}
 }

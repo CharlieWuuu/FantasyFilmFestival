@@ -229,6 +229,7 @@ main {
 .tableDaily__container {
   margin-top: 30px;
   display: block;
+  transform: scale(0.9);
 }
 
 table {
@@ -267,6 +268,7 @@ td p {
   width: 6vw;
 }
 #date02 p {
+  width: 6vw;
   position: relative;
   top: -5px;
   left: 0px;
@@ -278,6 +280,7 @@ td p {
   width: 3vw;
 }
 #date03 p {
+  width: 3vw;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -291,9 +294,10 @@ td p {
   width: 8vw;
 }
 #cinema p {
-  width: 8vw;
+  width: 6vw;
   font-size: 16px;
   font-weight: 700;
+  margin: auto;
 }
 
 #cinema::before {
@@ -386,19 +390,36 @@ td p {
 .film__container #film__name {
   justify-content: space-between;
 }
-.film__container #film__name > a {
-  font-size: 1.2rem;
+.film__container #film__name a {
+  position: relative;
   font-weight: 700;
   text-decoration: none;
   color: black;
 }
-.film__container #film__name > .film__fav {
+.film__container #film__name a:hover::before {
+  width: 100%;
+}
+.film__container #film__name a::before {
+  position: absolute;
+  content: "";
+  left: 0px;
+  bottom: -4px;
+  width: 0%;
+  height: 4px;
+  background-color: #adb36e;
+  transition-duration: 0.3s;
+}
+.film__container #film__name .film__fav {
   cursor: pointer;
   color: rgba(0, 0, 0, 0.2);
   transition-duration: 0.2s;
   font-size: 1.2rem;
   margin-left: 10px;
 }
-.film__container #film__name > .film__fav.active {
+.film__container #film__name .film__fav.active {
   color: #EA5136;
+}
+.film__container #film__time {
+  font-size: 0.5rem;
+  font-weight: 300;
 }/*# sourceMappingURL=style.css.map */
