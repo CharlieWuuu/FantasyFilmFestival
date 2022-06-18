@@ -497,6 +497,7 @@ article .title__container .title__all .ZHtitle__text {
   position: absolute;
   object-fit: cover;
   bottom: 0px;
+  left: -10%;
   width: 35%;
   height: 35vh;
   border-radius: 0 50px 15px 0;
