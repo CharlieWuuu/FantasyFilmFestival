@@ -87,6 +87,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  border: 1px solid black;
 }
 
 /* 賦予 HTML5 標籤基本的 Display:block ，用於輔助舊的瀏覽器能正常顯示 */
@@ -188,11 +189,11 @@ body {
   }
 }
 header {
+  margin: 140px auto 120px auto;
   max-width: 1280px;
 }
 header .title__container {
   position: relative;
-  margin: 140px 10% 120px 10%;
   padding-left: 86px;
   font-weight: 700;
   font-size: 10rem;

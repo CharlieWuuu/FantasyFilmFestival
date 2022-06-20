@@ -193,8 +193,12 @@ body {
     transform: translateY(-1vh);
   }
 }
+header {
+  margin: 140px auto 160px auto;
+  width: 80%;
+  max-width: 1280px;
+}
 header .title__container {
-  margin: 140px 10% 160px 10%;
   font-weight: 700;
   font-size: 10rem;
   color: #D3D6B1;
@@ -236,11 +240,13 @@ header .title__container #ENtitle_2 {
 .main {
   flex-direction: column;
   color: #D3D6B1;
-  margin: 200px 10%;
+  width: 80%;
+  max-width: 1280px;
+  margin: 200px auto;
 }
 .main .container {
   padding-bottom: 162px;
-  width: 90%;
+  width: 100%;
   display: flex;
 }
 .main .content__left {

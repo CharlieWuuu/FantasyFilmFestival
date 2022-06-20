@@ -1,9 +1,17 @@
 .main{
+	position: relative;
 	@extend %flex-center;
 	flex-direction: column;
 	margin: 50px auto 200px auto;
 	width: 90%;
 	max-width: 1200px;
+}
+
+.symbols{
+	position: absolute;
+	color: white;
+	top: 20px;
+	right: 0px;
 }
 
 .type__container{

@@ -2,11 +2,13 @@
 	@extend %flex-center;
 	flex-direction: column;
 	color:$color_secondary_golden;
-	margin: 200px 10%;
+	width: 80%;
+	max-width: 1280px;
+	margin: 200px auto;
 
   .container{
 		padding-bottom: 162px;
-		width: 90%;
+		width: 100%;
 		display: flex;
 	}
 	.content__left{

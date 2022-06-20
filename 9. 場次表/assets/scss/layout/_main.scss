@@ -1,7 +1,14 @@
 //資訊卡
 main{
+	position: relative;
 	margin: 70px 0 200px 0;
+}
 
+.symbols{
+	position: absolute;
+	color: white;
+	top: 6px;
+	right: 10%;
 }
 
 .information__container{
@@ -243,5 +250,18 @@ td{
 	#film__time{
 			font-size: 0.5rem;
 			font-weight: 300;
+	}
+}
+
+.timeline__chooseStart, .timeline__dataError, .timeline__cinemaError{
+	font-size: 84px;
+	color: rgba(255, 255, 255, 0.3);
+	margin: 10vh;
+	display: none;
+	h1{
+		text-align: center;
+	}
+	&.active{
+		display: block;
 	}
 }

@@ -2,7 +2,7 @@
 // 變數：要渲染的片單HTML
 const filmHTML = `
 <section class="film">
-  <p><a href="/FantasyFilmFestival/6. 影片介紹/index.html">{{name}}</a> | {{country}} | {{long}} | {{rating}}</p>
+  <p><a href="/FantasyFilmFestival/6. 影片介紹/index.html">{{name}}</a> | {{country}} | {{long}}分 | {{rating}}</p>
   <div id="timelineList">{{timelineList}}</div>
 </section>`;
 
@@ -11,7 +11,7 @@ const timelineHTML = `
   <span>{{date}}</span>
   <span>{{startTime}}</span>
   <span class="timelineCinema">{{cinema}}</span>
-  <span class="timelineFav" id="{{full_id}}" onclick="chooseFavorite(this.id);">❤</span>
+  <span class="timelineFav" id="{{full_id}}" onclick="chooseFavorite(this.id);"><i class="fa-solid fa-heart"></i></span>
 </div>`;
 
 // 迴圈：依序取代資料，放到對應的容器中
@@ -77,20 +77,21 @@ $('.type__title').click(function () {
 });
 
 // (3) 載入時，已選片單變紅色
+// 變數：載入時，預選的id；預設為空值
 const localData = JSON.parse(localStorage.getItem('片單'))
   ? JSON.parse(localStorage.getItem('片單'))
   : [];
 
 function showClicked() {
-  const localData = JSON.parse(localStorage.getItem('片單'));
-  // 變數：載入時，預選的id；預設為空值
   let chosenId = localStorage.getItem('片單').full_id;
   // 檢查：瀏覽器暫存片單(obj)所有資料
   for (i = 0; i < localData.length; i++) {
     chosenId = localData[i].full_id;
     // 判斷：是否有預選id，有的話欲渲染片單的HTML變色
     const clickedHTML = document.querySelector('#' + chosenId);
-    if (clickedHTML != null) $(clickedHTML).addClass('active');
+    if (clickedHTML !== null) {
+      $(clickedHTML).addClass('active');
+    }
   }
 }
 showClicked();

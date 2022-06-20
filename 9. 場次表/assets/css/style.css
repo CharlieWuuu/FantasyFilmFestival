@@ -165,7 +165,8 @@ body {
 }
 
 header .title__container {
-  margin: 145px 6vw 0vh 6vw;
+  margin: 145px auto 0vh auto;
+  max-width: 83%;
   font-weight: 700;
   font-size: 10rem;
   color: #D3D6B1;
@@ -198,7 +199,15 @@ header .title__container .ZHtitle__contaitner .ZHtitle__line {
 }
 
 main {
+  position: relative;
   margin: 70px 0 200px 0;
+}
+
+.symbols {
+  position: absolute;
+  color: white;
+  top: 6px;
+  right: 10%;
 }
 
 .information__container {
@@ -422,4 +431,17 @@ td p {
 .film__container #film__time {
   font-size: 0.5rem;
   font-weight: 300;
+}
+
+.timeline__chooseStart, .timeline__dataError, .timeline__cinemaError {
+  font-size: 84px;
+  color: rgba(255, 255, 255, 0.3);
+  margin: 10vh;
+  display: none;
+}
+.timeline__chooseStart h1, .timeline__dataError h1, .timeline__cinemaError h1 {
+  text-align: center;
+}
+.timeline__chooseStart.active, .timeline__dataError.active, .timeline__cinemaError.active {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

@@ -192,8 +192,12 @@ body {
     transform: translateY(-1vh);
   }
 }
+header {
+  margin: 140px 10% 160px 10%;
+  width: 80%;
+  max-width: 1280px;
+}
 header .title__container {
-  margin: 140px 10vw 160px 10vw;
   font-weight: 700;
   font-size: 10rem;
   color: #D3D6B1;

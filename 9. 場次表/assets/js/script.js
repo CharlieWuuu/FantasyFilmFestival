@@ -201,22 +201,30 @@ function changeDate(event) {
   startIndex = dateArray.indexOf(inputStartValue);
   endIndex = dateArray.indexOf(inputEndValue);
 
-  // 如果「開始」、「結束」日期的值無資料，不執行
+  // 初始值：如果「開始」、「結束」日期的值無資料，印出所有資料
   if (inputStartValue == '' && inputEndValue == '') {
     var all_daily_div = document.querySelectorAll('.tableDaily__container');
     for (i = 0; i < all_daily_div.length; i++) {
       all_daily_div[i].style.display = 'block';
     }
-    // 如果「開始」日期的值 > 「結束」日期的值，跳出警告視窗
+    // 如果「開始」日期無資料，「結束」日期有資料，顯示錯誤文字
   } else if (inputStartValue == '' && inputEndValue !== '') {
-    alert('請選擇開始日期');
-    // 如果「開始」日期的值 <= 「結束」日期的值，顯示包含這些日期id的div
+    $('.timeline__chooseStart').addClass('active');
+    $('.timeline__dataError').removeClass('active');
+    // 如果「開始」日期有資料，「結束」日期無資料，顯示包含此日期id的div
   } else if (inputStartValue !== '' && inputEndValue == '') {
     let x = startIndex;
     document.querySelector('#' + dateArray[x]).style.display = 'block';
+    $('.timeline__chooseStart').removeClass('active');
+  } else if (inputStartValue > inputEndValue) {
+    $('.timeline__dataError').addClass('active');
+    $('.timeline__chooseStart').removeClass('active');
+    // 如果「開始」日期有資料，「結束」日期有資料，顯示此範圍內的div
   } else {
     for (i = startIndex; i <= endIndex; i++) {
       document.querySelector('#' + dateArray[i]).style.display = 'block';
+      $('.timeline__chooseStart').removeClass('active');
+      $('.timeline__dataError').removeClass('active');
     }
   }
 }
@@ -224,13 +232,13 @@ function changeDate(event) {
 // 改變「開始」日期的值時，執行函式
 startDate_selector.addEventListener('change', function (event) {
   changeDate(event);
-  // changeCinema(event);
+  changeCinema(event);
 });
 
 // 改變「結束」日期的值時，執行函式
 endDate_selector.addEventListener('change', function (event) {
   changeDate(event);
-  // changeCinema(event);
+  changeCinema(event);
 });
 
 // (3) 選擇影廳
@@ -248,8 +256,6 @@ function changeCinema(event) {
   // 選擇所有影廳的容器，「選擇所有（querySelectorAll）」會變成陣列，因此用for迴圈一一隱藏
   var all_cinema_div = document.querySelectorAll('.tableCinema__container');
   for (i = 0; i < all_cinema_div.length; i++) {
-    // all_cinema_div[i].style.backgroundColor = 'red';
-    // all_cinema_div[i].style.height = '200px';
     all_cinema_div[i].style.display = 'none';
   }
 
@@ -286,13 +292,29 @@ function changeCinema(event) {
           count++;
         }
       }
-
       if (count == daily_cinema_div.length) {
         all_daily_div[i].style.display = 'none';
       } else {
         all_daily_div[i].style.display = 'block';
       }
     }
+  }
+  // 如果有顯示片單的話，刪除提示文字
+  for (i = 0; i < all_daily_div.length; i++) {
+    if (all_daily_div[i].style.display == 'block') {
+      return;
+    }
+    $('.timeline__cinemaError').removeClass('active');
+  }
+  // (1) 若是日期資料錯誤，不顯示「此時段無資料」
+  if (
+    $('.timeline__chooseStart').hasClass('active') == true ||
+    $('.timeline__dataError').hasClass('active') == true
+  ) {
+    $('.timeline__cinemaError').removeClass('active');
+    // (2) 若是該場次時段無影片，顯示提示文字
+  } else {
+    $('.timeline__cinemaError').addClass('active');
   }
 }
 
