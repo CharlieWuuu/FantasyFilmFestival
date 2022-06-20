@@ -16,7 +16,7 @@ $(document).ready(function () {
   });
 });
 
-$(this).scroll(function () {
-  const Y = scrollY;
-  $('.background').css('top', 0 + 0.04 * Y + 'vh');
-});
+// $(this).scroll(function () {
+//   const Y = scrollY;
+//   $('.background').css('top', 0 + 0.02 * Y + 'vh');
+// });

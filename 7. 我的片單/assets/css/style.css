@@ -171,7 +171,9 @@ body {
 }
 
 header .title__container {
-  margin: 145px 6vw 0vh 6vw;
+  position: relative;
+  margin: 145px auto 0vh auto;
+  max-width: 1200px;
   font-weight: 700;
   font-size: 10rem;
   color: #D3D6B1;

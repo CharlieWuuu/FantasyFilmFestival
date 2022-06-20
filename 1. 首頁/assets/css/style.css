@@ -296,7 +296,6 @@ header .header__main__container #cornP {
 
 .main {
   margin-top: -2px;
-  padding-bottom: 20vh;
   font-weight: 700;
   background-color: #1E646A;
   overflow: hidden;
@@ -306,11 +305,12 @@ header .header__main__container #cornP {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 700vh;
+  height: 750vh;
+  overflow: hidden;
 }
 .background #tail__latest {
   position: absolute;
-  top: 100vh;
+  top: 120vh;
   width: 100%;
   transform: rotate(-2deg);
   z-index: 2;
@@ -334,7 +334,7 @@ header .header__main__container #cornP {
 }
 .background #tail__getIt {
   position: absolute;
-  top: 580vh;
+  top: 650vh;
   right: 0;
   width: 50%;
 }
@@ -346,7 +346,7 @@ header .header__main__container #cornP {
   height: 90vh;
   width: 90%;
   max-width: 1200px;
-  margin: 50vh auto 50vh auto;
+  margin: 250px auto 250px auto;
   opacity: 0;
 }
 
@@ -663,15 +663,15 @@ article .title__container .title__all .ZHtitle__text {
 }
 .manual__img #manualCornP {
   position: absolute;
-  right: -20px;
+  right: 10px;
   top: -130px;
   transform: scale(0.3);
 }
 .manual__img #manualCornG {
   position: absolute;
-  right: 50px;
-  top: -50px;
-  transform: scale(0.25);
+  right: 60px;
+  top: -100px;
+  transform: scale(0.25) rotate(30deg);
 }
 
 .manual__container {
@@ -684,17 +684,8 @@ article .title__container .title__all .ZHtitle__text {
   width: 100%;
 }
 
-.main > #getIt {
-  height: 120vh;
-}
-.main > #getIt .title__container {
-  height: 10vh;
-  position: relative;
-}
-
 .getIt__container {
   position: relative;
-  height: 150vh;
   width: 100%;
   display: flex;
   justify-content: space-between;
