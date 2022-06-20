@@ -87,6 +87,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  cursor: default;
 }
 
 /* 賦予 HTML5 標籤基本的 Display:block ，用於輔助舊的瀏覽器能正常顯示 */
@@ -136,6 +137,10 @@ table {
   border-spacing: 0;
 }
 
+a {
+  cursor: pointer;
+}
+
 .sponsor .sponsor__icon, .sponsor, .manual__container, .aboutFilmFes__container .aboutFilmFes__text, .aboutFilmFes__container .aboutFilmFes__bg, .whatsOn__container .whatsOn__more, .whatsOn__container .whatsOn__text, .latest__more, .latest__news__container, article .title__container .title__all, article .title__container, .main > article, header {
   display: flex;
   justify-content: center;
@@ -151,7 +156,7 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 680vh;
+  height: 700vh;
   overflow: hidden;
 }
 .background #tail__latest {
@@ -379,6 +384,29 @@ article .title__container .title__all .ZHtitle__text {
 .latest__news__container .news-list__item {
   display: flex;
   width: 30%;
+  position: relative;
+}
+.latest__news__container .news-list__item::before {
+  position: absolute;
+  top: -30px;
+  left: 0px;
+  color: #fff;
+  font-size: 0.8em;
+  background-color: #EA5136;
+  opacity: 0%;
+  padding: 5px;
+  border-radius: 5px;
+  content: "連結僅示意";
+  transition-duration: 0.3s;
+}
+.latest__news__container .news-list__item:hover * {
+  cursor: pointer;
+}
+.latest__news__container .news-list__item:hover img {
+  transform: scale(1.1, 1.1);
+}
+.latest__news__container .news-list__item:hover::before {
+  opacity: 100%;
 }
 .latest__news__container .news-list__item .news-list__background {
   background-color: #fff;
@@ -388,12 +416,17 @@ article .title__container .title__all .ZHtitle__text {
 .latest__news__container .news-list__item .news-list__background a {
   text-decoration: none;
 }
-.latest__news__container .news-list__item .news-list__background a img {
+.latest__news__container .news-list__item .news-list__background a .news-list__img__container {
   position: relative;
-  object-fit: cover;
+  width: 100%;
   right: 10px;
+  overflow: hidden;
+}
+.latest__news__container .news-list__item .news-list__background a .news-list__img__container img {
+  object-fit: cover;
   width: 100%;
   height: 180px;
+  transition-duration: 0.3s;
 }
 .latest__news__container .news-list__item .news-list__background a .news-thumbnail__detail {
   display: flex;
@@ -457,15 +490,41 @@ article .title__container .title__all .ZHtitle__text {
   justify-content: space-between;
   border-bottom: 2px solid #6AB5B9;
   padding: 15px 0;
+  position: relative;
+}
+.whatsOn__container .whatsOn__text::before {
+  position: absolute;
+  top: -20px;
+  left: 0px;
+  color: #fff;
+  font-size: 0.8em;
+  background-color: #EA5136;
+  opacity: 0%;
+  padding: 5px;
+  border-radius: 5px;
+  content: "連結僅示意";
+  transition-duration: 0.3s;
 }
 .whatsOn__container .whatsOn__text p {
   font-weight: 900;
   font-size: 18px;
   color: white;
+  transition-duration: 0.3s;
 }
 .whatsOn__container .whatsOn__text a {
   font-size: 18px;
   color: white;
+  transition-duration: 0.3s;
+}
+.whatsOn__container .whatsOn__text:hover {
+  cursor: pointer;
+}
+.whatsOn__container .whatsOn__text:hover p, .whatsOn__container .whatsOn__text:hover i {
+  color: #D3D6B1;
+  cursor: pointer;
+}
+.whatsOn__container .whatsOn__text:hover::before {
+  opacity: 100%;
 }
 .whatsOn__container .whatsOn__more {
   justify-content: flex-end;
@@ -604,13 +663,13 @@ article .title__container .title__all .ZHtitle__text {
   position: absolute;
   right: -20px;
   top: -130px;
-  transform: scale(0.6);
+  transform: scale(0.3);
 }
 .manual__img #manualCornG {
   position: absolute;
   right: 50px;
   top: -50px;
-  transform: scale(0.5);
+  transform: scale(0.25);
 }
 
 .manual__container {
@@ -675,15 +734,33 @@ article .title__container .title__all .ZHtitle__text {
   width: 100%;
   height: 0;
 }
-.getIt__container .getIt__container__vertical .getIt__container__card .getIt__container__icon img {
+.getIt__container .getIt__container__vertical .getIt__container__card .getIt__container__icon img, .getIt__container .getIt__container__vertical .getIt__container__card .getIt__container__icon svg {
   position: absolute;
   right: 0;
   bottom: 0rem;
   width: 40px;
   margin: 10px;
+  fill: white;
 }
 .getIt__container .getIt__container__vertical .getIt__container__card .getIt__container__icon #iconPlace {
   height: 40px;
+}
+
+#getItDownload * {
+  cursor: pointer;
+}
+
+#getItDownload > .getIt__container__card:hover .getIt__container__line {
+  background-color: #D3D6B1;
+  transition-duration: 0.3s;
+}
+#getItDownload > .getIt__container__card:hover .getIt__container__text {
+  color: #D3D6B1;
+  transition-duration: 0.3s;
+}
+#getItDownload > .getIt__container__card:hover svg {
+  fill: #D3D6B1;
+  transition-duration: 0.3s;
 }
 
 .sponsor {
