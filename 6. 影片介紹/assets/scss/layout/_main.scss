@@ -26,10 +26,9 @@
 		position: relative;
 	}
 	.title__container{
-
-		width: 40%;
 		display: flex;
 		flex-direction: column;
+		flex: 1;
 	}
 	h11{
 		margin-bottom: 7px;
@@ -51,12 +50,11 @@ line-height: 30px;
 letter-spacing: 0.2px;
 	}
 .property__container{
-	width: 60%;
 	display: flex;
 	flex-wrap: wrap;
 }
 .property__item{
-	margin: 0 16px 8px 0;
+	margin: 0 0 8px 16px;
 }
 .property__item__border{
 border: 1px solid $color_secondary_gray;
@@ -142,20 +140,31 @@ color: $color_secondary_gray;
 	width: 100%;
 	background-color: $color_main;
 	width: 1071px;
-height: 66px;
-display: flex;
-align-items: center;
-margin-bottom: 16px;
+	height: 66px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 16px;
+	h2{
+		padding-left: 35%;
+		margin-right: 8px;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 28px;
+		letter-spacing: 0.05em;
+		color: $color_secondary_black;
+	}
+	.timelineFav{
+		cursor: pointer;
+		color:rgba(0, 0, 0, 0.2);
+		transition-duration: 0.2s;
+		font-size: 1.2rem;
+
+		&.active{
+			color: #EA5136;
+		}
+	}
 }
-h20{
-	padding-left: 35%;
-	margin-right: 8px;
-font-weight: 400;
-font-size: 20px;
-line-height: 28px;
-letter-spacing: 0.05em;
-color: $color_secondary_black;
-}
+
 
 .moremovie__container{
 	width: 85%;

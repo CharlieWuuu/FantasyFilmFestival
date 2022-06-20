@@ -221,9 +221,9 @@ header .banner__container {
   position: relative;
 }
 .main .title__container {
-  width: 40%;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 .main h11 {
   margin-bottom: 7px;
@@ -245,12 +245,11 @@ header .banner__container {
   letter-spacing: 0.2px;
 }
 .main .property__container {
-  width: 60%;
   display: flex;
   flex-wrap: wrap;
 }
 .main .property__item {
-  margin: 0 16px 8px 0;
+  margin: 0 0 8px 16px;
 }
 .main .property__item__border {
   border: 1px solid #E1E1E1;
@@ -337,7 +336,7 @@ header .banner__container {
   align-items: center;
   margin-bottom: 16px;
 }
-.main h20 {
+.main .movietime__item h2 {
   padding-left: 35%;
   margin-right: 8px;
   font-weight: 400;
@@ -345,6 +344,15 @@ header .banner__container {
   line-height: 28px;
   letter-spacing: 0.05em;
   color: #000000;
+}
+.main .movietime__item .timelineFav {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.2);
+  transition-duration: 0.2s;
+  font-size: 1.2rem;
+}
+.main .movietime__item .timelineFav.active {
+  color: #EA5136;
 }
 .main .moremovie__container {
   width: 85%;
