@@ -25,17 +25,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
-    <div class="background">
-      <img id="tail__latest" src="./assets/image/bg/尾巴3-09 3.svg" alt="" />
-      <img id="tail__whatsOn" src="./assets/image/bg/尾巴3-09 2.svg" alt="" />
-      <img
-        id="tail__aboutFilmFes"
-        src="./assets/image/bg/尾巴3-09 4.svg"
-        alt=""
-      />
-      <img id="tail__manual" src="./assets/image/bg/尾巴-角.svg" alt="" />
-      <img id="tail__getIt" src="./assets/image/bg/尾巴-最下方.svg" alt="" />
-    </div>
     <nav id="navbar"></nav>
     <header class="header" onmousemove="myFunction(event)">
       <div class="header__bg__container">
@@ -140,7 +129,18 @@
     <div class="curve">
       <img src="./assets/image/wave.svg" alt="" />
     </div>
-    <main class="main" onmousemove="show(event)">
+    <main class="main">
+      <div class="background">
+        <img id="tail__latest" src="./assets/image/bg/尾巴3-09 3.svg" alt="" />
+        <img id="tail__whatsOn" src="./assets/image/bg/尾巴3-09 2.svg" alt="" />
+        <img
+          id="tail__aboutFilmFes"
+          src="./assets/image/bg/尾巴3-09 4.svg"
+          alt=""
+        />
+        <img id="tail__manual" src="./assets/image/bg/尾巴-角.svg" alt="" />
+        <img id="tail__getIt" src="./assets/image/bg/尾巴-最下方.svg" alt="" />
+      </div>
       <article class="latest">
         <div class="title__container">
           <div class="title__all">
@@ -152,7 +152,7 @@
         <section class="latest__news__container">
           <div class="news-list__item">
             <div class="news-list__background">
-              <a href="">
+              <a href="#" onClick="return false;">
                 <div class="news-list__img__container">
                   <img src="./assets/image/latest/news01.png" alt="" />
                 </div>
@@ -168,7 +168,7 @@
 
           <div class="news-list__item">
             <div class="news-list__background">
-              <a href="">
+              <a href="#" onClick="return false;">
                 <div class="news-list__img__container">
                   <img src="./assets/image/latest/news02.png" alt="" />
                 </div>
@@ -183,7 +183,7 @@
           </div>
           <div class="news-list__item">
             <div class="news-list__background">
-              <a href="">
+              <a href="#" onClick="return false;">
                 <div class="news-list__img__container">
                   <img src="./assets/image/latest/conan.png" alt="" />
                 </div>
@@ -470,7 +470,7 @@
     </section>
     <footer class="footer" id="footer"></footer>
     <script src="../assets/js/common.js" defer></script>
-    <script src="./assets/js/script.js" defer></script>
     <script src="./assets/js/header.js"></script>
+    <script src="./assets/js/script.js" defer></script>
   </body>
 </html>

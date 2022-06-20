@@ -1,42 +1,4 @@
 body{
 	font-family: 'Noto Sans TC', sans-serif;
 	font-family: 'Alata', sans-serif;
-
-}
-
-.background{
-	position: absolute;
-	top: 0;
-	width: 100%;
-	height: 700vh;
-	overflow: hidden;
-	#tail__latest{
-		position: absolute;
-		top: 120vh;
-		width: 100%;
-		transform: rotate(-2deg);
-	}
-	#tail__whatsOn{
-		position: absolute;
-		top: 250vh;
-		right: 0px;
-		width: 70%;
-	}
-	#tail__aboutFilmFes{
-		position: absolute;
-		top: 410vh;
-		width: 70%;
-	}
-	#tail__manual{
-		position: absolute;
-		top: 420vh;
-		right: 0px;
-		width: 70%;
-	}
-	#tail__getIt{
-		position: absolute;
-		top: 580vh;
-		width: 50%;
-		margin: 0 25% 0 25%;
-	}
 }

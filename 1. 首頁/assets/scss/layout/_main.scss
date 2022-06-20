@@ -13,7 +13,46 @@
 	padding-bottom: 20vh;
 	font-weight: 700;
 	background-color: #1E646A;
+	overflow: hidden;
 }
+
+.background{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 700vh;
+	#tail__latest{
+		position: absolute;
+		top: 100vh;
+		width: 100%;
+		transform: rotate(-2deg);
+		z-index: 2;
+	}
+	#tail__whatsOn{
+		position: absolute;
+		top: 250vh;
+		right: 0px;
+		width: 70%;
+	}
+	#tail__aboutFilmFes{
+		position: absolute;
+		top: 410vh;
+		width: 70%;
+	}
+	#tail__manual{
+		position: absolute;
+		top: 420vh;
+		right: 0px;
+		width: 70%;
+	}
+	#tail__getIt{
+		position: absolute;
+		top: 580vh;
+		right: 0;
+		width: 50%;
+	}
+}
+
 
 .main > article{
 	@extend %flex-center;
@@ -23,7 +62,8 @@
 	height: 90vh;
 	width: 90%;
 	max-width: 1200px;
-	margin: 0 auto 10vh auto;
+	margin: 50vh auto 50vh auto;
+	opacity: 0;
 }
 
 // 設定各節標題
