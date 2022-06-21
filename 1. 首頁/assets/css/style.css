@@ -88,7 +88,6 @@ video {
   font: inherit;
   vertical-align: baseline;
   cursor: default;
-  box-shadow: 0 0 0 1px black;
 }
 
 /* 賦予 HTML5 標籤基本的 Display:block ，用於輔助舊的瀏覽器能正常顯示 */
@@ -348,7 +347,7 @@ header .header__main__container #cornP {
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  height: 90vh;
+  height: fit-content;
   width: 90%;
   max-width: 1200px;
   margin: 250px auto 250px auto;
@@ -651,13 +650,13 @@ article .title__container .title__all .ZHtitle__text {
 }
 .aboutFilmFes__img #img__horse {
   width: 200px;
-  left: 12%;
+  right: 66%;
   bottom: 30vh;
   z-index: 1;
 }
 .aboutFilmFes__img #img__text {
   width: 250px;
-  left: 25%;
+  right: 48%;
   bottom: 10vh;
 }
 
@@ -705,7 +704,7 @@ article .title__container .title__all .ZHtitle__text {
   background-color: #6AB5B9;
   padding: 20px;
   border-radius: 10px;
-  margin: 40px 0;
+  margin-top: 40px;
 }
 .getIt__container .getIt__container__vertical .getIt__container__card .getIt__container__title {
   font-size: 18px;
@@ -745,6 +744,17 @@ article .title__container .title__all .ZHtitle__text {
   height: 40px;
 }
 
+@media screen and (max-width: 900px) {
+  .getIt__container {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .getIt__container__vertical {
+    width: 30%;
+    min-width: 300px;
+  }
+}
 #getItDownload * {
   cursor: pointer;
 }

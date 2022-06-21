@@ -240,6 +240,11 @@ header .title__container #ENtitle_2 {
   left: 150px;
 }
 
+@media screen and (max-width: 900px) {
+  header {
+    transform: scale(0.75) translateX(-17%);
+  }
+}
 .main {
   flex-direction: column;
   justify-content: flex-start;
