@@ -213,13 +213,6 @@ main {
   height: fit-content;
 }
 
-.symbols {
-  position: absolute;
-  color: white;
-  top: 6px;
-  right: 10%;
-}
-
 .information__container {
   width: 95vw;
   margin: auto;
@@ -245,10 +238,17 @@ main {
   color: #535353;
 }
 
+.symbols {
+  width: 87%;
+  text-align: end;
+  color: white;
+  transform: translateY(24px);
+}
+
 .tableDaily__container {
   margin-top: 30px;
   display: block;
-  transform: scale(0.9);
+  transform: scale(0.9) translateY(-5.5%);
 }
 
 table {

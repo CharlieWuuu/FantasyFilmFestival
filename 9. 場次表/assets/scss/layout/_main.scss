@@ -5,12 +5,7 @@ main{
 	height: fit-content;
 }
 
-.symbols{
-	position: absolute;
-	color: white;
-	top: 6px;
-	right: 10%;
-}
+
 
 .information__container{
 	width: 95vw;
@@ -40,11 +35,19 @@ main{
 	}
 }
 
+	.symbols{
+		width: 87%;
+		text-align: end;
+		color: white;
+		transform: translateY(24px);
+	}
+
 //時間表
 .tableDaily__container{
 	margin-top: 30px;
 	display: block;
-	transform: scale(0.9);
+	// translateY為調高度後，就不會因為內容量變少而改變位置
+	transform: scale(0.9) translateY(-5.5%);
 }
 
 table{
