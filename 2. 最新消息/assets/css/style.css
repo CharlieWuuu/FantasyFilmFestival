@@ -192,6 +192,15 @@ body {
     transform: translateY(-1vh);
   }
 }
+@media screen and (max-width: 900px) {
+  #navbar, #footer {
+    display: none;
+  }
+
+  #navbar__mobile, #footer__mobile {
+    display: block;
+  }
+}
 header {
   margin: 140px auto 160px auto;
   width: 80%;
@@ -242,6 +251,7 @@ header .title__container #ENtitle_2 {
   color: #D3D6B1;
   max-width: 1280px;
   margin: 0 auto 200px;
+  height: fit-content;
 }
 .main .news-list__container {
   position: relative;
