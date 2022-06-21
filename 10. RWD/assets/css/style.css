@@ -136,7 +136,7 @@ table {
   border-spacing: 0;
 }
 
-.footer__share__mobile a, .footer__share__mobile, .footer__button__container .footer__button .footer__button__menu, .footer__button__container .footer__button, .footer__button__container, .footer__top a, .footer__logo__container, #footer__mobile .footer__container, .navbar__container .navbar__link .nav__button .nav__button__burger, .navbar__container .navbar__link .nav__button .nav__button__search, .navbar__container .navbar__link .nav__button .nav__button__number__container .nav__button__number, .navbar__container .navbar__link .nav__button, .navbar__container .navbar__link li a, .navbar__container .navbar__link, .navbar__container .navbar__logo, .navbar__container, .navbar__content {
+.footer__share__mobile a, .footer__share__mobile, .footer__button__container .footer__button .footer__button__menu, .footer__button__container .footer__button, .footer__button__container, .footer__top a, .footer__logo__container, #footer__mobile .footer__container, .navbar__container__mobile .navbar__link .nav__button__mobile .nav__button__burger, .navbar__container__mobile .navbar__link .nav__button__mobile .nav__button__search, .navbar__container__mobile .navbar__link .nav__button__mobile .nav__button__number__container .nav__button__number, .navbar__container__mobile .navbar__link .nav__button__mobile, .navbar__container__mobile .navbar__link li a, .navbar__container__mobile .navbar__link, .navbar__container__mobile .navbar__logo__mobile, .navbar__container__mobile .navbar__content__mobile, .navbar__container__mobile {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -159,12 +159,7 @@ main {
   display: none;
 }
 
-.navbar__content {
-  margin: auto 8px;
-  width: 100%;
-}
-
-.navbar__container {
+.navbar__container__mobile {
   position: fixed;
   top: 0px;
   z-index: 999;
@@ -174,22 +169,26 @@ main {
   filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.25));
   transition: all 1s;
 }
-.navbar__container .navbar__logo {
+.navbar__container__mobile .navbar__content__mobile {
+  margin: auto 8px;
+  width: 100%;
+}
+.navbar__container__mobile .navbar__logo__mobile {
   justify-content: flex-start;
 }
-.navbar__container .navbar__logo #navbar__logoPic {
+.navbar__container__mobile .navbar__logo__mobile #navbar__logoPic {
   width: 60px;
 }
-.navbar__container .navbar__logo #navbar__logoText {
+.navbar__container__mobile .navbar__logo__mobile #navbar__logoText {
   width: 75px;
   transform: translateX(-10px);
 }
-.navbar__container .navbar__link {
+.navbar__container__mobile .navbar__link {
   justify-content: flex-end;
   flex: 1;
   overflow: hidden;
 }
-.navbar__container .navbar__link li a {
+.navbar__container__mobile .navbar__link li a {
   color: #FFFFFF;
   font-weight: 500;
   font-size: 16px;
@@ -198,20 +197,21 @@ main {
   transition-duration: 500ms;
   cursor: pointer;
 }
-.navbar__container .navbar__link li a i {
+.navbar__container__mobile .navbar__link li a i {
   margin: 0 2px;
 }
-.navbar__container .navbar__link .nav__button {
+.navbar__container__mobile .navbar__link .nav__button__mobile {
   background-color: #FFFFFF;
   padding: 6px 15px;
   border-radius: 20px;
+  flex: 1;
 }
-.navbar__container .navbar__link .nav__button .nav__button__number__container {
+.navbar__container__mobile .navbar__link .nav__button__mobile .nav__button__number__container {
   position: absolute;
   width: 0;
   height: 0;
 }
-.navbar__container .navbar__link .nav__button .nav__button__number__container .nav__button__number {
+.navbar__container__mobile .navbar__link .nav__button__mobile .nav__button__number__container .nav__button__number {
   color: #FFFFFF;
   background-color: #EA5136;
   border-radius: 50%;
@@ -221,39 +221,39 @@ main {
   position: relative;
   top: -20px;
 }
-.navbar__container .navbar__link .nav__button .nav__button__line {
+.navbar__container__mobile .navbar__link .nav__button__mobile .nav__button__line {
   height: 18px;
   margin: 0px 12px;
   width: 1px;
   background-color: #E1E1E1;
 }
-.navbar__container .navbar__link .nav__button .nav__button__search .nav__button__searchBar {
+.navbar__container__mobile .navbar__link .nav__button__mobile .nav__button__search .nav__button__searchBar {
   width: 80px;
   margin: 0 5px;
   border-radius: 3px;
   border: 1px black solid;
 }
-.navbar__container .navbar__link .nav__button .nav__button__search * {
+.navbar__container__mobile .navbar__link .nav__button__mobile .nav__button__search * {
   cursor: pointer;
 }
-.navbar__container .navbar__link .nav__button .nav__button__search .nav__button__searchBar__mobile {
+.navbar__container__mobile .navbar__link .nav__button__mobile .nav__button__search .nav__button__searchBar__mobile {
   width: 80px;
   margin: 0 5px;
   border-radius: 3px;
   border: 1px black solid;
 }
-.navbar__container .navbar__link .nav__button .nav__button__burger {
+.navbar__container__mobile .navbar__link .nav__button__mobile .nav__button__burger {
   position: relative;
   width: 16px;
   height: 16px;
   cursor: pointer;
 }
-.navbar__container .navbar__link .nav__button .nav__button__burger * {
+.navbar__container__mobile .navbar__link .nav__button__mobile .nav__button__burger * {
   position: absolute;
   cursor: pointer;
   transition-duration: 0.3s;
 }
-.navbar__container .navbar__link .nav__button .nav__button__burger .fa-xmark {
+.navbar__container__mobile .navbar__link .nav__button__mobile .nav__button__burger .fa-xmark {
   opacity: 0;
 }
 
@@ -297,15 +297,19 @@ a {
 }
 .navbar__menu .navbar__menu__container .navbar__menu__slide__container {
   position: relative;
-  width: 64px;
-  left: 6px;
+  width: 72px;
+  left: 0px;
   top: 8px;
 }
 .navbar__menu .navbar__menu__container .navbar__menu__slide__container .navbar__menu__slide {
+  text-align: end;
   font-size: 16px;
   color: #E1E1E1;
   margin-top: 24px;
   transition-duration: 0.3s;
+}
+.navbar__menu .navbar__menu__container #buyTicket {
+  color: #4D3CCD;
 }
 
 #footer__mobile {
