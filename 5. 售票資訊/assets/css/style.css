@@ -194,9 +194,27 @@ body {
     transform: translateY(-1vh);
   }
 }
+#navbar {
+  display: block;
+}
+
+#navbar__mobile {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  #navbar {
+    display: none;
+  }
+
+  #navbar__mobile {
+    display: block;
+  }
+}
 header .title__container {
   margin: 140px auto 160px auto;
   max-width: 1200px;
+  width: 80%;
   color: #D3D6B1;
 }
 header .title__container h1 {

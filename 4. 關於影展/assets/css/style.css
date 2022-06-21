@@ -190,6 +190,7 @@ body {
 header {
   margin: 140px auto 120px auto;
   max-width: 1280px;
+  width: 80%;
 }
 header .title__container {
   position: relative;
