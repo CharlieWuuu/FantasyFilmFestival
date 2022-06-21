@@ -118,12 +118,19 @@ function remove(selectedFilm) {
   // 刪除sessionStorage
   sessionData.splice(0, 1);
   sessionStorage.setItem('filmHeight', JSON.stringify(sessionData));
-  // 顯示片單數量
+  // 顯示片單數量（>900px）
   if (localData.length == 0) {
     document.getElementById('film_amount').style.opacity = '0';
   } else {
     document.getElementById('film_amount').style.opacity = '1';
     document.getElementById('film_amount').innerText = localData.length;
+  }
+
+  if (localData.length == 0) {
+    document.getElementById('film_amount_mobile').style.opacity = '0';
+  } else {
+    document.getElementById('film_amount_mobile').style.opacity = '1';
+    document.getElementById('film_amount_mobile').innerText = localData.length;
   }
   // 顯示衝堂
   conflict();

@@ -379,6 +379,13 @@ function chooseFavorite(clickedId) {
     document.getElementById('film_amount').style.opacity = '1';
     document.getElementById('film_amount').innerText = localData.length;
   }
+
+  if (localData.length == 0) {
+    document.getElementById('film_amount_mobile').style.opacity = '0';
+  } else {
+    document.getElementById('film_amount_mobile').style.opacity = '1';
+    document.getElementById('film_amount_mobile').innerText = localData.length;
+  }
 }
 
 // (6) hover後顯示完整片單內容

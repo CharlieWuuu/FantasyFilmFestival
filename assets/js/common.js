@@ -43,6 +43,17 @@ document.addEventListener('scroll', function () {
   lastPos = currentPos; //再記住現在位置，跟未來的位置做比較
 });
 
+//(2.5)判斷螢幕尺寸
+
+function checkBigScreen() {
+  var x = window.matchMedia('(max-width: 900px)');
+  if (x.matches) {
+    return 0;
+  } else {
+    return 1;
+  }
+}
+
 // (3) 渲染加入最愛的資料
 // 函式：載入時，顯示已選片單數量
 function showFilmAmount() {
@@ -51,11 +62,15 @@ function showFilmAmount() {
     ? JSON.parse(localStorage.getItem('片單'))
     : [];
 
+  var isBig = checkBigScreen();
+  var id = 'film_amount'; // isBig == 1 ? 'film_amount' : 'film_amount_mobile';
+  console.log(id);
   if (localData.length == 0) {
-    document.getElementById('film_amount').style.opacity = '0';
+    document.getElementById(id).style.opacity = '0';
   } else {
-    document.getElementById('film_amount').style.opacity = '1';
-    document.getElementById('film_amount').innerText = localData.length;
+    console.log(document.getElementById(id));
+    document.getElementById(id).style.opacity = '1';
+    document.getElementById(id).innerText = localData.length;
   }
 }
 
