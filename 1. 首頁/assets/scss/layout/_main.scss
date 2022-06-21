@@ -546,6 +546,7 @@ article{
 	}
 	.sponsor__icon{
 		@extend %flex-center;
+		flex-wrap: wrap;
 		margin: 40px 0 50px 0;
 	}
 }

@@ -88,6 +88,7 @@ video {
   font: inherit;
   vertical-align: baseline;
   cursor: default;
+  box-shadow: 0 0 0 1px black;
 }
 
 /* 賦予 HTML5 標籤基本的 Display:block ，用於輔助舊的瀏覽器能正常顯示 */
@@ -784,6 +785,7 @@ article .title__container .title__all .ZHtitle__text {
   margin-top: 8px;
 }
 .sponsor .sponsor__icon {
+  flex-wrap: wrap;
   margin: 40px 0 50px 0;
 }
 
