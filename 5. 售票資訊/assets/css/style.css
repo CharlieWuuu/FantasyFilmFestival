@@ -246,6 +246,7 @@ header .title__container #ENtitle_2 {
   font-weight: 700;
   color: #D3D6B1;
   margin: 200px 10vw;
+  height: fit-content;
 }
 .main .ticketInfo__container {
   display: flex;

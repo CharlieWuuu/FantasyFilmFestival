@@ -170,6 +170,15 @@ body {
   background-size: s;
 }
 
+@media screen and (max-width: 900px) {
+  #navbar, #footer {
+    display: none;
+  }
+
+  #navbar__mobile, #footer__mobile {
+    display: block;
+  }
+}
 header .title__container {
   position: relative;
   margin: 145px auto 0vh auto;
@@ -210,6 +219,7 @@ main {
   align-items: center;
   flex-direction: column;
   margin: 70px 0 200px 0;
+  height: fit-content;
 }
 
 .favorite__select {

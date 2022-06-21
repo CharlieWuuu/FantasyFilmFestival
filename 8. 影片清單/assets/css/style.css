@@ -164,6 +164,15 @@ body {
   background-size: s;
 }
 
+@media screen and (max-width: 900px) {
+  #navbar, #footer {
+    display: none;
+  }
+
+  #navbar__mobile, #footer__mobile {
+    display: block;
+  }
+}
 header .title__container {
   margin: 145px auto 0vh auto;
   max-width: 1200px;
@@ -203,6 +212,7 @@ header .title__container .ZHtitle__contaitner .ZHtitle__line {
   margin: 50px auto 200px auto;
   width: 90%;
   max-width: 1200px;
+  height: fit-content;
 }
 
 .symbols {

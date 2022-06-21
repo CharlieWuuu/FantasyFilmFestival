@@ -20,3 +20,12 @@ body{
 		background-size: s;
 	}
 }
+
+@media screen and (max-width: 900px) {
+	#navbar, #footer{
+		display: none;
+	}
+	#navbar__mobile, #footer__mobile{
+		display: block;
+	}
+}
