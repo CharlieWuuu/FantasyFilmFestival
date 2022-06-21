@@ -2,7 +2,7 @@ $(document).ready(function () {
   // 載入header
   $.ajax({
     dataType: 'html',
-    url: '/10. RWD/assets/html/nav.html',
+    url: '../10. RWD/assets/html/nav.html',
     jsonp: '$callback',
     success: showMobileHeaderData,
   });
@@ -56,7 +56,7 @@ $(document).ready(function () {
   }
   $.ajax({
     dataType: 'html',
-    url: '/10. RWD//assets/html/footer.html',
+    url: '../10. RWD/assets/html/footer.html',
     jsonp: '$callback',
     success: showMobileFooterData,
   });
