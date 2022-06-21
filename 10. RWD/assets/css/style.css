@@ -1,0 +1,421 @@
+@charset "UTF-8";
+/* 將大部分標籤的預設樣式重製成以下的內容 */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* 賦予 HTML5 標籤基本的 Display:block ，用於輔助舊的瀏覽器能正常顯示 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* 將 body 也就是整體的文字行高預設成 1 */
+body {
+  line-height: 1;
+}
+
+/* 取消項目列表預設的輔助符號 */
+ol,
+ul {
+  list-style: none;
+}
+
+/* 隱藏引用標籤預設的引號(部分瀏覽器有) */
+blockquote,
+q {
+  quotes: none;
+}
+
+/* 重置引用標籤的偽元素 */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* 將表格初始化 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.footer__share__mobile a, .footer__share__mobile, .footer__button__container .footer__button .footer__button__menu, .footer__button__container .footer__button, .footer__button__container, .footer__top a, .footer__logo__container, #footer__mobile .footer__container, .navbar__container .navbar__link .nav__button .nav__button__burger, .navbar__container .navbar__link .nav__button .nav__button__search, .navbar__container .navbar__link .nav__button .nav__button__number__container .nav__button__number, .navbar__container .navbar__link .nav__button, .navbar__container .navbar__link li a, .navbar__container .navbar__link, .navbar__container .navbar__logo, .navbar__container, .navbar__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Alata", sans-serif;
+}
+
+main {
+  height: 60vh;
+}
+
+* {
+  cursor: default;
+}
+
+#navbar__mobile {
+  display: none;
+}
+
+.navbar__content {
+  margin: auto 8px;
+  width: 100%;
+}
+
+.navbar__container {
+  position: fixed;
+  top: 0px;
+  z-index: 999;
+  width: 100%;
+  height: 64px;
+  background-color: #6AB5B9;
+  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.25));
+  transition: all 1s;
+}
+.navbar__container .navbar__logo {
+  justify-content: flex-start;
+}
+.navbar__container .navbar__logo #navbar__logoPic {
+  width: 60px;
+}
+.navbar__container .navbar__logo #navbar__logoText {
+  width: 75px;
+  transform: translateX(-10px);
+}
+.navbar__container .navbar__link {
+  justify-content: flex-end;
+  flex: 1;
+  overflow: hidden;
+}
+.navbar__container .navbar__link li a {
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  letter-spacing: 0.2px;
+  transition-duration: 500ms;
+  cursor: pointer;
+}
+.navbar__container .navbar__link li a i {
+  margin: 0 2px;
+}
+.navbar__container .navbar__link .nav__button {
+  background-color: #FFFFFF;
+  padding: 6px 15px;
+  border-radius: 20px;
+}
+.navbar__container .navbar__link .nav__button .nav__button__number__container {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.navbar__container .navbar__link .nav__button .nav__button__number__container .nav__button__number {
+  color: #FFFFFF;
+  background-color: #EA5136;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  position: relative;
+  top: -20px;
+}
+.navbar__container .navbar__link .nav__button .nav__button__line {
+  height: 18px;
+  margin: 0px 12px;
+  width: 1px;
+  background-color: #E1E1E1;
+}
+.navbar__container .navbar__link .nav__button .nav__button__search .nav__button__searchBar {
+  width: 80px;
+  margin: 0 5px;
+  border-radius: 3px;
+  border: 1px black solid;
+}
+.navbar__container .navbar__link .nav__button .nav__button__search * {
+  cursor: pointer;
+}
+.navbar__container .navbar__link .nav__button .nav__button__search .nav__button__searchBar__mobile {
+  width: 80px;
+  margin: 0 5px;
+  border-radius: 3px;
+  border: 1px black solid;
+}
+.navbar__container .navbar__link .nav__button .nav__button__burger {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.navbar__container .navbar__link .nav__button .nav__button__burger * {
+  position: absolute;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.navbar__container .navbar__link .nav__button .nav__button__burger .fa-xmark {
+  opacity: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.navbar__menu {
+  position: fixed;
+  z-index: 990;
+  width: 100%;
+  height: 100vh;
+  top: 0px;
+  background-color: #6AB5B9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.navbar__menu .navbar__menu__container {
+  position: absolute;
+  top: 72px;
+  width: 96px;
+}
+.navbar__menu .navbar__menu__container .navbar__menu__button {
+  position: relative;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 48px auto 0 auto;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+.navbar__menu .navbar__menu__container .navbar__menu__button i {
+  position: absolute;
+  font-size: 12px;
+  top: 4px;
+  right: 8px;
+}
+.navbar__menu .navbar__menu__container .navbar__menu__slide__container {
+  position: relative;
+  width: 64px;
+  left: 6px;
+  top: 8px;
+}
+.navbar__menu .navbar__menu__container .navbar__menu__slide__container .navbar__menu__slide {
+  font-size: 16px;
+  color: #E1E1E1;
+  margin-top: 24px;
+  transition-duration: 0.3s;
+}
+
+#footer__mobile {
+  position: relative;
+  padding: 12px;
+  background-color: #6AB5B9;
+  color: #D3D6B1;
+  z-index: 10;
+  display: none;
+}
+#footer__mobile .footer__container {
+  flex-direction: column;
+}
+#footer__mobile .footer__container .footer__upside {
+  position: relative;
+  width: 100%;
+  height: 144px;
+}
+#footer__mobile .footer__container .footer__downside {
+  position: relative;
+  width: 100%;
+  height: 24px;
+  margin-top: 16px;
+}
+
+.footer__logo__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: fit-content;
+  justify-content: flex-start;
+  margin-left: -4px;
+}
+.footer__logo__container * {
+  cursor: pointer;
+}
+.footer__logo__container #footer__logoPic {
+  width: 50px;
+}
+.footer__logo__container #footer__logoText {
+  transform: translateX(-15px);
+  width: 60px;
+}
+
+.footer__top {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: fit-content;
+  color: white;
+  margin-top: 64px;
+}
+.footer__top * {
+  cursor: pointer;
+}
+.footer__top a {
+  flex-direction: column;
+}
+
+.footer__button__container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  flex-direction: column;
+  align-items: flex-end;
+  width: fit-content;
+}
+.footer__button__container .footer__button {
+  margin-bottom: 12px;
+  font-size: 8.375px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.footer__button__container .footer__button .footer__button__menu a {
+  margin-left: 8px;
+  width: 48px;
+  text-align: center;
+  cursor: pointer;
+}
+.footer__button__container .footer__button .footer__button__menu a p {
+  white-space: nowrap;
+  overflow: hidden;
+  color: #E1E1E1;
+}
+
+.footer__copyright {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: fit-content;
+  font-size: 8px;
+}
+
+.footer__share__mobile {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: fit-content;
+}
+.footer__share__mobile a {
+  text-decoration: none;
+  margin-left: 8px;
+  border: white solid 1px;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  font-family: arial;
+}
+.footer__share__mobile a i {
+  color: #D3D6B1;
+}/*# sourceMappingURL=style.css.map */

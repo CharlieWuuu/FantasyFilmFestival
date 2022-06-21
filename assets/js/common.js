@@ -1,3 +1,21 @@
+$(document).ready(function () {
+  // 載入header
+  $.ajax({
+    dataType: 'html',
+    url: '../assets/html/nav.html',
+    jsonp: '$callback',
+    success: showHeaderData,
+  });
+
+  // 載入顯示footer
+  $.ajax({
+    dataType: 'html',
+    url: '../assets/html/footer.html',
+    jsonp: '$callback',
+    success: showFooterData,
+  });
+});
+
 // (1) menu開合
 function dropDown(myObj) {
   const menu = myObj.querySelector('.menu__container');
@@ -40,24 +58,6 @@ function showFilmAmount() {
     document.getElementById('film_amount').innerText = localData.length;
   }
 }
-
-$(document).ready(function () {
-  // 載入header
-  $.ajax({
-    dataType: 'html',
-    url: '../assets/html/nav.html',
-    jsonp: '$callback',
-    success: showHeaderData,
-  });
-
-  // 載入顯示footer
-  $.ajax({
-    dataType: 'html',
-    url: '../assets/html/footer.html',
-    jsonp: '$callback',
-    success: showFooterData,
-  });
-});
 
 function showHeaderData(data) {
   // Use the template
