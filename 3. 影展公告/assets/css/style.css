@@ -193,6 +193,15 @@ body {
     transform: translateY(-1vh);
   }
 }
+@media screen and (max-width: 900px) {
+  #navbar, #footer {
+    display: none;
+  }
+
+  #navbar__mobile, #footer__mobile {
+    display: block;
+  }
+}
 header {
   margin: 140px auto 160px auto;
   width: 80%;
@@ -243,6 +252,7 @@ header .title__container #ENtitle_2 {
   width: 80%;
   max-width: 1280px;
   margin: 200px auto;
+  height: fit-content;
 }
 .main .container {
   padding-bottom: 162px;

@@ -187,6 +187,15 @@ body {
     transform: translateY(-1vh);
   }
 }
+@media screen and (max-width: 900px) {
+  #navbar, #footer {
+    display: none;
+  }
+
+  #navbar__mobile, #footer__mobile {
+    display: block;
+  }
+}
 header {
   margin: 0 auto 48px;
   max-width: 1280px;
@@ -203,6 +212,7 @@ header .banner__container {
   max-width: 1280px;
   margin: 0 auto 200px;
   position: relative;
+  height: fit-content;
 }
 .main .intro__circle {
   position: absolute;

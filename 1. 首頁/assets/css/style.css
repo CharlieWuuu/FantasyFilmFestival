@@ -152,6 +152,15 @@ body {
   font-family: "Alata", sans-serif;
 }
 
+@media screen and (max-width: 900px) {
+  #navbar, #footer {
+    display: none;
+  }
+
+  #navbar__mobile, #footer__mobile {
+    display: block;
+  }
+}
 header {
   position: static;
   top: 0px;
@@ -299,6 +308,7 @@ header .header__main__container #cornP {
   font-weight: 700;
   background-color: #1E646A;
   overflow: hidden;
+  height: fit-content;
 }
 
 .background {

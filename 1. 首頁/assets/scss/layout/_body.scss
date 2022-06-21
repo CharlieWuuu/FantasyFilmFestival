@@ -2,3 +2,12 @@ body{
 	font-family: 'Noto Sans TC', sans-serif;
 	font-family: 'Alata', sans-serif;
 }
+
+@media screen and (max-width: 900px) {
+	#navbar, #footer{
+		display: none;
+	}
+	#navbar__mobile, #footer__mobile{
+		display: block;
+	}
+}
