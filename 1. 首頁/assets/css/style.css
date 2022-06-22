@@ -141,7 +141,7 @@ a * {
   cursor: pointer;
 }
 
-.sponsor .sponsor__icon, .sponsor, .manual__container, .aboutFilmFes__container .aboutFilmFes__text, .aboutFilmFes__container .aboutFilmFes__bg, .whatsOn__container .whatsOn__more, .whatsOn__container .whatsOn__text, .latest__more, .latest__news__container, article .title__container .title__all, article .title__container, .main > article, header {
+.sponsor .sponsor__icon, .sponsor, .manual__container, .aboutFilmFes__container .aboutFilmFes__text, .aboutFilmFes__container .aboutFilmFes__bg, .whatsOn__container .whatsOn__more, .whatsOn__container .whatsOn__text, .latest__more, .latest__news__container, article .title__container .title__all, article .title__container, article, header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -344,7 +344,7 @@ header .header__main__container #cornP {
   width: 70%;
 }
 
-.main > article {
+article {
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
@@ -788,6 +788,22 @@ article .title__container .title__all .ZHtitle__text {
     width: 250%;
   }
 }
+.manual {
+  margin-bottom: 0;
+}
+
+.getIt {
+  margin-top: 0;
+}
+.getIt .title__container {
+  height: 20vh;
+}
+@media screen and (max-width: 500px) {
+  .getIt .title__container {
+    height: 5vh;
+  }
+}
+
 .getIt__container {
   position: relative;
   width: 100%;

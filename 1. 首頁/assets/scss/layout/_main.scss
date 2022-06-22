@@ -50,7 +50,7 @@
 
 
 
-.main > article{
+article{
 	@extend %flex-center;
 	justify-content: flex-start;
 	align-items: flex-start;
@@ -522,6 +522,7 @@ article{
 	height: 0vh;
 	width: 100%;
 
+
 	#manualCornP{
 		position: absolute;
 		right: 10px;
@@ -573,6 +574,22 @@ article{
 	.manual__container{
 		& > img{
 			width: 250%;
+		}
+	}
+}
+
+.manual{
+	margin-bottom: 0;
+}
+
+.getIt{
+	margin-top: 0;
+	.title__container{
+		height: 20vh;
+	}
+	@media screen and (max-width: 500px) {
+		.title__container{
+			height: 5vh;
 		}
 	}
 }
