@@ -304,6 +304,21 @@ main {
   background-color: #4d9fa3;
 }
 
+@media screen and (max-width: 700px) {
+  .favorite__select {
+    flex-wrap: wrap;
+  }
+  .favorite__select .favorite__select__symbols {
+    display: flex;
+    justify-content: space-between;
+  }
+  .favorite__select .favorite__select__symbols #favSymbolsB, .favorite__select .favorite__select__symbols #favSymbolsR {
+    margin: 0;
+  }
+  .favorite__select .favorite__select__delete {
+    margin-left: 0;
+  }
+}
 .favTable__wrapper {
   display: flex;
   justify-content: center;
