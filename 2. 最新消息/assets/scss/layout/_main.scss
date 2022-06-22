@@ -44,6 +44,12 @@
 	}
 }
 
+@media screen and (max-width: 650px) {
+	.news-list__container{
+		transform: scale(0.6) translateY(-1000px);
+	}
+}
+
 	.news-list__item{
 		position: relative;
 		margin-bottom: 56px;
