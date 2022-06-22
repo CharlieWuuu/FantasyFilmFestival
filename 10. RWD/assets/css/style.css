@@ -307,6 +307,16 @@ a {
   color: #E1E1E1;
   margin-top: 24px;
   transition-duration: 0.3s;
+  display: flex;
+  justify-content: flex-end;
+}
+.navbar__menu .navbar__menu__container .navbar__menu__slide__container .navbar__menu__slide a {
+  width: 64px;
+  text-align-last: justify;
+}
+.navbar__menu .navbar__menu__container .navbar__menu__slide__container .navbar__menu__slide a span {
+  display: inline-block;
+  padding-left: 100%;
 }
 .navbar__menu .navbar__menu__container #buyTicket {
   color: #4D3CCD;

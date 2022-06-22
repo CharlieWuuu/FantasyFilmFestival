@@ -155,9 +155,6 @@ a{
 			margin: 48px auto 0 auto;
 			transition-duration: 0.3s;
 			cursor: pointer;
-			// &:hover{
-			// 	color: $color_secondary_red;
-			// }
 
 			i{
 				position: absolute;
@@ -178,9 +175,15 @@ a{
 				color: #E1E1E1;
 				margin-top: 24px;
 				transition-duration: 0.3s;
-				// &:hover{
-				// 	color: $color_secondary_red;
-				// }
+				display: flex;
+				justify-content: flex-end;
+
+				a{
+					width: 64px;
+					text-align-last: justify;
+					span { display: inline-block /* Opera */; padding-left: 100%; };
+				}
+
 			}
 		}
 
