@@ -50,7 +50,7 @@
 
 
 
-article{
+.main > article{
 	@extend %flex-center;
 	justify-content: flex-start;
 	align-items: flex-start;
@@ -579,17 +579,17 @@ article{
 }
 
 .manual{
-	margin-bottom: 0;
+	margin-bottom: 0 !important;
 }
 
 .getIt{
-	margin-top: 0;
+	margin-top: 0 !important;
 	.title__container{
-		height: 20vh;
+		height: 20vh !important;
 	}
 	@media screen and (max-width: 500px) {
 		.title__container{
-			height: 5vh;
+			height: 5vh !important;
 		}
 	}
 }
