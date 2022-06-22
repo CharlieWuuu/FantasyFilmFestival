@@ -98,6 +98,26 @@ article{
 	}
 }
 
+@media screen and (max-width: 900px) {
+	article{.title__container{
+		.title__all{
+			h1{
+				font-weight: 400;
+				font-size: 40px;
+				line-height: 60px;
+			}
+
+			.ZHtitle__text{
+				width: 30px;
+				font-size: 24px;
+				line-height: 30px;
+				color: $color_secondary_white;
+				font-weight: 500;
+			}
+		}
+	}}
+}
+
 // 最新消息
 #latest{
 	margin-top: 10vw;
@@ -357,7 +377,19 @@ article{
 
 	.whatsOn__img{
 		img{
-			bottom: -300px;
+			position: absolute;
+			object-fit: cover;
+			bottom: -100px;
+			left: -10%;
+			width: 50%;
+			height: 20vh;
+			border-radius: 0 50px 15px 0;
+		}
+	}
+	.whatsOn__cone{
+		img{
+			width:70px;
+			bottom: -150px;
 		}
 	}
 }
@@ -452,13 +484,6 @@ article{
 	.aboutFilmFes__container{
 		top: 40px;
 		width: 100%;
-		// .aboutFilmFes__text{
-		// 	top: 120px;
-		// 	p{
-		// 		font-size: 16px;
-		// 		line-height: 36px;
-		// 	}
-		// }
 	}
 	.aboutFilmFes__bg{
 		margin: auto;
@@ -467,14 +492,14 @@ article{
 	}
 	.aboutFilmFes__img{
 	#img__horse{
-		width: 150px;
-		left: 10vw;
+		width: 120px;
+		left: 10%;
 		bottom: -150px;
 
 	}
 	#img__text{
-		width: 200px;
-		left: 20vw;
+		width: 150px;
+		left: 40%;
 		bottom: -220px;
 	}}
 }
@@ -532,13 +557,13 @@ article{
 
 	.manual__img{
 		#manualCornP{
-			right: -130px;
-			top: -85px;
+			right: -70px;
+			top: -65px;
 
 		}
 		#manualCornG{
-			right: -100px;
-			top: -75px;
+			right: -40px;
+			top: -55px;
 		}
 	}
 }
@@ -603,6 +628,11 @@ article{
 				}
 				#iconPlace{
 					height: 40px;
+				}
+				@media screen and (max-width: 900px) {
+					img,svg{
+						margin: 0;
+					}
 				}
 			}
 		}
