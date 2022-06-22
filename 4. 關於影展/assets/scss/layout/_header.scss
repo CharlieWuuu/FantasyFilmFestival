@@ -52,5 +52,10 @@ header{
 			left: 150px;
 		}
 	}
+}
 
+@media screen and (max-width: 900px) {
+	header{
+		transform: scale(0.75) translateX(-17%);
+	}
 }

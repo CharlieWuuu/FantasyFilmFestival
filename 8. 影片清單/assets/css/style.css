@@ -174,8 +174,9 @@ body {
   }
 }
 header .title__container {
+  position: relative;
   margin: 145px auto 0vh auto;
-  max-width: 1200px;
+  width: 85%;
   font-weight: 700;
   font-size: 10rem;
   color: #D3D6B1;
@@ -206,6 +207,11 @@ header .title__container .ZHtitle__contaitner .ZHtitle__line {
   background-color: #6AB5B9;
 }
 
+@media screen and (max-width: 900px) {
+  header {
+    transform: scale(0.75) translateX(-17%);
+  }
+}
 .main {
   position: relative;
   flex-direction: column;

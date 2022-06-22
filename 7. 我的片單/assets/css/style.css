@@ -213,6 +213,11 @@ header .title__container .ZHtitle__contaitner .ZHtitle__line {
   background-color: #6AB5B9;
 }
 
+@media screen and (max-width: 900px) {
+  header {
+    transform: scale(0.75) translateX(-17%);
+  }
+}
 main {
   display: flex;
   justify-content: center;
