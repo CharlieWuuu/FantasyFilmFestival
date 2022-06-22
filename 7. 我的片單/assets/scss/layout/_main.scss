@@ -36,8 +36,10 @@ main{
 		#favSymbolsR{
 			background-color: #FFE4E6;
 			color: #BE123C;
+			opacity: 1;
 		}
 	}
+
 	.favorite__select__button__conatiner{
 		@extend %flex-center;
 		.favorite__select__delete{

@@ -254,6 +254,7 @@ main {
 .favorite__select__symbols #favSymbolsR {
   background-color: #FFE4E6;
   color: #BE123C;
+  opacity: 1;
 }
 .favorite__select .favorite__select__button__conatiner .favorite__select__delete {
   background-color: #6AB5B9;
