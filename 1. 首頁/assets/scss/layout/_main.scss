@@ -306,13 +306,13 @@ article{
 			line-height: 24px;
 		}
 
-		a{
+		i{
 			font-size: 18px;
 			color: white;
 			transition-duration: 0.3s;
 		}
 		&:hover{
-			p,a{
+			p,i{
 				color: $color_secondary_golden;
 			}
 			&::before{

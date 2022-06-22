@@ -556,12 +556,12 @@ article .title__container .title__all .ZHtitle__text {
   transition-duration: 0.3s;
   line-height: 24px;
 }
-.whatsOn__container .whatsOn__text a {
+.whatsOn__container .whatsOn__text i {
   font-size: 18px;
   color: white;
   transition-duration: 0.3s;
 }
-.whatsOn__container .whatsOn__text:hover p, .whatsOn__container .whatsOn__text:hover a {
+.whatsOn__container .whatsOn__text:hover p, .whatsOn__container .whatsOn__text:hover i {
   color: #D3D6B1;
 }
 .whatsOn__container .whatsOn__text:hover::before {
