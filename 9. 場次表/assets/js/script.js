@@ -209,22 +209,22 @@ function changeDate(event) {
     }
     // 如果「開始」日期無資料，「結束」日期有資料，顯示錯誤文字
   } else if (inputStartValue == '' && inputEndValue !== '') {
-    $('.timeline__chooseStart').addClass('active');
-    $('.timeline__dataError').removeClass('active');
+    $('#timeline__chooseStart').addClass('active');
+    $('#timeline__dataError').removeClass('active');
     // 如果「開始」日期有資料，「結束」日期無資料，顯示包含此日期id的div
   } else if (inputStartValue !== '' && inputEndValue == '') {
     let x = startIndex;
     document.querySelector('#' + dateArray[x]).style.display = 'block';
-    $('.timeline__chooseStart').removeClass('active');
+    $('#timeline__chooseStart').removeClass('active');
   } else if (inputStartValue > inputEndValue) {
-    $('.timeline__dataError').addClass('active');
-    $('.timeline__chooseStart').removeClass('active');
+    $('#timeline__dataError').addClass('active');
+    $('#timeline__chooseStart').removeClass('active');
     // 如果「開始」日期有資料，「結束」日期有資料，顯示此範圍內的div
   } else {
     for (i = startIndex; i <= endIndex; i++) {
       document.querySelector('#' + dateArray[i]).style.display = 'block';
-      $('.timeline__chooseStart').removeClass('active');
-      $('.timeline__dataError').removeClass('active');
+      $('#timeline__chooseStart').removeClass('active');
+      $('#timeline__dataError').removeClass('active');
     }
   }
 }
@@ -304,17 +304,17 @@ function changeCinema(event) {
     if (all_daily_div[i].style.display == 'block') {
       return;
     }
-    $('.timeline__cinemaError').removeClass('active');
+    $('#timeline__cinemaError').removeClass('active');
   }
   // (1) 若是日期資料錯誤，不顯示「此時段無資料」
   if (
-    $('.timeline__chooseStart').hasClass('active') == true ||
-    $('.timeline__dataError').hasClass('active') == true
+    $('#timeline__chooseStart').hasClass('active') == true ||
+    $('#timeline__dataError').hasClass('active') == true
   ) {
-    $('.timeline__cinemaError').removeClass('active');
+    $('#timeline__cinemaError').removeClass('active');
     // (2) 若是該場次時段無影片，顯示提示文字
   } else {
-    $('.timeline__cinemaError').addClass('active');
+    $('#timeline__cinemaError').addClass('active');
   }
 }
 

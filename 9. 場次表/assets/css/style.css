@@ -455,15 +455,29 @@ td p {
   font-weight: 300;
 }
 
-.timeline__chooseStart, .timeline__dataError, .timeline__cinemaError {
-  font-size: 84px;
+.timeline__error {
   color: rgba(255, 255, 255, 0.3);
   margin: 10vh;
   display: none;
 }
-.timeline__chooseStart h1, .timeline__dataError h1, .timeline__cinemaError h1 {
+.timeline__error h1 {
   text-align: center;
+  font-size: 84px;
 }
-.timeline__chooseStart.active, .timeline__dataError.active, .timeline__cinemaError.active {
+.timeline__error.active {
   display: block;
+}
+
+@media screen and (max-width: 750px) {
+  .timeline__error h1 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .timeline__error {
+    margin: 40px;
+  }
+  .timeline__error h1 {
+    font-size: 22px;
+  }
 }/*# sourceMappingURL=style.css.map */
