@@ -42,6 +42,10 @@ color: transparent;
 		text-decoration: none;
 		display: flex;
 		flex-direction: row;
+		cursor: pointer;
+		*{
+			cursor: pointer;
+		}
 		&::before{
 			position: absolute;
 			top: -30px;

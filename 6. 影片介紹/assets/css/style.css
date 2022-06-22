@@ -383,5 +383,25 @@ header .banner__container {
   flex-wrap: wrap;
 }
 .main .moremovie__item > a {
+  position: relative;
   margin-left: 48px;
+}
+.main .moremovie__item > a * {
+  cursor: pointer;
+}
+.main .moremovie__item > a::before {
+  position: absolute;
+  top: -20px;
+  left: 0px;
+  color: #fff;
+  font-size: 0.8em;
+  background-color: #EA5136;
+  opacity: 0;
+  padding: 5px;
+  border-radius: 5px;
+  content: "連結僅示意";
+  transition-duration: 0.3s;
+}
+.main .moremovie__item > a:hover::before {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

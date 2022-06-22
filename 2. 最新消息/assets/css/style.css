@@ -303,6 +303,10 @@ header .title__container #ENtitle_2 {
   background-color: #FFFFFF;
   width: 500px;
   height: 410px;
+  cursor: pointer;
+}
+.main .news-list__item * {
+  cursor: pointer;
 }
 .main .news-list__item::before {
   position: absolute;

@@ -290,6 +290,10 @@ header .title__container #ENtitle_2 {
   text-decoration: none;
   display: flex;
   flex-direction: row;
+  cursor: pointer;
+}
+.main .list-item__card * {
+  cursor: pointer;
 }
 .main .list-item__card::before {
   position: absolute;
