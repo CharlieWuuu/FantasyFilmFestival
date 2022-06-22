@@ -159,9 +159,12 @@
 		p{
 			display: flex;
 			flex-direction: column;
+			font-size: 14px;
 			a{
-				width: 50%;
-				white-space: nowrap;
+				width: 100%;
+				font-size: 16px;
+
+
 			}
 		}
 		#timelineList{
@@ -174,19 +177,24 @@
 @media screen and (max-width: 490px) {
 	.film {
 		#timelineList{
-			width: 50%;
+			width: fit-content;
+
 			.timelineList__container{
 				flex-wrap: wrap;
+				width: 150px;
+				span {
+					font-size: 14px;
+				}
 				span:nth-child(2){
 					overflow:visible;
-					width: 50%;
+					width: 40%;
 					white-space: nowrap;
 					}
 				span:nth-child(3){
 				overflow:visible;
-				width: fit-content;
-				white-space: nowrap;
-				text-align: left;
+					width: fit-content;
+					white-space: nowrap;
+					text-align: left;
 				}
 			}
 		}
