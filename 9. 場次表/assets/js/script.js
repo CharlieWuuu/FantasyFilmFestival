@@ -73,7 +73,7 @@ var filmContainer_html = `
   width: {{filmData.list.long}}vw;">
     <p id="film__name">
       <a href="/FantasyFilmFestival/6. 影片介紹/index.html">{{filmData.list.name}}</a>
-      <span class="film__fav" id="{{filmData.list.full_id}}" onclick="chooseFavorite(this.id)">❤</span>
+      <span class="film__fav" id="{{filmData.list.full_id}}" onclick="chooseFavorite(this.id)"><i class="fa-solid fa-heart"></i></span>
     </p>
     <p id="film__time">
       {{filmData.list.startTime}}-{{filmData.list.endTime}}
