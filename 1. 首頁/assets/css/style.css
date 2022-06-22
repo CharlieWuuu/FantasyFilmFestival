@@ -165,7 +165,7 @@ header {
   position: static;
   top: 0px;
   width: 100%;
-  height: 100vh;
+  height: calc(80px + 50vw);
   align-items: flex-start;
   overflow: hidden;
 }
@@ -182,7 +182,7 @@ header .header__bg__container .header__float {
 header .header__bg__container #tailBig {
   position: absolute;
   width: 40%;
-  top: -10vh;
+  top: -4vw;
   left: 15%;
   filter: blur(2px);
   transition-duration: 0.5s all;
@@ -193,6 +193,7 @@ header .header__bg__container #tailSmall1 {
   position: absolute;
   bottom: 0vh;
   width: 70%;
+  top: calc(80px + 25vw);
   left: -10%;
   opacity: 50%;
   filter: blur(5px);
@@ -202,7 +203,7 @@ header .header__bg__container #tailSmall1 {
 header .header__bg__container #tailSmall2 {
   position: absolute;
   width: 40%;
-  top: -20vh;
+  top: -12vw;
   right: -15%;
   opacity: 50%;
   filter: blur(6px);
@@ -221,7 +222,7 @@ header .header__main__container .header__main__title__container {
   flex-direction: column;
   width: 24%;
   height: 75vh;
-  top: 22vh;
+  top: 18vw;
   left: 8%;
 }
 header .header__main__container .header__main__title__container #ZHtitle {
@@ -241,7 +242,7 @@ header .header__main__container .header__main__title__container #arrow {
 header .header__main__container #horse {
   position: absolute;
   width: 60%;
-  top: 5vh;
+  top: 65px;
   right: 10%;
   z-index: 4;
   animation: move 8s infinite;
@@ -249,8 +250,8 @@ header .header__main__container #horse {
 }
 header .header__main__container #rainbow {
   position: absolute;
-  height: 130%;
-  top: 5vh;
+  width: 50%;
+  top: 65px;
   right: 0%;
   z-index: 2;
   animation: move 6s infinite;
@@ -259,7 +260,7 @@ header .header__main__container #rainbow {
 header .header__main__container #cornO {
   position: absolute;
   width: 5%;
-  top: 68vh;
+  top: calc(65px + 35vw);
   right: 5%;
   z-index: 3;
   animation: move 6s infinite;
@@ -268,7 +269,7 @@ header .header__main__container #cornO {
 header .header__main__container #cornG {
   position: absolute;
   width: 5%;
-  top: 40vh;
+  top: calc(65px + 15vw);
   right: 15%;
   z-index: 5;
   animation: move 5s infinite;
@@ -277,7 +278,7 @@ header .header__main__container #cornG {
 header .header__main__container #cornP {
   position: absolute;
   width: 6%;
-  top: 70vh;
+  top: calc(65px + 32vw);
   right: 23%;
   z-index: 5;
   animation: move 4s infinite;
@@ -381,15 +382,23 @@ article .title__container .title__all .ZHtitle__text {
   font-weight: 500;
 }
 
+#latest {
+  margin-top: 10vw;
+}
+
 .latest__news__container {
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  height: 60vh;
+  min-height: 60vh;
+  height: fit-content;
   z-index: 2;
 }
 .latest__news__container .news-list__item {
   display: flex;
   width: 30%;
+  min-width: 340px;
+  margin: 40px 0 40px 0;
   position: relative;
 }
 .latest__news__container .news-list__item::before {
@@ -453,6 +462,11 @@ article .title__container .title__all .ZHtitle__text {
   color: gray;
 }
 
+@media screen and (max-width: 900px) {
+  .latest__news__container {
+    justify-content: space-around;
+  }
+}
 .latest__more {
   align-items: flex-start;
   height: 10vh;
@@ -516,6 +530,7 @@ article .title__container .title__all .ZHtitle__text {
   font-size: 18px;
   color: white;
   transition-duration: 0.3s;
+  line-height: 24px;
 }
 .whatsOn__container .whatsOn__text a {
   font-size: 18px;
@@ -564,6 +579,7 @@ article .title__container .title__all .ZHtitle__text {
   bottom: 0px;
   left: -10%;
   width: 35%;
+  min-width: 240px;
   height: 35vh;
   border-radius: 0 50px 15px 0;
 }
@@ -583,6 +599,17 @@ article .title__container .title__all .ZHtitle__text {
   width: 150px;
 }
 
+@media screen and (max-width: 900px) {
+  .whatsOn__container {
+    top: 40px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .whatsOn__img img {
+    bottom: -300px;
+  }
+}
 .aboutFilmFes__container {
   position: relative;
   top: -10vh;
@@ -591,18 +618,15 @@ article .title__container .title__all .ZHtitle__text {
   margin-left: auto;
 }
 .aboutFilmFes__container .aboutFilmFes__bg {
-  position: absolute;
   height: 500px;
   width: 500px;
   border-radius: 50%;
   border: 1px solid white;
   align-items: flex-end;
 }
-.aboutFilmFes__container .aboutFilmFes__logo {
-  margin-bottom: 10px;
-}
 .aboutFilmFes__container .aboutFilmFes__logo img {
   position: absolute;
+  top: -10px;
   left: 55%;
   width: 150px;
 }
@@ -644,22 +668,54 @@ article .title__container .title__all .ZHtitle__text {
   height: 0vh;
   width: 100%;
 }
-.aboutFilmFes__img img {
+.aboutFilmFes__img #img__horse {
   position: absolute;
   object-fit: cover;
-}
-.aboutFilmFes__img #img__horse {
   width: 200px;
   right: 66%;
   bottom: 30vh;
   z-index: 1;
 }
 .aboutFilmFes__img #img__text {
+  position: absolute;
+  object-fit: cover;
   width: 250px;
-  right: 48%;
+  right: 50%;
   bottom: 10vh;
 }
 
+@media screen and (max-width: 900px) {
+  .aboutFilmFes__container {
+    top: 40px;
+    width: 100%;
+  }
+
+  .aboutFilmFes__bg {
+    margin: auto;
+    height: 300px;
+    width: 300px;
+  }
+
+  .aboutFilmFes__img #img__horse {
+    width: 150px;
+    left: 10vw;
+    bottom: -150px;
+  }
+  .aboutFilmFes__img #img__text {
+    width: 200px;
+    left: 20vw;
+    bottom: -220px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .aboutFilmFes__container .aboutFilmFes__text {
+    top: 120px;
+  }
+  .aboutFilmFes__container .aboutFilmFes__text p {
+    font-size: 16px;
+    line-height: 36px;
+  }
+}
 .manual__img {
   position: relative;
   height: 0vh;
@@ -688,6 +744,25 @@ article .title__container .title__all .ZHtitle__text {
   width: 100%;
 }
 
+@media screen and (max-width: 900px) {
+  .manual__container > img {
+    width: 160%;
+  }
+
+  .manual__img #manualCornP {
+    right: -130px;
+    top: -85px;
+  }
+  .manual__img #manualCornG {
+    right: -100px;
+    top: -75px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .manual__container > img {
+    width: 250%;
+  }
+}
 .getIt__container {
   position: relative;
   width: 100%;

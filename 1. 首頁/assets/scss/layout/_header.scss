@@ -2,7 +2,7 @@ header{
 	position: static;
 	top: 0px;
 	width: 100%;
-	height: 100vh;
+	height: calc(80px + 50vw);
 	@extend %flex-center;
 	align-items: flex-start;
 	overflow: hidden;
@@ -19,7 +19,7 @@ header{
 		#tailBig{
 			position: absolute;
 			width: 40%;
-			top: -10vh;
+			top: -4vw;
 			left: 15%;
 			filter: blur(2px);
 			transition-duration: 0.5s all;
@@ -31,6 +31,7 @@ header{
 			position: absolute;
 			bottom: 0vh;
 			width: 70%;
+			top: calc(80px + 25vw);
 			left: -10%;
 			opacity: 50%;
 			filter: blur(5px);
@@ -41,7 +42,7 @@ header{
 		#tailSmall2{
 			position: absolute;
 			width: 40%;
-			top: -20vh;
+			top: -12vw;
 			right: -15%;
 			opacity: 50%;
 			filter: blur(6px);
@@ -61,7 +62,7 @@ header{
 			flex-direction: column;
 			width: 24%;
 			height: 75vh;
-			top: 22vh;
+			top: 18vw;
 			left: 8%;
 
 				#ZHtitle{
@@ -83,7 +84,7 @@ header{
 		#horse{
 			position: absolute;
 			width: 60%;
-			top: 5vh;
+			top: 65px;
 			right: 10%;
 			z-index: 4;
 			animation: move 8s infinite;
@@ -91,8 +92,8 @@ header{
 		}
 		#rainbow{
 			position: absolute;
-			height: 130%;
-			top: 5vh;
+			width: 50%;
+			top: 65px;
 			right: 0%;
 			z-index: 2;
 			animation: move 6s infinite;
@@ -101,7 +102,7 @@ header{
 		#cornO{
 			position: absolute;
 			width: 5%;
-			top: 68vh;
+			top: calc(65px + 35vw);
 			right: 5%;
 			z-index: 3;
 			animation: move 6s infinite;
@@ -110,7 +111,7 @@ header{
 		#cornG{
 			position: absolute;
 			width: 5%;
-			top: 40vh;
+			top: calc(65px + 15vw);
 			right: 15%;
 			z-index: 5;
 			animation: move 5s infinite;
@@ -119,7 +120,7 @@ header{
 		#cornP{
 			position: absolute;
 			width: 6%;
-			top: 70vh;
+			top: calc(65px + 32vw);
 			right: 23%;
 			z-index: 5;
 			animation: move 4s infinite;
