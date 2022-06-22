@@ -623,7 +623,7 @@ article .title__container .title__all .ZHtitle__text {
   .whatsOn__img img {
     position: absolute;
     object-fit: cover;
-    bottom: -100px;
+    bottom: -200px;
     left: -10%;
     width: 50%;
     height: 20vh;
