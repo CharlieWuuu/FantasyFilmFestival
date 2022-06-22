@@ -38,9 +38,22 @@
 			transition: 0.5s transform;
 		}
 
+		& p{
+			text-align: center;
+		}
+
 		& i{
 			transition: 0.5s transform;
 		}
+
+@media screen and (max-width: 900px) {
+	.title__container{
+		p{
+			font-size: 16px;
+			font-weight: 700;
+		}
+	}
+}
 
 		// active是js控制用
 		&:hover, &.active{
@@ -85,13 +98,14 @@
 		margin: 10px;
 		color: rgba(255, 255, 255, 0.8);
 		font-weight: 300;
+		line-height: 32px;
 
 		a{
 			text-decoration: none;
 			color: $color_secondary_white;
 			font-weight: 700;
 			font-size: 1.2rem;
-			padding: 0 10px;
+			padding: 0 10px 0 0;
 			transition-duration: 0.3s;
 			&:hover{
 				background-color: rgba(255, 255, 255, 0.2);
@@ -104,6 +118,7 @@
 		text-align:right;
 		padding: 10px;
 		width: 25%;
+		max-width: 250px;
 		overflow: hidden;
 		text-overflow: ellipsis;
 
@@ -133,6 +148,45 @@
 
 				&.active{
 					color: #EA5136;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.film {
+		p{
+			display: flex;
+			flex-direction: column;
+			a{
+				width: 50%;
+				white-space: nowrap;
+			}
+		}
+		#timelineList{
+			width: 50%;
+		}
+	}
+}
+
+
+@media screen and (max-width: 490px) {
+	.film {
+		#timelineList{
+			width: 50%;
+			.timelineList__container{
+				flex-wrap: wrap;
+				span:nth-child(2){
+					overflow:visible;
+					width: 50%;
+					white-space: nowrap;
+					}
+				span:nth-child(3){
+				overflow:visible;
+				width: fit-content;
+				white-space: nowrap;
+				text-align: left;
 				}
 			}
 		}
