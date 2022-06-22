@@ -48,6 +48,9 @@
 	.news-list__container{
 		transform: scale(0.6) translateY(-1000px);
 	}
+	.news-list__content-right{
+		margin-top: 0px;
+	}
 	.news-list{
 		height: 1750px;
 	}
@@ -233,6 +236,4 @@
 			animation-delay: 2500ms;
 		}
 	}
-
-
 }

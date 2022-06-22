@@ -291,6 +291,9 @@ header .title__container #ENtitle_2 {
   .main .news-list__container {
     transform: scale(0.6) translateY(-1000px);
   }
+  .main .news-list__content-right {
+    margin-top: 0px;
+  }
   .main .news-list {
     height: 1750px;
   }
