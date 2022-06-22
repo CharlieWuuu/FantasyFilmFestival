@@ -398,6 +398,7 @@ article .title__container .title__all .ZHtitle__text {
 }
 #latest {
   margin-top: 10vw;
+  opacity: 1;
 }
 
 .latest__news__container {
