@@ -280,9 +280,13 @@ article{
 		border-bottom: 2px solid $color_main;
 		padding: 15px 0;
 		position: relative;
+		cursor: pointer;
+		*{
+			cursor: pointer;
+		}
 		&::before{
 			position: absolute;
-			top: -20px;
+			top: -10px;
 			left: 0px;
 			color: #fff;
 			font-size: .8em;
@@ -308,10 +312,8 @@ article{
 			transition-duration: 0.3s;
 		}
 		&:hover{
-			cursor: pointer;
-			p,i{
+			p,a{
 				color: $color_secondary_golden;
-				cursor: pointer;
 			}
 			&::before{
 				opacity: 100%;

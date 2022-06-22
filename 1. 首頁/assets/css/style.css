@@ -531,10 +531,14 @@ article .title__container .title__all .ZHtitle__text {
   border-bottom: 2px solid #6AB5B9;
   padding: 15px 0;
   position: relative;
+  cursor: pointer;
+}
+.whatsOn__container .whatsOn__text * {
+  cursor: pointer;
 }
 .whatsOn__container .whatsOn__text::before {
   position: absolute;
-  top: -20px;
+  top: -10px;
   left: 0px;
   color: #fff;
   font-size: 0.8em;
@@ -557,12 +561,8 @@ article .title__container .title__all .ZHtitle__text {
   color: white;
   transition-duration: 0.3s;
 }
-.whatsOn__container .whatsOn__text:hover {
-  cursor: pointer;
-}
-.whatsOn__container .whatsOn__text:hover p, .whatsOn__container .whatsOn__text:hover i {
+.whatsOn__container .whatsOn__text:hover p, .whatsOn__container .whatsOn__text:hover a {
   color: #D3D6B1;
-  cursor: pointer;
 }
 .whatsOn__container .whatsOn__text:hover::before {
   opacity: 100%;
