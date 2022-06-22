@@ -136,7 +136,7 @@ table {
   border-spacing: 0;
 }
 
-.main, header .title__container .ZHtitle__contaitner {
+.main .news-list__content-right, .main .news-list__content-left, .main .news-list__container, .main, header .title__container .ZHtitle__contaitner {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -253,17 +253,37 @@ header .title__container #ENtitle_2 {
   margin: 0 auto 200px;
   height: fit-content;
 }
+.main .news-list {
+  width: 100%;
+  max-width: 1280px;
+}
 .main .news-list__container {
   position: relative;
   width: 90%;
-  padding-left: 5%;
+  margin: auto;
   display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.main .news-list__content-left {
+  flex-direction: column;
+  width: fit-content;
+  margin-top: 0px;
 }
 .main .news-list__content-right {
-  width: 50%;
+  flex-direction: column;
+  width: fit-content;
   margin-top: 176px;
 }
+@media screen and (max-width: 1200px) {
+  .main .news-list__container {
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
 .main .news-list__item {
+  position: relative;
   margin-bottom: 56px;
   display: inline-flex;
   box-sizing: border-box;
@@ -271,12 +291,38 @@ header .title__container #ENtitle_2 {
   width: 500px;
   height: 410px;
 }
-.main img {
+.main .news-list__item::before {
+  position: absolute;
+  top: -30px;
+  right: 0px;
+  color: #fff;
+  font-size: 0.8em;
+  background-color: #EA5136;
+  opacity: 0%;
+  padding: 5px;
+  border-radius: 5px;
+  content: "連結僅示意";
+  transition-duration: 0.3s;
+}
+.main .news-list__item:hover .img__container > img {
+  transform: scale(1.1, 1.1);
+  filter: brightness(80%);
+}
+.main .news-list__item:hover::before {
+  opacity: 100%;
+}
+.main .img__container {
   position: relative;
   right: 32px;
+  overflow: hidden;
+  transition-duration: 0.3s;
+}
+.main .img__container img {
+  transition-duration: 0.3s;
 }
 .main a {
   text-decoration: none;
+  left: 50px;
 }
 .main .news-thumbnail__detail {
   display: flex;
