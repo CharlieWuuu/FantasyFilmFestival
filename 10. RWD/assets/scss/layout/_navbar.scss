@@ -176,6 +176,9 @@ a{
 				transition-duration: 0.3s;
 				display: flex;
 				justify-content: flex-start;
+				*{
+					cursor: pointer;
+				}
 
 				a{
 					display: flex;

@@ -309,6 +309,9 @@ a {
   display: flex;
   justify-content: flex-start;
 }
+.navbar__menu .navbar__menu__container .navbar__menu__slide__container .navbar__menu__slide * {
+  cursor: pointer;
+}
 .navbar__menu .navbar__menu__container .navbar__menu__slide__container .navbar__menu__slide a {
   display: flex;
   justify-content: space-between;
