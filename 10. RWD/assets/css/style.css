@@ -397,7 +397,7 @@ a {
 .footer__button__container .footer__button .footer__button__menu a {
   margin-left: 8px;
   width: 48px;
-  text-align: center;
+  text-align: -webkit-center;
   cursor: pointer;
 }
 .footer__button__container .footer__button .footer__button__menu a p {

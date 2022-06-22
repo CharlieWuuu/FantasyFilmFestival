@@ -92,7 +92,8 @@
 			a{
 				margin-left: 8px;
 				width: 48px;
-				text-align: center;
+				// text-align: center;
+				text-align: -webkit-center;
 				cursor: pointer;
 				p{
 					white-space: nowrap;
