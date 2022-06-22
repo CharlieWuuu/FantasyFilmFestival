@@ -42,6 +42,24 @@ color: transparent;
 		text-decoration: none;
 		display: flex;
 		flex-direction: row;
+		&::before{
+			position: absolute;
+			top: -30px;
+			right: 0px;
+			color: #fff;
+			font-size: .8em;
+			background-color: $color_secondary_red;
+			opacity: 0;
+			padding: 5px;
+			border-radius: 5px;
+			content: '連結僅示意';
+			transition-duration: 0.3s;
+		}
+		&:hover{
+			&::before{
+				opacity: 1;
+			}
+		}
 	}
 	.list-item__card__line{
 		position: absolute;

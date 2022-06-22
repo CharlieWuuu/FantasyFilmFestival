@@ -286,6 +286,22 @@ header .title__container #ENtitle_2 {
   display: flex;
   flex-direction: row;
 }
+.main .list-item__card::before {
+  position: absolute;
+  top: -30px;
+  right: 0px;
+  color: #fff;
+  font-size: 0.8em;
+  background-color: #EA5136;
+  opacity: 0;
+  padding: 5px;
+  border-radius: 5px;
+  content: "連結僅示意";
+  transition-duration: 0.3s;
+}
+.main .list-item__card:hover::before {
+  opacity: 1;
+}
 .main .list-item__card__line {
   position: absolute;
   left: 80px;
