@@ -512,7 +512,7 @@ article .title__container .title__all .ZHtitle__text {
 .whatsOn__container {
   position: relative;
   top: -10vh;
-  height: 65vh;
+  height: fit-content;
   width: 60%;
   margin-left: auto;
 }
@@ -611,7 +611,7 @@ article .title__container .title__all .ZHtitle__text {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  height: 25vh;
+  height: 0;
   width: 25%;
   margin-left: auto;
 }
@@ -640,7 +640,7 @@ article .title__container .title__all .ZHtitle__text {
 
   .whatsOn__cone img {
     width: 70px;
-    bottom: -150px;
+    bottom: -300px;
   }
 }
 .aboutFilmFes__container {

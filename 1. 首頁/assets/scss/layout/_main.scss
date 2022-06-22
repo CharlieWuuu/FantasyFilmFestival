@@ -259,7 +259,7 @@ article{
 .whatsOn__container{
 	position: relative;
 	top: -10vh;
-	height: 65vh;
+	height: fit-content;
 	width: 60%;
 	margin-left: auto;
 
@@ -367,7 +367,7 @@ article{
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-end;
-	height: 25vh;
+	height: 0;
 	width: 25%;
 	margin-left: auto;
 	img{
@@ -398,7 +398,7 @@ article{
 	.whatsOn__cone{
 		img{
 			width: 70px;
-			bottom: -150px;
+			bottom: -300px;
 		}
 	}
 }
