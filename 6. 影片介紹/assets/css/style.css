@@ -197,7 +197,7 @@ body {
   }
 }
 header {
-  margin: 0 auto 48px;
+  margin: 65px auto 0 auto;
   max-width: 1280px;
   width: 100%;
 }
@@ -205,7 +205,8 @@ header .banner__container {
   width: 90%;
   margin: 0 auto;
 }
-header .banner__container .img {
+header .banner__container img {
+  width: 100%;
   object-fit: cover;
 }
 
@@ -219,7 +220,7 @@ header .banner__container .img {
 }
 .main .intro__circle {
   position: absolute;
-  top: 0;
+  top: 48px;
   left: 5%;
   background-color: #DB83BD;
   width: 51px;
@@ -227,16 +228,19 @@ header .banner__container .img {
   border-radius: 50%;
 }
 .main .intro {
+  margin-top: 69px;
   margin-bottom: 40px;
   padding-top: 21px;
   width: 85%;
   display: flex;
+  flex-wrap: wrap;
   position: relative;
 }
 .main .title__container {
   display: flex;
   flex-direction: column;
   flex: 1;
+  min-width: 275px;
 }
 .main h11 {
   margin-bottom: 7px;
@@ -263,6 +267,12 @@ header .banner__container .img {
 }
 .main .property__item {
   margin: 0 0 8px 16px;
+  height: fit-content;
+}
+@media screen and (max-width: 768px) {
+  .main .property__item {
+    margin: 8px 16px 0 0;
+  }
 }
 .main .property__item__border {
   border: 1px solid #E1E1E1;
@@ -310,17 +320,36 @@ header .banner__container .img {
   flex-direction: column;
   margin-right: 56px;
 }
+@media screen and (max-width: 768px) {
+  .main .award__text {
+    flex-wrap: wrap;
+  }
+  .main .award__item {
+    margin: 8px 8px 8px 0;
+  }
+}
 .main .director__intro {
   width: 85%;
   margin-bottom: 112px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+  .main .director__intro img {
+    margin: auto;
+  }
 }
 .main .director__intro__text {
   width: 70%;
   display: flex;
   margin: 0 auto;
   flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  .main .director__intro__text {
+    width: 100%;
+  }
 }
 .main h18 {
   font-weight: 500;
@@ -343,14 +372,24 @@ header .banner__container .img {
 .main .movietime__item {
   width: 100%;
   background-color: #6AB5B9;
-  width: 1071px;
   height: 66px;
   display: flex;
+  justify-content: center;
   align-items: center;
   margin-bottom: 16px;
 }
-.main .movietime__item h2 {
-  padding-left: 35%;
+.main .movietime__item .movietime__item__container {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+@media screen and (max-width: 768px) {
+  .main .movietime__item .movietime__item__container {
+    width: 90%;
+  }
+}
+.main .movietime__item .movietime__item__container h2 {
   margin-right: 8px;
   font-weight: 400;
   font-size: 20px;
@@ -358,13 +397,13 @@ header .banner__container .img {
   letter-spacing: 0.05em;
   color: #000000;
 }
-.main .movietime__item .timelineFav {
+.main .movietime__item .movietime__item__container .timelineFav {
   cursor: pointer;
   color: rgba(0, 0, 0, 0.2);
   transition-duration: 0.2s;
   font-size: 1.2rem;
 }
-.main .movietime__item .timelineFav.active {
+.main .movietime__item .movietime__item__container .timelineFav.active {
   color: #EA5136;
 }
 .main .moremovie__container {
@@ -391,6 +430,11 @@ header .banner__container .img {
 }
 .main .moremovie__item > a * {
   cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .main .moremovie__item > a {
+    margin: 8px 0px;
+  }
 }
 .main .moremovie__item > a::before {
   position: absolute;

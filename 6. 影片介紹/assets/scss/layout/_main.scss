@@ -1,5 +1,4 @@
 .main {
-
 	@extend %flex-center;
 	flex-direction: column;
 	color:$color_secondary_white;
@@ -12,7 +11,7 @@
 
 	.intro__circle{
 		position: absolute;
-		top: 0;
+		top: 48px;
 		left: 5%;
 		background-color: $color_secondary_pink;
 		width: 51px;
@@ -20,17 +19,22 @@
 		border-radius: 50%;
 	}
 	.intro{
+		margin-top: 69px;
 		margin-bottom: 40px;
 		padding-top: 21px;
 		width: 85%;
 		display: flex;
+		flex-wrap: wrap;
 		position: relative;
 	}
+
 	.title__container{
 		display: flex;
 		flex-direction: column;
 		flex: 1;
+		min-width: 275px;
 	}
+
 	h11{
 		margin-bottom: 7px;
 	font-weight: 700;
@@ -38,17 +42,19 @@
 	line-height: 30px;
 	letter-spacing: 0.2px;
 	}
+
 	h12{
 		margin-bottom: 7px;
-font-weight: 400;
-font-size: 20px;
-line-height: 28px;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 28px;
 	}
+
 	h13{
-font-weight: 400;
-font-size: 16px;
-line-height: 30px;
-letter-spacing: 0.2px;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 30px;
+		letter-spacing: 0.2px;
 	}
 .property__container{
 	display: flex;
@@ -56,6 +62,10 @@ letter-spacing: 0.2px;
 }
 .property__item{
 	margin: 0 0 8px 16px;
+	height: fit-content;
+	@media screen and (max-width: 768px) {
+		margin: 8px 16px 0 0;
+	}
 }
 .property__item__border{
 border: 1px solid $color_secondary_gray;
@@ -107,17 +117,36 @@ font-size: 16px;
 	flex-direction: column;
 	margin-right: 56px;
 }
+
+@media screen and (max-width: 768px) {
+	.award__text{
+		flex-wrap: wrap;
+
+	}
+	.award__item{
+		margin: 8px 8px 8px 0;
+	}
+}
 .director__intro{
 	width: 85%;
 	margin-bottom: 112px;
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
+	@media screen and (max-width: 768px) {
+		img{
+			margin: auto;
+		}
+	}
 }
 .director__intro__text{
 	width: 70%;
 	display: flex;
 	margin: 0 auto;
 	flex-direction: column;
+	@media screen and (max-width: 768px) {
+		width: 100%;
+	}
 }
 h18{
 	font-weight: 500;
@@ -140,13 +169,21 @@ color: $color_secondary_gray;
 .movietime__item{
 	width: 100%;
 	background-color: $color_main;
-	width: 1071px;
+	// width: 1071px;
 	height: 66px;
 	display: flex;
+	justify-content: center;
 	align-items: center;
 	margin-bottom: 16px;
+	.movietime__item__container{
+		width: 400px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		@media screen and (max-width: 768px) {
+			width: 90%;
+		}
 	h2{
-		padding-left: 35%;
 		margin-right: 8px;
 		font-weight: 400;
 		font-size: 20px;
@@ -164,6 +201,7 @@ color: $color_secondary_gray;
 			color: #EA5136;
 		}
 	}
+}
 }
 
 
@@ -192,6 +230,9 @@ background-color: $color_secondary_gray;
 	margin-left: 48px;
 	*{
 		cursor: pointer;
+	}
+	@media screen and (max-width: 768px) {
+		margin: 8px 0px;
 	}
 
 	&::before{
