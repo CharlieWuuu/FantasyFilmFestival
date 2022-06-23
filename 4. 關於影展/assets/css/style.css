@@ -270,16 +270,34 @@ header .title__container #ENtitle_2 {
   position: relative;
   background: linear-gradient(73.23deg, #0E6968 1.29%, rgba(106, 181, 185, 0.73) 74.23%);
 }
+@media screen and (max-width: 768px) {
+  .main .intro__bg {
+    flex-wrap: wrap;
+  }
+}
 .main .intro__img {
   position: absolute;
   top: -250px;
   right: 180px;
   width: 50%;
 }
+@media screen and (max-width: 768px) {
+  .main .intro__img {
+    position: relative;
+    top: 520px;
+    right: -55px;
+    width: 80%;
+  }
+}
 .main .intro__img > img {
   animation: float infinite 5s;
   animation-timing-function: ease;
   filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.2));
+}
+@media screen and (max-width: 768px) {
+  .main .intro__img > img {
+    width: 100%;
+  }
 }
 @keyframes float {
   0% {
@@ -295,6 +313,12 @@ header .title__container #ENtitle_2 {
 .main .intro__text {
   width: 50%;
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  .main .intro__text {
+    flex-wrap: wrap;
+    width: 90%;
+  }
 }
 .main .intro__line {
   position: absolute;
@@ -344,6 +368,11 @@ header .title__container #ENtitle_2 {
   font-size: 18px;
   line-height: 36px;
 }
+@media screen and (max-width: 768px) {
+  .main h6 {
+    top: 420px;
+  }
+}
 .main .movie01__container {
   margin-bottom: 120px;
   width: 100%;
@@ -351,12 +380,26 @@ header .title__container #ENtitle_2 {
   position: relative;
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .main .movie01__container {
+    flex-wrap: wrap;
+    margin-top: 200px;
+  }
+}
 .main .movie01__intro {
   position: absolute;
   top: 47px;
   right: 71px;
   display: flex;
   flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  .main .movie01__intro {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 90%;
+  }
 }
 .main h7 {
   padding: 320px 0 0 80px;
@@ -371,10 +414,39 @@ header .title__container #ENtitle_2 {
   max-width: 1280px;
   margin: 0 auto;
 }
+@media screen and (max-width: 768px) {
+  .main .movie0102__container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  .main .movie0102__container img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
 .main .movie03__container {
   width: 100%;
   margin-bottom: 120px;
   display: flex;
+}
+@media screen and (max-width: 768px) {
+  .main .movie03__container {
+    flex-wrap: wrap;
+  }
+  .main .movie03__container img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main .movie03__intro {
+    padding: 0;
+    width: 90%;
+    margin: 20px auto;
+  }
+  .main .movie03__intro h8 {
+    padding-left: 0px;
+  }
 }
 .main h8, .main h9, .main h10 {
   font-family: "Noto Sans";
@@ -393,12 +465,30 @@ header .title__container #ENtitle_2 {
   display: flex;
   position: relative;
 }
+@media screen and (max-width: 768px) {
+  .main .movie04__container {
+    flex-wrap: wrap-reverse;
+  }
+}
 .main .movie04__intro {
   padding: 29px 0 0 66px;
+}
+@media screen and (max-width: 768px) {
+  .main .movie04__intro {
+    padding: 0;
+    width: 90%;
+    margin: 20px auto;
+  }
 }
 .main .movie04__container > img {
   position: absolute;
   right: 0;
+}
+@media screen and (max-width: 768px) {
+  .main .movie04__container > img {
+    width: 100%;
+    position: relative;
+  }
 }
 .main .movie0506__container {
   width: 100%;
@@ -409,10 +499,22 @@ header .title__container #ENtitle_2 {
   width: 100%;
   display: flex;
 }
+@media screen and (max-width: 768px) {
+  .main .movie070809__container {
+    flex-wrap: wrap;
+  }
+}
 .main .movie070809__container__img {
   width: 50%;
 }
 .main .movie070809__intro {
   align-self: center;
   width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .main .movie070809__intro {
+    padding: 0;
+    width: 90%;
+    margin: 20px auto;
+  }
 }/*# sourceMappingURL=style.css.map */

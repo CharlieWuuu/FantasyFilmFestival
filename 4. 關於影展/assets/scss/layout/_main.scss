@@ -10,7 +10,7 @@
   .intro__container{
 		margin-bottom: 220px;
 		width: 100%;
-				box-sizing: border-box;
+		box-sizing: border-box;
 	}
 	.intro__bg{
 		width: 100%;
@@ -19,17 +19,30 @@
 		display: flex;
 		position: relative;
 		background: linear-gradient(73.23deg, #0E6968 1.29%, rgba(106, 181, 185, 0.73) 74.23%);
+		@media screen and (max-width: 768px) {
+			flex-wrap: wrap;
+		}
 	}
 	.intro__img{
 		position: absolute;
 		top: -250px;
 		right: 180px;
 		width: 50%;
+		@media screen and (max-width: 768px) {
+			position: relative;
+			top: 520px;
+			right: -55px;
+			width: 80%;
+		}
 	}
 	.intro__img>img{
 		animation: float infinite 5s;
 		animation-timing-function: ease;
 		filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.2));
+
+		@media screen and (max-width: 768px) {
+			width: 100%;
+		}
 
 		@keyframes float{
 			0% {transform: translateY(-1vh);}
@@ -40,6 +53,10 @@
 	.intro__text{
 		width: 50%;
 		position: relative;
+		@media screen and (max-width: 768px) {
+			flex-wrap: wrap;
+			width: 90%;
+		}
 	}
 	.intro__line{
 		position: absolute;
@@ -89,6 +106,9 @@ h6{
 	left: 120px;
 	font-size: 18px;
 	line-height: 36px;
+	@media screen and (max-width: 768px) {
+		top: 420px;
+	}
 }
 .movie01__container{
 	margin-bottom: 120px;
@@ -96,6 +116,10 @@ h6{
 	box-sizing: border-box;
 	position: relative;
 	display: flex;
+	@media screen and (max-width: 768px) {
+		flex-wrap: wrap;
+		margin-top: 200px;
+	}
 
 }
 .movie01__intro{
@@ -105,6 +129,12 @@ h6{
 
 	display: flex;
 	flex-direction: column;
+	@media screen and (max-width: 768px) {
+		position: relative;
+		top: 0;
+		right: 0;
+		width: 90%;
+	}
 }
 h7{
 padding: 320px 0 0 80px;
@@ -118,14 +148,38 @@ color: $color_secondary_gray;
 	width: 100%;
 	max-width: 1280px;
 	margin: 0 auto;
+	@media screen and (max-width: 768px) {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 20px;
+		img{
+			width: 100%;
+			object-fit: cover;
+		}
+	}
 }
 .movie03__container{
 	width: 100%;
 	margin-bottom: 120px;
 	display: flex;
+	@media screen and (max-width: 768px) {
+		flex-wrap: wrap;
+		img{
+			width: 100%;
+		}
+	}
 }
 .movie03__intro{
 	@extend %flex-center;
+	@media screen and (max-width: 768px) {
+		padding: 0;
+		width: 90%;
+		margin: 20px auto;
+		h8{
+			padding-left: 0px;
+			}
+	}
+
 }
 h8,h9,h10{
 	font-family: 'Noto Sans';
@@ -144,13 +198,25 @@ padding-left: 62px;
 	margin-bottom: 150px;
 	display: flex;
 	position: relative;
+	@media screen and (max-width: 768px) {
+		flex-wrap: wrap-reverse;
+	}
 }
 .movie04__intro{
 	padding: 29px 0 0 66px;
+	@media screen and (max-width: 768px) {
+		padding: 0;
+		width: 90%;
+		margin: 20px auto;
+	}
 }
 .movie04__container>img{
 	position: absolute;
 	right: 0;
+	@media screen and (max-width: 768px) {
+		width: 100%;
+		position: relative;
+	}
 }
 .movie0506__container{
 	width: 100%;
@@ -160,6 +226,9 @@ padding-left: 62px;
 .movie070809__container{
 	width: 100%;
 	display: flex;
+	@media screen and (max-width: 768px) {
+		flex-wrap: wrap;
+	}
 }
 .movie070809__container__img{
 	width: 50%;
@@ -167,5 +236,10 @@ padding-left: 62px;
 .movie070809__intro{
 align-self: center;
 width: 50%;
+@media screen and (max-width: 768px) {
+	padding: 0;
+	width: 90%;
+	margin: 20px auto;
+}
 }
 }
