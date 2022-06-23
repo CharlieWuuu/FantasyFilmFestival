@@ -8,28 +8,31 @@
 	height: fit-content;
 
   .container{
-		padding-bottom: 162px;
+		margin-bottom: 162px;
 		width: 100%;
 		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 	.content__left{
 		// border: 1px solid black;
 		position: relative;
-		width: 30%;
+		width: 200px;
+		height: fit-content;
 	}
 	.content__left__text{
-		position: absolute;
-	left: 0;
+		// position: absolute;
+		left: 0;
 		font-weight: 400;
-font-size: 40px;
-line-height: 40px;
-color: transparent;
--webkit-text-stroke: 1px $color_secondary_white;
-
+		font-size: 40px;
+		line-height: 40px;
+		color: transparent;
+		-webkit-text-stroke: 1px $color_secondary_white;;
 	}
+
 	.content__right{
 		// border: 1px solid red;
-		width: 100%;
+		width: fit-content;
 		padding-top: 58px;
 	}
 	.content__right__list__item{
@@ -67,14 +70,15 @@ color: transparent;
 	}
 	.list-item__card__line{
 		position: absolute;
-		left: 80px;
+		// left: 80px;
 		bottom: -13px;
-		width: 90%;
+		width: 100%;
 		height: 2px;
 		background-color: $color_main;
 	}
 	.list-item__card__text{
-		padding-left: 80px;
+		// padding-left: 80px;
+		flex: 1;
 font-weight: 900;
 font-size: 18px;
 line-height: 25px;
@@ -83,7 +87,8 @@ color: $color_secondary_white;
 
 	}
 .list-item__card__time{
-	position: absolute;
+	// position: absolute;
+	margin-left: 38px;
 	right: 58px;
 	display: flex;
 	align-items: center;
@@ -95,7 +100,8 @@ color: $color_secondary_white;
 	color: $color_secondary_white;
 }
 .list-item__card__icon{
-	position: absolute;
+	// position: absolute;
+	margin-left: 58px;
 	top: 0;
 	right: 0;
 	font-size: 26px;
@@ -113,7 +119,6 @@ color: $color_secondary_white;
 	}
 }
 
-
 .animate__fadeInUp{
 	animation: fadeInUp;
 	animation-duration: 2s;
@@ -124,4 +129,25 @@ color: $color_secondary_white;
 .animate__delay-4s{
 	animation-delay: 4s;
 }
+}
+
+@media screen and (max-width: 768px) {
+		.main{
+			.container{
+				.content__right{
+					.content__right__list{
+						.content__right__list__item{
+							.list-item__card{
+								.list-item__card__time{
+									margin-left: 10px;
+								}
+								.list-item__card__icon{
+									margin-left: 10px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

@@ -260,16 +260,18 @@ header .title__container #ENtitle_2 {
   height: fit-content;
 }
 .main .container {
-  padding-bottom: 162px;
+  margin-bottom: 162px;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .main .content__left {
   position: relative;
-  width: 30%;
+  width: 200px;
+  height: fit-content;
 }
 .main .content__left__text {
-  position: absolute;
   left: 0;
   font-weight: 400;
   font-size: 40px;
@@ -278,7 +280,7 @@ header .title__container #ENtitle_2 {
   -webkit-text-stroke: 1px #FFFFFF;
 }
 .main .content__right {
-  width: 100%;
+  width: fit-content;
   padding-top: 58px;
 }
 .main .content__right__list__item {
@@ -313,14 +315,13 @@ header .title__container #ENtitle_2 {
 }
 .main .list-item__card__line {
   position: absolute;
-  left: 80px;
   bottom: -13px;
-  width: 90%;
+  width: 100%;
   height: 2px;
   background-color: #6AB5B9;
 }
 .main .list-item__card__text {
-  padding-left: 80px;
+  flex: 1;
   font-weight: 900;
   font-size: 18px;
   line-height: 25px;
@@ -328,7 +329,7 @@ header .title__container #ENtitle_2 {
   color: #FFFFFF;
 }
 .main .list-item__card__time {
-  position: absolute;
+  margin-left: 38px;
   right: 58px;
   display: flex;
   align-items: center;
@@ -340,7 +341,7 @@ header .title__container #ENtitle_2 {
   color: #FFFFFF;
 }
 .main .list-item__card__icon {
-  position: absolute;
+  margin-left: 58px;
   top: 0;
   right: 0;
   font-size: 26px;
@@ -361,4 +362,13 @@ header .title__container #ENtitle_2 {
 }
 .main .animate__delay-4s {
   animation-delay: 4s;
+}
+
+@media screen and (max-width: 768px) {
+  .main .container .content__right .content__right__list .content__right__list__item .list-item__card .list-item__card__time {
+    margin-left: 10px;
+  }
+  .main .container .content__right .content__right__list .content__right__list__item .list-item__card .list-item__card__icon {
+    margin-left: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */
