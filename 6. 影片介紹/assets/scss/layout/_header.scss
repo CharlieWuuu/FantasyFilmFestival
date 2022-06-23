@@ -7,6 +7,8 @@ header{
 	.banner__container{
 		width: 90%;
 		margin: 0 auto;
-
+		.img{
+			object-fit: cover;
+		}
 	}
 }

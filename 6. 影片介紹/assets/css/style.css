@@ -205,6 +205,9 @@ header .banner__container {
   width: 90%;
   margin: 0 auto;
 }
+header .banner__container .img {
+  object-fit: cover;
+}
 
 .main {
   flex-direction: column;
