@@ -32,9 +32,9 @@ body{
 
 	img{
 		left: 43.15%;
-right: 36.35%;
-top: 10.87%;
-bottom: 55.46%;
+		right: 36.35%;
+		top: 10.87%;
+		bottom: 55.46%;
 
 		animation: float infinite 5s;
 		animation-timing-function: ease;
@@ -54,5 +54,11 @@ bottom: 55.46%;
 	}
 	#navbar__mobile, #footer__mobile{
 		display: block;
+	}
+	.background__tail{
+		img{
+			margin-top: 50px;
+			width: 45vw
+		}
 	}
 }

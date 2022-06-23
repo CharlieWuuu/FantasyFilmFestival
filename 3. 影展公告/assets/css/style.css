@@ -201,6 +201,11 @@ body {
   #navbar__mobile, #footer__mobile {
     display: block;
   }
+
+  .background__tail img {
+    margin-top: 50px;
+    width: 45vw;
+  }
 }
 header {
   margin: 140px auto 160px auto;
