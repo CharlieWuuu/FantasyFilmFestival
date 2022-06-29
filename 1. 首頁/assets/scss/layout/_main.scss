@@ -137,7 +137,6 @@ article{
 	height: fit-content;
 	z-index: 2;
 
-
 	.news-list__item{
 		display: flex;
 		width: 30%;
@@ -177,7 +176,6 @@ article{
 			width: 100%;
 			margin-left: 10px;
 
-
 			a{
 				text-decoration: none;
 
@@ -186,7 +184,6 @@ article{
 					width: 100%;
 					right: 10px;
 					overflow: hidden;
-
 
 					img{
 						object-fit: cover;
@@ -212,7 +209,7 @@ article{
 						padding: 12px 8px;
 						font-size: 16px;
 						font-weight: 300;
-						color: gray;
+						color: $color_secondary_gray;
 					}
 				}
 			}

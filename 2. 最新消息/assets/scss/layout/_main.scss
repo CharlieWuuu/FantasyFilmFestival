@@ -126,12 +126,12 @@
 		padding: 0 12px;
 		display: flex;
 		align-items: flex-end;
-		font-family: SF Pro;
+		// font-family: SF Pro;
 		font-size: 14px;
-	font-weight: 274;
-	line-height: 16px;
-	letter-spacing: 0.2%;
-	color: $color_secondary_gray;
+		font-weight: 274;
+		line-height: 16px;
+		letter-spacing: 0.2%;
+		color: $color_secondary_gray;
 	}
 
 	@media(min-width: 768px){
